@@ -1,0 +1,107 @@
+body {
+    background-color: #dddddd;
+    font-size: 12px;
+    font-family: Verdana, "Verdana CE",  Arial, "Arial CE", "Lucida Grande CE", lucida, "Helvetica CE", sans-serif;
+    color: #000000;  
+    margin: 10px;
+}
+
+h1 {
+    font-family: Verdana, "Verdana CE",  Arial, "Arial CE", "Lucida Grande CE", lucida, "Helvetica CE", sans-serif;
+    border-bottom: 1px solid #AFAFAF; 
+    font-size:  16px;
+    font-weight: bold;
+    margin: 0px;
+    padding: 0px;
+    color: #D20005;
+}
+
+a:link, a:visited {
+    color: #045491;
+    font-weight : bold;
+    text-decoration: none;
+}
+
+a:link:hover, a:visited:hover  {
+    color: #045491;
+    font-weight : bold;
+    text-decoration : underline;
+}
+.content
+{
+    top:0Px;
+    width:990Px;
+    height:450Px;   
+}
+.panel
+{
+    background: #c2dfef url(images/gradients/gradient_panel.gif) repeat-x top left;
+    color: #000000;
+    padding: 10px;
+    border: 2px outset;
+}
+.panelsurround
+{
+    padding-top: 100Px;    
+    color: #000000;
+    width: 500Px;    
+}
+.prompt
+{
+    text-align: left;
+    background: #036fab url(images/gradients/gradient_tcat.gif) repeat-x top left;
+    color: #FFFFFF;
+    font: bold 10pt Verdana, "Verdana CE",  Arial, "Arial CE", "Lucida Grande CE", lucida, "Helvetica CE", sans-serif;
+    padding: 10Px;
+    margin-bottom: 3Px;
+}
+input[type="text"] {
+    /*    background-image: url(../images/bg.png);
+        border: 1px solid #6297BC;
+        width: 230px;*/
+    background-image:url(../images/form_bg.jpg);
+    background-repeat:repeat-x;
+    border:1px solid #d1c7ac;
+    width: 230px;
+    color:#333333;
+    padding:3px;
+    margin-right:4px;
+    margin-bottom:8px;
+    font-family:Verdana, "Verdana CE",  Arial, "Arial CE", "Lucida Grande CE", lucida, "Helvetica CE", sans-serif;
+}
+input[type="password"] {
+    /*    background-image: url(../images/bg.png);
+        border: 1px solid #6297BC;
+        width: 230px;*/
+    background-image:url(../images/form_bg.jpg);
+    background-repeat:repeat-x;
+    border:1px solid #d1c7ac;
+    width: 230px;
+    color:#333333;
+    padding:3px;
+    margin-right:4px;
+    margin-bottom:8px;
+    font-family:Verdana, "Verdana CE",  Arial, "Arial CE", "Lucida Grande CE", lucida, "Helvetica CE", sans-serif;
+}
+input[type="submit"] {    
+    background:url(../images/overlay.png) repeat-x center #ffcc00;
+    border:1px solid #000000;/*#036fab*/
+    cursor:pointer;
+    background-color:#dddddd;
+}
+input[type="submit"]:hover{background-color:silver;}
+input[type="reset"] {
+    background:url(../images/overlay.png) repeat-x center #ffcc00;
+    border:1px solid #000000;/*#036fab*/
+    cursor:pointer;
+    background-color:#dddddd;
+}
+input[type="reset"]:hover{background-color:silver;}
+.errorLabel
+{
+    color: red;
+    letter-spacing: 1Px;
+    font-weight: bold;
+}
+
+

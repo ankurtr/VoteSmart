@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scene Scope="Project" version="2">
+    <Scope Scope="Faces Configuration Only"/>
+    <Scope Scope="Project">
+        <Node id="resources/customComponents/column.xhtml" x="650" y="150" zoom="true"/>
+        <Node id="admin/WardList.xhtml" x="400" y="900" zoom="true"/>
+        <Node id="admin/CandidateForm.jsf" x="150" y="1200" zoom="true"/>
+        <Node id="admin/ElectionList.jsf" x="2150" y="300" zoom="true"/>
+        <Node id="FingerPrintVerification.xhtml" x="1400" y="450" zoom="true"/>
+        <Node id="admin/ZoneForm.jsf" x="900" y="450" zoom="true"/>
+        <Node id="FingerPrintTemplates.xhtml" x="1900" y="150" zoom="true"/>
+        <Node id="admin/SecurityList.xhtml" x="400" y="1500" zoom="true"/>
+        <Node id="FaceRecognition.xhtml" x="650" y="1200" zoom="true"/>
+        <Node id="admin/PartyForm.jsf" x="1650" y="450" zoom="true"/>
+        <Node id="client/CastVote.xhtml" x="150" y="300" zoom="true"/>
+        <Node id="resources/ezcomp/Login.xhtml" x="400" y="600" zoom="true"/>
+        <Node id="admin/AreaForm.xhtml" x="1400" y="300" zoom="true"/>
+        <Node id="ErrorPage.xhtml" x="650" y="600" zoom="true"/>
+        <Node id="admin/SubWardList.jsf" x="1400" y="900" zoom="true"/>
+        <Node id="admin/WardForm.xhtml" x="650" y="750" zoom="true"/>
+        <Node id="admin/WardList.jsf" x="1900" y="600" zoom="true"/>
+        <Node id="*" x="900" y="750" zoom="true"/>
+        <Node id="client/CitizenTemplate.xhtml" x="400" y="450" zoom="true"/>
+        <Node id="client/test2.xhtml" x="1400" y="750" zoom="true"/>
+        <Node id="admin/WardForm.jsf" x="2400" y="300" zoom="true"/>
+        <Node id="admin/ZoneList.jsf" x="150" y="150" zoom="true"/>
+        <Node id="admin/CandidateResult.xhtml" x="900" y="1200" zoom="true"/>
+        <Node id="admin/PartyForm.xhtml" x="1900" y="300" zoom="true"/>
+        <Node id="resources/ezcomp/FingerPrintUpload.xhtml" x="150" y="900" zoom="true"/>
+        <Node id="client/CastVote.jsf" x="650" y="900" zoom="true"/>
+        <Node id="admin/CandidateForm.xhtml" x="1650" y="300" zoom="true"/>
+        <Node id="admin/AreaList.xhtml" x="1150" y="450" zoom="true"/>
+        <Node id="client/ProblemLogin.xhtml" x="400" y="150" zoom="true"/>
+        <Node id="admin/CitizenList.jsf" x="1150" y="750" zoom="true"/>
+        <Node id="LoginPage.xhtml" x="400" y="750" zoom="true"/>
+        <Node id="resources/customComponents/columnCommand.xhtml" x="150" y="750" zoom="true"/>
+        <Node id="client/test.xhtml" x="1650" y="600" zoom="true"/>
+        <Node id="resources/customComponents/field.xhtml" x="1400" y="150" zoom="true"/>
+        <Node id="MasterPage.xhtml" x="650" y="450" zoom="true"/>
+        <Node id="admin/DashBoard.jsf" x="900" y="150" zoom="true"/>
+        <Node id="admin/CandidateList.jsf" x="2150" y="150" zoom="true"/>
+        <Node id="resources/ezcomp/FaceRecognition.xhtml" x="900" y="1050" zoom="true"/>
+        <Node id="admin/CitizenList.xhtml" x="400" y="1050" zoom="true"/>
+        <Node id="admin/ScheduleElection.jsf" x="2400" y="150" zoom="true"/>
+        <Node id="admin/CandidateList.xhtml" x="900" y="600" zoom="true"/>
+        <Node id="admin/ElectionList.xhtml" x="650" y="1050" zoom="true"/>
+        <Node id="admin/CitizenForm.jsf" x="900" y="900" zoom="true"/>
+        <Node id="admin/CitizenForm.xhtml" x="1150" y="600" zoom="true"/>
+        <Node id="images/EPolling.htm" x="400" y="300" zoom="true"/>
+        <Node id="admin/PartyResult.xhtml" x="1150" y="1050" zoom="true"/>
+        <Node id="admin/SecurityForm.xhtml" x="650" y="1350" zoom="true"/>
+        <Node id="admin/DashBoard.xhtml" x="1150" y="300" zoom="true"/>
+        <Node id="admin/AreaForm.jsf" x="2650" y="150" zoom="true"/>
+        <Node id="FingerPrintTemplates.jsf" x="2650" y="300" zoom="true"/>
+        <Node id="admin/SecurityList.jsf" x="150" y="1650" zoom="true"/>
+        <Node id="admin/ZoneForm.xhtml" x="650" y="300" zoom="true"/>
+        <Node id="admin/SubWardForm.xhtml" x="1650" y="150" zoom="true"/>
+        <Node id="admin/PartyList.jsf" x="1400" y="600" zoom="true"/>
+        <Node id="admin/ZoneList.xhtml" x="150" y="600" zoom="true"/>
+        <Node id="FingerPrintVerification.jsf" x="400" y="1350" zoom="true"/>
+        <Node id="admin/ScheduleElection.xhtml" x="150" y="1350" zoom="true"/>
+        <Node id="LoginPage.jsf" x="900" y="300" zoom="true"/>
+        <Node id="FaceRecognition.jsf" x="150" y="1500" zoom="true"/>
+        <Node id="admin/ElectionForm.xhtml" x="400" y="1200" zoom="true"/>
+        <Node id="admin/SubWardList.xhtml" x="1150" y="150" zoom="true"/>
+        <Node id="admin/Result.xhtml" x="1150" y="900" zoom="true"/>
+        <Node id="admin/AdminMasterPage.xhtml" x="150" y="450" zoom="true"/>
+        <Node id="admin/PartyList.xhtml" x="150" y="1050" zoom="true"/>
+        <Node id="admin/SecurityForm.jsf" x="2900" y="150" zoom="true"/>
+        <Node id="admin/SubWardForm.jsf" x="2150" y="450" zoom="true"/>
+        <Node id="admin/AreaList.jsf" x="1650" y="750" zoom="true"/>
+        <Node id="admin/ElectionForm.jsf" x="1900" y="450" zoom="true"/>
+    </Scope>
+    <Scope Scope="All Faces Configurations"/>
+</Scene>

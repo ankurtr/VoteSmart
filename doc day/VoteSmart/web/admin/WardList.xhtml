@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="./AdminMasterPage.xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:col="http://www.trapasiya.com/jsf">
+
+    <ui:define  name="content">
+        <div id="content-outer">
+            <!-- start content -->
+            <div id="content">
+                <!--  start page-heading -->
+                <div id="page-heading">
+                    <h1>Ward Management</h1>
+                </div>
+                <!-- end page-heading -->
+                <table border="0" width="100%" cellpadding="0" cellspacing="0" id="content-table">
+                    <tr>
+                        <th rowspan="3" class="sized"><img src="../images/shared/side_shadowleft.jpg" width="20" height="300" alt="" /></th>
+                        <th class="topleft"></th>
+                        <td id="tbl-border-top">&nbsp;</td>
+                        <th class="topright"></th>
+                        <th rowspan="3" class="sized"><img src="../images/shared/side_shadowright.jpg" width="20" height="300" alt="" /></th>
+                    </tr>
+                    <tr>
+                        <td id="tbl-border-left"></td>
+                        <td>
+                            <!--  start content-table-inner ...................................................................... START -->
+                            <div id="content-table-inner">
+
+                                <!--  start table-content  -->
+                                <div id="table-content">
+                                    <h:form  styleClass="form"  >
+                                        <div style="background-color: #d5d5d5">
+                                            <table>
+                                                <tr>
+                                                    <td>
+                                                        &nbsp;   Search Ward :
+                                                    </td>
+                                                    <td>
+                                                        <h:inputText value="#{wardBean.searchText}"  style="width: 100%" ></h:inputText>
+                                                    </td>
+                                                    <td>
+                                                        <h:commandLink action="#{wardBean.search}"  >
+                                                            <img src="../images/icons/search.png" height="30px" width="30px" ></img>
+                                                        </h:commandLink>
+                                                    </td>
+                                                    <td>&nbsp;&nbsp;</td>
+                                                    <td>
+                                                        <h:commandButton value="View All Ward"  action="#{wardBean.loadAllWards}"  style="color: red"></h:commandButton>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <div>
+
+                                            <div style="height:40Px;">
+                                                <table width="100%">
+                                                    <tr>
+                                                        <td width="3%">
+                                                            <h:commandLink  action="#{wardBean.add}" >
+                                                                <img src="../images/icons/add.png" height="20px" width="20px" ></img>
+                                                            </h:commandLink>
+                                                        </td>
+
+                                                        <td width="3%">
+                                                            Add
+                                                        </td>
+                                                        <td width="3%">
+                                                            <h:commandLink  action="#{wardBean.delete}" >
+                                                                <img src="../images/icons/delete.png" height="20px" width="20px" ></img>
+                                                            </h:commandLink>
+                                                        </td>
+                                                        <td width="3%">
+                                                            Delete
+                                                        </td>
+                                                        <td align="right" width="70%">
+                                                            <h:outputText value="No. of Page : "/>
+                                                            <h:selectOneMenu value="#{wardBean.pageList}" style="width: 50px;" >
+                                                                <f:selectItem itemLabel="#{wardBean.pageRows}" itemValue="#{wardBean.pageRows}"/>
+                                                                <f:selectItem itemLabel="10" itemValue="10"  />
+                                                                <f:selectItem itemLabel="20" itemValue="20" />
+                                                                <f:selectItem itemLabel="25" itemValue="25" />
+                                                                <f:selectItem itemLabel="30" itemValue="30" />
+                                                                <f:selectItem itemLabel="35" itemValue="35" />
+                                                                <f:selectItem itemLabel="40" itemValue="40" />
+                                                                <f:selectItem itemLabel="45" itemValue="45" />
+
+                                                                <f:ajax execute="@form" event="change" render="myDT hdnPageRows hdnPage hdnTotalPages gridPageInfo" listener="#{wardBean.change}" />
+                                                            </h:selectOneMenu>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <h:dataTable  headerClass="ColumnHeader" first="#{wardBean.firstPage}"  id="myDT" captionStyle="background-color:#6d84b4;color: white;" styleClass="table"  rowClasses="odd,even"  value="#{wardBean.wardList}" rows="#{wardBean.pageRows}" var="row" width="100%" cellpadding="2" cellspacing="2" border="0" >
+                                                <h:column>
+                                                    <f:facet name="header">
+
+                                                        <center>
+                                                            Select</center>
+                                                    </f:facet>
+                                                    <center>
+                                                        <h:selectBooleanCheckbox value="#{wardBean.checked[row.wardId]}">
+                                                        </h:selectBooleanCheckbox>
+                                                    </center>
+                                                </h:column>
+
+                                                <col:column label="WardName" entity="${row}" fieldName="wardName" backingBean="#{wardBean}" />
+                                                <col:column label="ZoneName" entity="${row.zoneMaster}" fieldName="zoneName" backingBean="#{wardBean}"/>
+
+                                                <col:columnCommand action="edit" backingBean="#{wardBean}" imagePath="../images/icons/edit.png" label="Edit">
+                                                    <f:setPropertyActionListener target="#{wardBean.wardObj}" value="#{row}"/>
+                                                </col:columnCommand>
+                                                <col:columnCommand action="deleteFromLink" backingBean="#{wardBean}" imagePath="../images/icons/delete_a.png" label="Delete">
+                                                    <f:setPropertyActionListener target="#{wardBean.wardId}" value="#{row.wardId}"/>
+                                                </col:columnCommand>
+
+                                            </h:dataTable>
+                                        </div>
+
+                                        <h:panelGroup id="gridPageInfo">
+                                            <div style="float: left">
+                                                <span style="color:#4d9bbe;font-weight:  bold;margin-left: 10px;">
+                                                    page <h:outputText value="#{wardBean.currentPage}"/> of <h:outputText value="#{wardBean.totalPages}" />
+                                                </span>
+                                            </div>
+                                        </h:panelGroup>
+                                        <div style="float: right">
+                                            <h:commandButton id="btnFirst" value="First"  styleClass="navButton"  image="../images/table/paging_far_left.gif">
+                                                <f:ajax execute="@all" event="action" render="myDT hdnPage hdnPageRows gridPageInfo" listener="#{wardBean.first}" />
+                                            </h:commandButton>
+                                            <h:commandButton id="btnPrevious" value="Previous" styleClass="navButton" image="../images/table/paging_left.gif">
+                                                <f:ajax execute="@all" event="action" render="myDT hdnPage hdnPageRows gridPageInfo" listener="#{wardBean.previous}"/>
+                                            </h:commandButton>
+                                            <h:commandButton id="btnNext" value="Next" styleClass="navButton" image="../images/table/paging_right.gif">
+                                                <f:ajax execute="@all" event="action" render="myDT hdnPage hdnPageRows gridPageInfo" listener="#{wardBean.next}"/>
+                                            </h:commandButton>
+                                            <h:commandButton id="btnLast" value="Last" styleClass="navButton" image="../images/table/paging_far_right.gif">
+                                                <f:ajax execute="@all" event="action" render="myDT hdnPage hdnPageRows gridPageInfo" listener="#{wardBean.last}"/>
+                                            </h:commandButton>
+
+                                            <h:inputHidden id="hdnPage" value="#{wardBean.currentPage}" />
+                                            <h:inputHidden id="hdnPageRows" value="#{wardBean.pageRows}" />
+                                            <h:inputHidden id="hdnTotalPages" value="#{wardBean.totalPages}" />
+                                        </div>
+
+                                    </h:form>
+
+                                </div>
+                            </div>
+                            <!--  end content-table-inner ............................................END  -->
+                        </td>
+                        <td id="tbl-border-right"></td>
+                    </tr>
+                    <tr>
+                        <th class="sized bottomleft"></th>
+                        <td id="tbl-border-bottom">&nbsp;</td>
+                        <th class="sized bottomright"></th>
+                    </tr>
+                </table>
+                <div class="clear">&nbsp;</div>
+
+            </div>
+            <!--  end content -->
+            <div class="clear">&nbsp;</div>
+        </div>
+    </ui:define>
+</ui:composition>

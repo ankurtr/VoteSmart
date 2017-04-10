@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="./AdminMasterPage.xhtml">
+
+    <ui:define name="content">
+        <!-- Main Container Section -->
+
+        <div id="content-outer">
+            <!-- start content -->
+            <div id="content">
+                <!--  start page-heading -->
+                <div id="page-heading">
+                    <h1>  #{eng['DashBoard.Header']}</h1>
+                </div>
+                <!-- end page-heading -->
+                <table border="0" width="100%" cellpadding="0" cellspacing="0" id="content-table">
+                    <tr>
+                        <th rowspan="3" class="sized"><img src="../images/shared/side_shadowleft.jpg" width="20" height="300" alt="" /></th>
+                        <th class="topleft"></th>
+                        <td id="tbl-border-top">&nbsp;</td>
+                        <th class="topright"></th>
+                        <th rowspan="3" class="sized"><img src="../images/shared/side_shadowright.jpg" width="20" height="300" alt="" /></th>
+                    </tr>
+                    <tr>
+                        <td id="tbl-border-left"></td>
+                        <td>
+                            <!--  start content-table-inner ...................................................................... START -->
+                            <div id="content-table-inner">
+
+                                <!--  start table-content  -->
+                                <div id="table-content">
+                                    <div class="container_12">
+                                        <div class="grid_5">
+                                            <div class="module">
+                                                <h2>
+                                                    <span>#{eng['DashBoard.RegionManagement']}</span>
+                                                </h2>
+                                                <div class="module-body">
+                                                    <div class="grid_7">
+                                                        <a href="" class="dashboard-module">
+                                                            <img src="../images/Region.png" width="84" height="84" alt="edit" />
+                                                            <span>#{eng['DashBoard.AddZone']}</span></a><a href="" class="dashboard-module">
+                                                            <img src="../images/Region.png" width="84" height="84" alt="edit" />
+                                                            <span>#{eng['DashBoard.AddWard']}</span></a><a href="" class="dashboard-module">
+                                                            <img src="../images/Region.png" width="84" height="84" alt="edit" />
+                                                            <span>#{eng['DashBoard.AddSubWard']}</span></a><a href="" class="dashboard-module">
+                                                            <img src="../images/Region.png" width="84" height="84" alt="edit" />
+                                                            <span>#{eng['DashBoard.AddArea']}</span></a>
+                                                    </div>
+                                                    <div style="clear: both;">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div style="clear: both;">
+                                            </div>
+                                        </div>
+                                        <div class="grid_5">
+                                            <div class="module">
+                                                <h2>
+                                                    <span>#{eng['DashBoard.PartyManagement']}</span>
+                                                </h2>
+                                                <div class="module-body">
+                                                    <div class="grid_7">
+                                                        <a href="" class="dashboard-module">
+                                                            <img src="../images/india_flag.png" width="84" height="84" alt="edit" />
+                                                            <span>#{eng['DashBoard.AddParty']}</span></a><a href="" class="dashboard-module">
+                                                            <img src="../images/Candidate.png" width="84" height="84" alt="edit" />
+                                                            <span>#{eng['DashBoard.AddCandidate']}</span></a><a href="" class="dashboard-module">
+                                                            <img src="../images/ActiveCandidate.png" width="84" height="84" alt="edit" />
+                                                            <span>#{eng['DashBoard.ViewActiveCandidates']}</span></a>
+                                                    </div>
+                                                    <div style="clear: both;">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div style="clear: both;">
+                                            </div>
+                                        </div>
+                                        <div class="grid_5">
+                                            <div class="module">
+                                                <h2>
+                                                    <span>#{eng['DashBoard.CitizenManagement']}</span></h2>
+                                                <div class="module-body">
+                                                    <div class="grid_7">
+                                                        <a href="" class="dashboard-module">
+                                                            <img src="../images/Citizen.png" width="84" height="84" alt="edit" />
+                                                            <span>#{eng['DashBoard.AddCitizen']}</span></a><a href="" class="dashboard-module">
+                                                            <img src="../images/Search.png" width="84" height="84" alt="edit" />
+                                                            <span>#{eng['DashBoard.Search']}</span></a>
+                                                    </div>
+                                                    <div style="clear: both;">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div style="clear: both;">
+                                            </div>
+                                        </div>
+                                        <div class="grid_5">
+                                            <div class="module">
+                                                <h2>
+                                                    <span>#{eng['DashBoard.ElectionManagement']}</span></h2>
+                                                <div class="module-body">
+                                                    <div class="grid_7">
+                                                        <a href="" class="dashboard-module">
+                                                            <img src="../images/schedule.png" width="84" height="84" alt="Schedule Election" />
+                                                            <span>#{eng['DashBoard.ScheduleElection']}</span></a>
+                                                    </div>
+                                                    <div style="clear: both;">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div style="clear: both;">
+                                            </div>
+                                        </div>
+                                        <div class="grid_5">
+                                            <div class="module">
+                                                <h2>
+                                                    <span>#{eng['DashBoard.ResultManagement']}</span></h2>
+                                                <div class="module-body">
+                                                    <div class="grid_7">
+                                                        <a href="" class="dashboard-module">
+                                                            <img src="../images/charts.png" width="84" height="84" alt="edit" />
+                                                            <span>#{eng['DashBoard.ViewResult']}</span></a>
+                                                    </div>
+                                                    <div style="clear: both;">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div style="clear: both;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  end content-table-inner ............................................END  -->
+                        </td>
+                        <td id="tbl-border-right"></td>
+                    </tr>
+                    <tr>
+                        <th class="sized bottomleft"></th>
+                        <td id="tbl-border-bottom">&nbsp;</td>
+                        <th class="sized bottomright"></th>
+                    </tr>
+                </table>
+                <div class="clear">&nbsp;</div>
+
+            </div>
+            <!--  end content -->
+            <div class="clear">&nbsp;</div>
+        </div>
+    </ui:define>
+
+</ui:composition>

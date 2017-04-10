@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+    <ui:composition>
+
+        <c:if test="${empty label}">
+            <c:set var="label" value="${fieldName}" />
+        </c:if>
+
+        <c:if test="${empty required}">
+            <c:set var="required" value="true" />
+            
+        </c:if>
+        <c:if test="${empty validatorMessage}">
+            <c:set var="validatorMsg" value="Please Provide Proper Input"/>
+        </c:if>
+
+
+
+        <h:outputLabel id="${fieldName}Label"
+                       value="${label}" for="#{fieldName}" />
+
+         <c:choose>
+            <c:when test="${empty textArea}">
+                    <h:inputText id="#{fieldName}" value="#{entity[fieldName]}"
+                                 required="${required}" requiredMessage="${requiredMessage}" style="width:150Px;" validatorMessage="${validatorMessage}" >
+                        <ui:insert />
+                    </h:inputText>
+            </c:when>
+            <c:otherwise>
+                <h:inputTextarea id="#{fieldName}" value="#{entity[fieldName]}"
+                     required="${required}" requiredMessage="${requiredMessage}">
+                        <ui:insert />
+                </h:inputTextarea>
+            </c:otherwise>
+
+        </c:choose>
+
+        <!--  Display any error message that are found -->
+        <h:message id="${fieldName}Message"
+                   style="color: red;"
+                   for="#{fieldName}" />
+        
+    </ui:composition>
+
+</html>
+

@@ -1,0 +1,231 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:col="http://www.trapasiya.com/jsf">
+
+    <body>
+
+        <ui:composition template="./AdminMasterPage.xhtml">
+            <ui:define name="content">
+                <script type="text/javascript">
+        jQuery(function() {
+          // An example how the two helper functions can be used to achieve
+          // advanced functionality.
+          // - Linking: When changing the first input the second input is updated and the
+          //   duration is kept.
+          // - Validation: If the second input has a time earlier than the firs input,
+          //   an error class is added.
+
+          // Use default settings
+          $("#time1, #time2").timePicker();
+
+          // Store time used by duration.
+          var oldTime = $.timePicker("#time1").getTime();
+
+          // Keep the duration between the two inputs.
+          $("#time1").change(function() {
+            if ($("#time2").val()) { // Only update when second input has a value.
+              // Calculate duration.
+              var duration = ($.timePicker("#time2").getTime() - oldTime);
+              var time = $.timePicker("#time1").getTime();
+              // Calculate and update the time in the second input.
+              $.timePicker("#time2").setTime(new Date(new Date(time.getTime() + duration)));
+              oldTime = time;
+            }
+          });
+          // Validate.
+          $("#time2").change(function() {
+            if($.timePicker("#time1").getTime() > $.timePicker(this).getTime()) {
+              $(this).addClass("error");
+            }
+            else {
+              $(this).removeClass("error");
+            }
+          });
+
+        });
+                </script>
+                <script type="text/javascript">
+                // Analytics.
+                var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-123444-3"]),_gaq.push(["_trackPageview"]),function(){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)}()
+                </script>
+                <div id="content-outer">
+                    <!-- start content -->
+                    <div id="content">
+                        <!--  start page-heading -->
+                        <div id="page-heading">
+                            <h1>Edit Election</h1>
+                        </div>
+                        <!-- end page-heading -->
+                        <table border="0" width="100%" cellpadding="0" cellspacing="0" id="content-table">
+                            <tr>
+                                <th rowspan="3" class="sized"><img src="../images/shared/side_shadowleft.jpg" width="20" height="300" alt="" /></th>
+                                <th class="topleft"></th>
+                                <td id="tbl-border-top">&nbsp;</td>
+                                <th class="topright"></th>
+                                <th rowspan="3" class="sized"><img src="../images/shared/side_shadowright.jpg" width="20" height="300" alt="" /></th>
+                            </tr>
+                            <tr>
+                                <td id="tbl-border-left"></td>
+                                <td>
+                                    <!--  start content-table-inner ...................................................................... START -->
+                                    <div id="content-table-inner">
+
+                                        <!--  start table-content  -->
+                                        <div id="table-content" style="margin-top: -20px">
+
+                                            <h:form id="f1" enctype="multipart/form-data" prependId="false">
+
+                                                <h:panelGrid columns="2">
+
+                                                    <col:field  label="#{eng['ElectionForm.ElectionNamePrompt']}" required="true" entity="#{electionBean}" fieldName="name" id="txtElectionName" requiredMessage="#{eng['ElectionForm.ElectionNamePrompt']}"/>
+
+                                                    <h:outputLabel value="#{eng['ElectionForm.ElectionTypePrompt']}"/>
+                                                    <h:selectOneListbox value="#{electionBean.electionTypeId}">
+                                                        <f:selectItems value="#{electionBean.electionTypeList}" var="item" itemLabel="#{item.typeName}" itemValue="#{item.electionTypeId}"/>
+                                                    </h:selectOneListbox>
+
+                                                    <h:outputLabel value="#{eng['ElectionForm.FinalDatePrompt']}" />
+                                                    <table id="finalDateTable">
+                                                        <tr>
+                                                            <td>
+                                                                <h:outputLabel id="lbl_finalDate"  styleClass="label"/>
+                                                            </td>
+                                                            <td>
+                                                                <h:inputText id="datum1" styleClass="inp-form" value="#{electionBean.finalDate}">
+<!--                                                                    <h:message id="msg3" for="datum1"/>
+                                                                    <f:validateRegex pattern="\d\d:\d\d:\d\d\d\d" />-->
+                                                                    <f:converter converterId="dateConverter"/>
+<!--                                                                    <f:ajax render="msg3" execute="@this" event="valueChange"/>-->
+                                                                </h:inputText>
+
+                                                                <a  onclick="setYears(1901, 2011);showCalender(this, 'datum1');">
+                                                                    &nbsp;&nbsp;&nbsp;&nbsp;<img src="../images/calender.png" alt="Click Here" height="20px" width="22px"/>
+                                                                </a>
+                                                            </td>
+                                                            <td>
+                                                                <table id="calenderTable" >
+                                                                    <tbody id="calenderTableHead">
+                                                                        <tr>
+                                                                            <td colspan="4" align="center">
+                                                                                <select onChange="showCalenderBody(createCalender(document.getElementById('selectYear').value,
+                                                                        this.selectedIndex, false));" id="selectMonth">
+                                                                                    <option value="0">Jan</option>
+                                                                                    <option value="1">Feb</option>
+                                                                                    <option value="2">Mar</option>
+                                                                                    <option value="3">Apr</option>
+                                                                                    <option value="4">May</option>
+                                                                                    <option value="5">Jun</option>
+                                                                                    <option value="6">Jul</option>
+                                                                                    <option value="7">Aug</option>
+                                                                                    <option value="8">Sep</option>
+                                                                                    <option value="9">Oct</option>
+                                                                                    <option value="10">Nov</option>
+                                                                                    <option value="11">Dec</option>
+                                                                                </select>
+                                                                            </td>
+                                                                            <td colspan="2" align="center">
+                                                                                <select onChange="showCalenderBody(createCalender(this.value,
+                                                                        document.getElementById('selectMonth').selectedIndex, false));" id="selectYear">
+                                                                                </select>
+                                                                            </td>
+                                                                            <td align="center">
+                                                                                <a href="#" onClick="closeCalender();"><font color="#003333">close</font></a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                    <tbody id="calenderTableDays">
+                                                                        <tr style="font:message-box;border-style:solid; ">
+
+                                                                            <td>Sun|</td><td>Mon|</td><td>Tue|</td><td>Wed|</td><td>Thu|</td><td>Fri|</td><td>Sat</td>
+
+                                                                        </tr>
+                                                                    </tbody>
+                                                                    <tbody id="calender"></tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+
+                                                    <h:outputLabel value="#{eng['ElectionForm.StartTimePrompt']}"/>
+                                                    <h:inputText id="time1" value="#{electionBean.startTime}" style="width: 50Px">
+<!--                                                        <f:ajax event="valueChange" execute="@this" render="msg1"/>
+                                                        <f:validateRegex pattern="\d\d:\d\d"  />
+                                                        <h:message id="msg1" for="time1"/>-->
+                                                        <f:converter converterId="timeConverter"/>
+                                                    </h:inputText>
+                                                    <h:outputLabel value="#{eng['ElectionForm.EndTimePrompt']}" />
+                                                    <h:inputText id="time2" value="#{electionBean.endTime}" style="width: 50Px"  >
+<!--                                                        <f:ajax event="valueChange" execute="@this" render="msg2"/>
+                                                        <f:validateRegex pattern="\d\d:\d\d" />-->
+                                                        <f:converter converterId="timeConverter"/>
+<!--                                                        <h:message id="msg2" for="time2"/>-->
+                                                    </h:inputText>
+
+                                                    <h:outputLabel value="#{eng['ElectionForm.CandidateSelectionPrompt']}"/>
+
+                                                    <br/>
+                                                    <h:outputLabel value="#{eng['ElectionForm.SelectZonePrompt']}"/>
+                                                    <h:selectOneMenu value="#{electionBean.selectedZone}" id="zoneCombo">
+                                                        <f:selectItems var="item" value="#{electionBean.zoneList}" itemLabel="#{item.zoneName}" itemValue="#{item.zoneId}"/>
+                                                        <f:ajax event="valueChange" execute="@this" render="wardCombo" listener="#{electionBean.zoneSelectionChanged}"/>
+                                                    </h:selectOneMenu>
+
+
+                                                    <h:outputLabel value="#{eng['ElectionForm.SelectWardPrompt']}"/>
+                                                    <h:selectOneMenu value="#{electionBean.selectedWard}" id="wardCombo">
+                                                        <f:selectItems var="item" value="#{electionBean.wardList}" itemLabel="#{item.wardName}" itemValue="#{item.wardId}"/>
+                                                        <f:ajax event="valueChange" execute="@this" render="myDT" listener="#{electionBean.wardSelectionChanged}"/>
+                                                    </h:selectOneMenu>
+
+                                                    <br/>
+
+                                                    <h:dataTable headerClass="ColumnHeader" value="#{electionBean.candidateList}" var="row" id="myDT" >
+                                                        <h:column>
+                                                            <f:facet name="header">
+                                                                <center>Select</center>
+                                                            </f:facet>
+                                                            <center>
+                                                                <h:selectBooleanCheckbox value="#{electionBean.checked[row.candidateId]}">
+                                                                </h:selectBooleanCheckbox>
+                                                            </center>
+                                                        </h:column>
+
+                                                        <col:column backingBean="#{electionBean}" entity="#{row}" fieldName="firstName" label="Candidate Name" sort="false"/>
+
+                                                    </h:dataTable>
+                                                    <h:commandButton value="Add Candidates" id="btn" action="#{electionBean.selectCandidates}"/>
+                                                </h:panelGrid>
+
+                                                <h:commandButton action="#{electionBean.save}"  value="#{eng['ElectionForm.SaveButtonPrompt']}"/>
+                                                <input type="reset" value="Reset"/>
+                                            </h:form>
+                                        </div>
+                                    </div>
+                                    <!--  end content-table-inner ............................................END  -->
+                                </td>
+                                <td id="tbl-border-right"></td>
+                            </tr>
+                            <tr>
+                                <th class="sized bottomleft"></th>
+                                <td id="tbl-border-bottom">&nbsp;</td>
+                                <th class="sized bottomright"></th>
+                            </tr>
+                        </table>
+                        <div class="clear">&nbsp;</div>
+
+                    </div>
+                    <!--  end content -->
+                    <div class="clear">&nbsp;</div>
+                </div>
+            </ui:define>
+
+
+
+        </ui:composition>
+
+    </body>
+</html>

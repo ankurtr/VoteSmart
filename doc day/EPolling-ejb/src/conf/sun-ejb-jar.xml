@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!--<!DOCTYPE sun-ejb-jar PUBLIC "-//Sun Microsystems, Inc.//DTD GlassFish Application Server 3.0 EJB 3.1//EN" "http://www.sun.com/software/appserver/dtds/sun-ejb-jar_3_1-0.dtd">-->
+<!DOCTYPE sun-ejb-jar PUBLIC '-//Sun Microsystems, Inc.//DTD Application Server 9.0 Servlet 2.5//EN' 'http://www.sun.com/software/appserver/dtds/sun-web-app_2_5-0.dtd'>
+<sun-ejb-jar>
+    <security-role-mapping>
+        <role-name>admin</role-name>
+        <group-name>admin</group-name>
+    </security-role-mapping>
+    <security-role-mapping>
+        <role-name>citizen</role-name>
+        <group-name>citizen</group-name>
+    </security-role-mapping>
+    <enterprise-beans>
+        <ejb>
+            <ejb-name>CoreBean</ejb-name>
+            <ejb-name>ElectionSchedulerBean</ejb-name>
+            <ejb-name>ResultBean</ejb-name>
+            <ejb-name>SearcherBean</ejb-name>
+            <ejb-name>SecurityBean</ejb-name>
+            <ejb-name>VoteBean</ejb-name>
+            <webservice-endpoint>
+                <port-component-name>EPollWebServicePort</port-component-name>
+                <transport-guarantee>CONFIDENTIAL</transport-guarantee>
+            </webservice-endpoint>
+            <login-config>
+                <auth-method>FORM</auth-method>
+                <realm>EPolling</realm>
+            </login-config>
+        </ejb>
+    </enterprise-beans>
+</sun-ejb-jar>

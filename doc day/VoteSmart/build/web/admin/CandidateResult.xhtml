@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="./AdminMasterPage.xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:field="http://www.trapasiya.com/jsf"
+                xmlns:p="http://primefaces.prime.com.tr/ui"
+                xmlns:t="http://myfaces.apache.org/tomahawk"
+                xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+    <ui:define name="content">
+        <h2>Party Result</h2><br/>
+        <h:form>
+            <h:selectOneMenu value="#{candidateResultBean.zoneId}"  style="width: 70%">
+                <f:selectItems value="#{candidateResultBean.zoneList}" var="row" itemLabel="#{row.zoneName}" itemValue="#{row.zoneId}" />
+                <f:ajax event="valueChange" render="cmbWard" execute="@this" listener="#{candidateResultBean.change}" />
+            </h:selectOneMenu>
+            <h:selectOneMenu id="cmbWard" value="#{candidateResultBean.wardId}"  style="width: 70%" >
+                <f:selectItems value="#{candidateResultBean.wardList}" var="row" itemLabel="#{row.wardName}" itemValue="#{row.wardId}" />
+            </h:selectOneMenu>
+
+            
+
+            <h:commandButton value="Show" action="#{candidateResultBean.createCartesianModel}" />
+            
+
+            <h3>Bar Chart</h3>
+            <p:barChart   model="#{candidateResultBean.cartesianModel}" width="70%"  />
+            <br/>
+
+            <h3>Column Chart</h3>
+            <p:columnChart   model="#{candidateResultBean.cartesianModel}" width="70%"  />
+            <br/>
+
+            <h3>Line Chart</h3>
+            <p:lineChart   model="#{candidateResultBean.cartesianModel}" width="70%"  />
+            <br/>
+        </h:form>
+    </ui:define>
+</ui:composition>

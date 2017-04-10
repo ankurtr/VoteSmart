@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="./CitizenTemplate.xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core">
+
+    <ui:define name="top">
+        <table width="100%">
+            <tr>
+                <td align="left">
+                    #{eng['CastVoteForm.CastVotePrompt']}
+                </td>
+                <td align="right">
+                    <h:form prependId="false">
+                        <div id="lnkLogOut">
+                            <h:commandLink action="#{loginBean.logout}" value="#{eng['CastVoteForm.LogOutPrompt']}">
+                            </h:commandLink>
+                        </div>                        
+                    </h:form>     
+                </td>
+            </tr>
+        </table>        
+    </ui:define>
+
+    <ui:define name="content"  >
+        <div style="background-color: #ece3a5;">
+            <div class="gallery wrapper" align="center" >
+                <h:form id="form1" prependId="false">
+                    <ui:repeat value="#{voteBean.partyList}" var="party">
+                        <ul class="gallery_web_design" style="list-style-type: none">
+                            <li >
+                                <span style="background-color: #008000;text-decoration:none;
+                                      color: #444444;
+                                      width: 160px;
+                                      margin-bottom: 0;
+                                      display: block;
+                                      height: 17px; /* CHANGE THIS VALUE ACCORDING TO IMAGE HEIGHT */
+                                      margin-right: 0px;
+                                      font-weight: bold;
+                                      color: white;
+                                      padding-top: 10px;text-align: center ">#{party.partyName}
+                                    <h:selectBooleanCheckbox value="#{voteBean.partyChecked[party.partyId]}"/>
+                                </span>
+                                <ui:repeat value="#{voteBean.fetchCandidateOfParty(party.partyId)}" var="candidate">
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <h:graphicImage url="../images/img/#{candidate.image}" height="100" width="160"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center">
+                                                #{candidate.firstName} #{candidate.lastName}
+                                                <h:selectBooleanCheckbox value="#{voteBean.checked[candidate.candidateId]}" >
+                                                </h:selectBooleanCheckbox>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <br/>
+                                </ui:repeat>
+                            </li>
+                        </ul>
+                    </ui:repeat>
+                    <h:message id="msg" for="form1" style="color: red"/>
+                        <h:commandButton value="#{eng['CastVoteForm.CastVoteButtonPrompt']}" action="#{voteBean.castVote}"/>
+                </h:form>
+            </div>            
+            <div align="center">
+                
+            </div>
+            <div style="height: 20Px;">                
+            </div>
+        </div>
+    </ui:define>
+</ui:composition>

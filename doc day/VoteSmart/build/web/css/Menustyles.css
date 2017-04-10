@@ -1,0 +1,88 @@
+
+
+
+
+
+div.module { 
+	background: url(../images/module-body-left-bg.gif) no-repeat scroll bottom left;
+	float: left; 
+	width: 160px; 
+	margin-bottom: 20px; 
+	margin-left:20px;
+	}
+
+div.module div.module-body { 
+	background: url(../images/module-body-right-bg.gif) no-repeat scroll bottom right;
+	padding: 20px 10px 20px 10px; float: left; width: 94%;
+
+	}
+
+
+
+.grid_5 div.module div.module-body  { padding: 10px 20px 10px 10px; float: left; width: 130px; }
+
+
+
+
+div.module h2 { 
+    /* Sliding right image */
+    background: url(../images/module-header-left-bg.gif) no-repeat scroll top left;
+	display: block;
+	float: left;
+	height: 32px; /* CHANGE THIS VALUE ACCORDING TO IMAGE HEIGHT */
+	margin-right: 0px;
+	padding-right: 0px; /* CHENGE THIS VALUE ACCORDING TO RIGHT IMAGE WIDTH */
+	/* FONT PROPERTIES */
+	text-decoration:none;
+	color: #444444;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:bold;
+	width: 160px;
+	margin-bottom: 0;
+	letter-spacing: normal
+	}
+
+div.module h2 span { 
+	/* Background left image */ 
+	background: url(../images/module-header-right-bg.gif) no-repeat top right;
+	display: block;
+	line-height: 20px; /* CHANGE THIS VALUE ACCORDING TO BUTTONG HEIGHT */
+	padding: 7px 0 5px 10px;
+
+	}
+
+
+
+
+
+/* -------------------- Dashboard -------------------- */
+
+a.dashboard-module, 
+a.dashboard-module:visited { 
+	width: 142px; 
+	height: 142px; 
+	display: block; 
+	float: left; 
+	background: url(../images/dashboard-module.gif) top left no-repeat;
+	margin: 0 8px 8px 0;  
+	text-align: center; 
+	color: #444444; 
+	}
+	
+a.dashboard-module:hover, 
+a.dashboard-module:active { 
+	background-position: bottom left;
+        cursor:pointer;
+	text-decoration: none; 
+	color:#0063be; 
+	}
+
+a.dashboard-module img { 
+	margin-top: 20px; 
+	}
+	
+a.dashboard-module span { 
+	margin-top: 10px; 
+	display: block; 
+	}

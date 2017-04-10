@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="./AdminMasterPage.xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:col="http://www.trapasiya.com/jsf"
+                >
+
+    <ui:define  name="content">
+        <div id="content-outer">
+            <!-- start content -->
+            <div id="content">
+                <!--  start page-heading -->
+                <div id="page-heading">
+                    <h1> Security Management </h1>
+                </div>
+                <!-- end page-heading -->
+                <table border="0" width="100%" cellpadding="0" cellspacing="0" id="content-table">
+                    <tr>
+                        <th rowspan="3" class="sized"><img src="../images/shared/side_shadowleft.jpg" width="20" height="300" alt="" /></th>
+                        <th class="topleft"></th>
+                        <td id="tbl-border-top">&nbsp;</td>
+                        <th class="topright"></th>
+                        <th rowspan="3" class="sized"><img src="../images/shared/side_shadowright.jpg" width="20" height="300" alt="" /></th>
+                    </tr>
+                    <tr>
+                        <td id="tbl-border-left"></td>
+                        <td>
+                            <!--  start content-table-inner ...................................................................... START -->
+                            <div id="content-table-inner">
+
+                                <!--  start table-content  -->
+                                <div id="table-content">
+                                    <h:form  styleClass="form"  >
+                                      
+                                        <div>
+                                            <div style="height:40Px;">
+                                                <table width="100%">
+                                                    <tr>
+                                                        <td width="3%">
+                                                            <h:commandLink  action="#{securityBean.add}" >
+                                                                <img src="../images/icons/add.png" height="20px" width="20px" ></img>
+                                                            </h:commandLink>
+                                                        </td>
+
+                                                        <td width="3%">
+                                                            Add
+                                                        </td>
+                                                       
+                                                        <td align="right" width="70%">                                                            
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <h:dataTable  headerClass="ColumnHeader" id="myDT" captionStyle="background-color:#6d84b4;color: white;" styleClass="table"  rowClasses="odd,even"  value="#{securityBean.securityList}" rows="#{securityBean.pageRows}" var="row" width="100%" cellpadding="2" cellspacing="2" border="0" >
+                                               
+
+                                                <col:column label="SecurityName" sort="false" entity="${row}" fieldName="securityName" backingBean="#{securityBean}" />
+                                                <col:column label="Description" sort="false" entity="${row}" fieldName="description" backingBean="#{securityBean}"/>
+<!--                                                <col:column label="IsActive" entity="{row}" fieldName="isActive" backingBean="{securityBean}"/>-->
+
+                                                <h:column>
+                                                    <f:facet name="header">
+                                                        Active
+                                                    </f:facet>
+                                                    <a href="SecurityList.jsf?action=activate&amp;id=#{row.securityId}">
+                                                        Make #{!securityBean.isActive}
+                                                    </a>
+                                                </h:column>
+
+                                                <h:column>
+                                                    <f:facet name="header">
+                                                        Delete
+                                                    </f:facet>
+                                                    <a href="SecurityList.jsf?action=deactivate&amp;id=#{row.securityId}">
+                                                        <img src="../images/icons/delete_a.png"/>
+                                                    </a>
+                                                </h:column>
+
+                                            </h:dataTable>
+                                        </div>
+
+                                        <h:panelGroup id="gridPageInfo">
+                                            <div style="float: left">
+                                                <span style="color:#4d9bbe;font-weight:  bold;margin-left: 10px;">
+                                                    page <h:outputText value="#{securityBean.currentPage}"/> of <h:outputText value="#{securityBean.totalPages}" />
+                                                </span>
+                                            </div>
+                                        </h:panelGroup>
+                                        <div style="float: right">
+                                            <h:commandButton id="btnFirst" value="First"  styleClass="navButton"  image="../images/table/paging_far_left.gif">
+                                                <f:ajax execute="@all" event="action" render="myDT hdnPage hdnPageRows gridPageInfo" listener="#{securityBean.first}" />
+                                            </h:commandButton>
+                                            <h:commandButton id="btnPrevious" value="Previous" styleClass="navButton" image="../images/table/paging_left.gif">
+                                                <f:ajax execute="@all" event="action" render="myDT hdnPage hdnPageRows gridPageInfo" listener="#{securityBean.previous}"/>
+                                            </h:commandButton>
+                                            <h:commandButton id="btnNext" value="Next" styleClass="navButton" image="../images/table/paging_right.gif">
+                                                <f:ajax execute="@all" event="action" render="myDT hdnPage hdnPageRows gridPageInfo" listener="#{securityBean.next}"/>
+                                            </h:commandButton>
+                                            <h:commandButton id="btnLast" value="Last" styleClass="navButton" image="../images/table/paging_far_right.gif">
+                                                <f:ajax execute="@all" event="action" render="myDT hdnPage hdnPageRows gridPageInfo" listener="#{securityBean.last}"/>
+                                            </h:commandButton>
+
+                                            <h:inputHidden id="hdnPage" value="#{securityBean.currentPage}" />
+                                            <h:inputHidden id="hdnPageRows" value="#{securityBean.pageRows}" />
+                                            <h:inputHidden id="hdnTotalPages" value="#{securityBean.totalPages}" />
+                                        </div>
+
+                                    </h:form>
+
+                                </div>
+                            </div>
+                            <!--  end content-table-inner ............................................END  -->
+                        </td>
+                        <td id="tbl-border-right"></td>
+                    </tr>
+                    <tr>
+                        <th class="sized bottomleft"></th>
+                        <td id="tbl-border-bottom">&nbsp;</td>
+                        <th class="sized bottomright"></th>
+                    </tr>
+                </table>
+                <div class="clear">&nbsp;</div>
+
+            </div>
+            <!--  end content -->
+            <div class="clear">&nbsp;</div>
+        </div>
+    </ui:define>
+</ui:composition>

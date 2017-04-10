@@ -1,0 +1,2026 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+ <definitions 
+ xmlns="http://schemas.xmlsoap.org/wsdl/" 
+ xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+ xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="EPollWebServiceService" targetNamespace="http://service/" xmlns:tns="http://service/" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:fi="http://java.sun.com/xml/ns/wsit/2006/09/policy/fastinfoset/service" xmlns:tcp="http://java.sun.com/xml/ns/wsit/2006/09/policy/soaptcp/service" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702" xmlns:sc="http://schemas.sun.com/2006/03/wss/server" xmlns:wspp="http://java.sun.com/xml/ns/wsit/policy"
+ >
+    <message name="addCandidate"/>
+    <message name="addCandidateResponse"/>
+    <message name="checkForExistingCandidate"/>
+    <message name="checkForExistingCandidateResponse"/>
+    <message name="updateCandidate"/>
+    <message name="updateCandidateResponse"/>
+    <message name="getCandidate"/>
+    <message name="getCandidateResponse"/>
+    <message name="getAllCandidates"/>
+    <message name="getAllCandidatesResponse"/>
+    <message name="deleteCandidate"/>
+    <message name="deleteCandidateResponse"/>
+    <message name="addCitizen"/>
+    <message name="addCitizenResponse"/>
+    <message name="updateCitizen"/>
+    <message name="updateCitizenResponse"/>
+    <message name="getCitizenMaster"/>
+    <message name="getCitizenMasterResponse"/>
+    <message name="getAllCitizens"/>
+    <message name="getAllCitizensResponse"/>
+    <message name="getLoginMaster"/>
+    <message name="getLoginMasterResponse"/>
+    <message name="deleteCitizen"/>
+    <message name="deleteCitizenResponse"/>
+    <message name="addZone"/>
+    <message name="addZoneResponse"/>
+    <message name="updateZone"/>
+    <message name="updateZoneResponse"/>
+    <message name="deleteZone"/>
+    <message name="deleteZoneResponse"/>
+    <message name="getZone"/>
+    <message name="getZoneResponse"/>
+    <message name="getAllZones"/>
+    <message name="getAllZonesResponse"/>
+    <message name="getWardsOfZone"/>
+    <message name="getWardsOfZoneResponse"/>
+    <message name="getCitizensOfZone"/>
+    <message name="getCitizensOfZoneResponse"/>
+    <message name="getCandidatesOfZone"/>
+    <message name="getCandidatesOfZoneResponse"/>
+    <message name="addWard"/>
+    <message name="addWardResponse"/>
+    <message name="updateWard"/>
+    <message name="updateWardResponse"/>
+    <message name="deleteWard"/>
+    <message name="deleteWardResponse"/>
+    <message name="getWard"/>
+    <message name="getWardResponse"/>
+    <message name="getAllWards"/>
+    <message name="getAllWardsResponse"/>
+    <message name="getSubWardsOfWard"/>
+    <message name="getSubWardsOfWardResponse"/>
+    <message name="getCitizensOfWard"/>
+    <message name="getCitizensOfWardResponse"/>
+    <message name="getCandidatesOfWard"/>
+    <message name="getCandidatesOfWardResponse"/>
+    <message name="addSubWard"/>
+    <message name="addSubWardResponse"/>
+    <message name="updateSubWard"/>
+    <message name="updateSubWardResponse"/>
+    <message name="deleteSubWard"/>
+    <message name="deleteSubWardResponse"/>
+    <message name="getSubWard"/>
+    <message name="getSubWardResponse"/>
+    <message name="getAllSubwards"/>
+    <message name="getAllSubwardsResponse"/>
+    <message name="getAreaOfSubward"/>
+    <message name="getAreaOfSubwardResponse"/>
+    <message name="getCitizensOfSubward"/>
+    <message name="getCitizensOfSubwardResponse"/>
+    <message name="getCandidatesOfSubward"/>
+    <message name="getCandidatesOfSubwardResponse"/>
+    <message name="addArea"/>
+    <message name="addAreaResponse"/>
+    <message name="updateArea"/>
+    <message name="updateAreaResponse"/>
+    <message name="deleteArea"/>
+    <message name="deleteAreaResponse"/>
+    <message name="getArea"/>
+    <message name="getAreaResponse"/>
+    <message name="getAllAreas"/>
+    <message name="getAllAreasResponse"/>
+    <message name="getCitizensOfArea"/>
+    <message name="getCitizensOfAreaResponse"/>
+    <message name="getCandidatesOfArea"/>
+    <message name="getCandidatesOfAreaResponse"/>
+    <message name="addParty"/>
+    <message name="addPartyResponse"/>
+    <message name="checkForExistingParty"/>
+    <message name="checkForExistingPartyResponse"/>
+    <message name="getParty"/>
+    <message name="getPartyResponse"/>
+    <message name="getCandidatesOfParty"/>
+    <message name="getCandidatesOfPartyResponse"/>
+    <message name="updateParty"/>
+    <message name="updatePartyResponse"/>
+    <message name="deleteParty"/>
+    <message name="deletePartyResponse"/>
+    <message name="getAllParties"/>
+    <message name="getAllPartiesResponse"/>
+    <message name="addCity"/>
+    <message name="addCityResponse"/>
+    <message name="getAllCities"/>
+    <message name="getAllCitiesResponse"/>
+    <message name="getCity"/>
+    <message name="getCityResponse"/>
+    <message name="getZonesOfCity"/>
+    <message name="getZonesOfCityResponse"/>
+    <message name="addElection"/>
+    <message name="addElectionResponse"/>
+    <message name="scheduleElection"/>
+    <message name="scheduleElectionResponse"/>
+    <message name="cancelElection"/>
+    <message name="cancelElectionResponse"/>
+    <message name="updateElection"/>
+    <message name="updateElectionResponse"/>
+    <message name="getAllElections"/>
+    <message name="getAllElectionsResponse"/>
+    <message name="getScheduledElections"/>
+    <message name="getScheduledElectionsResponse"/>
+    <message name="getElection"/>
+    <message name="getElectionResponse"/>
+    <message name="getAllElectionTypes"/>
+    <message name="getAllElectionTypesResponse"/>
+    <message name="addSecurity"/>
+    <message name="addSecurityResponse"/>
+    <message name="activateSecurity"/>
+    <message name="activateSecurityResponse"/>
+    <message name="deactivateSecurity"/>
+    <message name="deactivateSecurityResponse"/>
+    <message name="addGroup"/>
+    <message name="addGroupResponse"/>
+    <message name="castVote"/>
+    <message name="castVoteResponse"/>
+    <message name="isValidToVote"/>
+    <message name="isValidToVoteResponse"/>
+    <message name="getActiveCandidatesWithPartyId"/>
+    <message name="getActiveCandidatesWithPartyIdResponse"/>
+    <message name="getVoteCountForCandidate"/>
+    <message name="getVoteCountForCandidateResponse"/>
+    <message name="getVoteCountsForElection"/>
+    <message name="getVoteCountsForElectionResponse"/>
+    <message name="getVoteCountForZone"/>
+    <message name="getVoteCountForZoneResponse"/>
+    <message name="getVoteCountForWard"/>
+    <message name="getVoteCountForWardResponse"/>
+    <message name="getVoteCountForSubward"/>
+    <message name="getVoteCountForSubwardResponse"/>
+    <message name="getVoteCountForArea"/>
+    <message name="getVoteCountForAreaResponse"/>
+    <message name="getVoteCountForParty"/>
+    <message name="getVoteCountForPartyResponse"/>
+    <message name="getCandidateWiseVoteCountsForElection"/>
+    <message name="getCandidateWiseVoteCountsForElectionResponse"/>
+    <message name="getCandidateWiseVoteCountsForWard"/>
+    <message name="getCandidateWiseVoteCountsForWardResponse"/>
+    <message name="getWardWiseVoteCountsForZone"/>
+    <message name="getWardWiseVoteCountsForZoneResponse"/>
+    <message name="searchWardByName"/>
+    <message name="searchWardByNameResponse"/>
+    <message name="searchByZoneName"/>
+    <message name="searchByZoneNameResponse"/>
+    <message name="searchBySubWardName"/>
+    <message name="searchBySubWardNameResponse"/>
+    <message name="searchByAreaName"/>
+    <message name="searchByAreaNameResponse"/>
+    <message name="searchCandidateByFirstName"/>
+    <message name="searchCandidateByFirstNameResponse"/>
+    <message name="searchCandidateByLastName"/>
+    <message name="searchCandidateByLastNameResponse"/>
+    <message name="searchCandidateByDateOfBirthRange"/>
+    <message name="searchCandidateByDateOfBirthRangeResponse"/>
+    <message name="searchCandidateByActiveStatus"/>
+    <message name="searchCandidateByActiveStatusResponse"/>
+    <message name="searchCitizenById"/>
+    <message name="searchCitizenByIdResponse"/>
+    <message name="searchElectionByName"/>
+    <message name="searchElectionByNameResponse"/>
+    <message name="searchElectionByFinalDate"/>
+    <message name="searchElectionByFinalDateResponse"/>
+    <message name="searchElectionByDateRange"/>
+    <message name="searchElectionByDateRangeResponse"/>
+    <message name="searchElectionByElectionType"/>
+    <message name="searchElectionByElectionTypeResponse"/>
+    <message name="searchCitizenByUsername"/>
+    <message name="searchCitizenByUsernameResponse"/>
+    <message name="searchPartyByPartyName"/>
+    <message name="searchPartyByPartyNameResponse"/>
+    <message name="sayHello"/>
+    <message name="sayHelloResponse"/>
+    <message name="getPastElections"/>
+    <message name="getPastElectionsResponse"/>
+    <message name="getFutureElections"/>
+    <message name="getFutureElectionsResponse"/>
+    <message name="getActiveCandidatesOfParty"/>
+    <message name="getActiveCandidatesOfPartyResponse"/>
+    <message name="getActiveSecurity"/>
+    <message name="getActiveSecurityResponse"/>
+    <message name="getLoginMasterFromUsername"/>
+    <message name="getLoginMasterFromUsernameResponse"/>
+    <message name="getAllActiveCandidates"/>
+    <message name="getAllActiveCandidatesResponse"/>
+    <message name="getAllInActiveCandidates"/>
+    <message name="getAllInActiveCandidatesResponse"/>
+    <message name="searchCitizenByName"/>
+    <message name="searchCitizenByNameResponse"/>
+    <message name="getAllSecurity"/>
+    <message name="getAllSecurityResponse"/>
+    <message name="getSecurity"/>
+    <message name="getSecurityResponse"/>
+    <portType name="EPollWebService">
+        <operation name="addCandidate">
+            <input message="tns:addCandidate"/>
+            <output message="tns:addCandidateResponse"/>
+        </operation>
+        <operation name="checkForExistingCandidate">
+            <input message="tns:checkForExistingCandidate"/>
+            <output message="tns:checkForExistingCandidateResponse"/>
+        </operation>
+        <operation name="updateCandidate">
+            <input message="tns:updateCandidate"/>
+            <output message="tns:updateCandidateResponse"/>
+        </operation>
+        <operation name="getCandidate">
+            <input message="tns:getCandidate"/>
+            <output message="tns:getCandidateResponse"/>
+        </operation>
+        <operation name="getAllCandidates">
+            <input message="tns:getAllCandidates"/>
+            <output message="tns:getAllCandidatesResponse"/>
+        </operation>
+        <operation name="deleteCandidate">
+            <input message="tns:deleteCandidate"/>
+            <output message="tns:deleteCandidateResponse"/>
+        </operation>
+        <operation name="addCitizen">
+            <input message="tns:addCitizen"/>
+            <output message="tns:addCitizenResponse"/>
+        </operation>
+        <operation name="updateCitizen">
+            <input message="tns:updateCitizen"/>
+            <output message="tns:updateCitizenResponse"/>
+        </operation>
+        <operation name="getCitizenMaster">
+            <input message="tns:getCitizenMaster"/>
+            <output message="tns:getCitizenMasterResponse"/>
+        </operation>
+        <operation name="getAllCitizens">
+            <input message="tns:getAllCitizens"/>
+            <output message="tns:getAllCitizensResponse"/>
+        </operation>
+        <operation name="getLoginMaster">
+            <input message="tns:getLoginMaster"/>
+            <output message="tns:getLoginMasterResponse"/>
+        </operation>
+        <operation name="deleteCitizen">
+            <input message="tns:deleteCitizen"/>
+            <output message="tns:deleteCitizenResponse"/>
+        </operation>
+        <operation name="addZone">
+            <input message="tns:addZone"/>
+            <output message="tns:addZoneResponse"/>
+        </operation>
+        <operation name="updateZone">
+            <input message="tns:updateZone"/>
+            <output message="tns:updateZoneResponse"/>
+        </operation>
+        <operation name="deleteZone">
+            <input message="tns:deleteZone"/>
+            <output message="tns:deleteZoneResponse"/>
+        </operation>
+        <operation name="getZone">
+            <input message="tns:getZone"/>
+            <output message="tns:getZoneResponse"/>
+        </operation>
+        <operation name="getAllZones">
+            <input message="tns:getAllZones"/>
+            <output message="tns:getAllZonesResponse"/>
+        </operation>
+        <operation name="getWardsOfZone">
+            <input message="tns:getWardsOfZone"/>
+            <output message="tns:getWardsOfZoneResponse"/>
+        </operation>
+        <operation name="getCitizensOfZone">
+            <input message="tns:getCitizensOfZone"/>
+            <output message="tns:getCitizensOfZoneResponse"/>
+        </operation>
+        <operation name="getCandidatesOfZone">
+            <input message="tns:getCandidatesOfZone"/>
+            <output message="tns:getCandidatesOfZoneResponse"/>
+        </operation>
+        <operation name="addWard">
+            <input message="tns:addWard"/>
+            <output message="tns:addWardResponse"/>
+        </operation>
+        <operation name="updateWard">
+            <input message="tns:updateWard"/>
+            <output message="tns:updateWardResponse"/>
+        </operation>
+        <operation name="deleteWard">
+            <input message="tns:deleteWard"/>
+            <output message="tns:deleteWardResponse"/>
+        </operation>
+        <operation name="getWard">
+            <input message="tns:getWard"/>
+            <output message="tns:getWardResponse"/>
+        </operation>
+        <operation name="getAllWards">
+            <input message="tns:getAllWards"/>
+            <output message="tns:getAllWardsResponse"/>
+        </operation>
+        <operation name="getSubWardsOfWard">
+            <input message="tns:getSubWardsOfWard"/>
+            <output message="tns:getSubWardsOfWardResponse"/>
+        </operation>
+        <operation name="getCitizensOfWard">
+            <input message="tns:getCitizensOfWard"/>
+            <output message="tns:getCitizensOfWardResponse"/>
+        </operation>
+        <operation name="getCandidatesOfWard">
+            <input message="tns:getCandidatesOfWard"/>
+            <output message="tns:getCandidatesOfWardResponse"/>
+        </operation>
+        <operation name="addSubWard">
+            <input message="tns:addSubWard"/>
+            <output message="tns:addSubWardResponse"/>
+        </operation>
+        <operation name="updateSubWard">
+            <input message="tns:updateSubWard"/>
+            <output message="tns:updateSubWardResponse"/>
+        </operation>
+        <operation name="deleteSubWard">
+            <input message="tns:deleteSubWard"/>
+            <output message="tns:deleteSubWardResponse"/>
+        </operation>
+        <operation name="getSubWard">
+            <input message="tns:getSubWard"/>
+            <output message="tns:getSubWardResponse"/>
+        </operation>
+        <operation name="getAllSubwards">
+            <input message="tns:getAllSubwards"/>
+            <output message="tns:getAllSubwardsResponse"/>
+        </operation>
+        <operation name="getAreaOfSubward">
+            <input message="tns:getAreaOfSubward"/>
+            <output message="tns:getAreaOfSubwardResponse"/>
+        </operation>
+        <operation name="getCitizensOfSubward">
+            <input message="tns:getCitizensOfSubward"/>
+            <output message="tns:getCitizensOfSubwardResponse"/>
+        </operation>
+        <operation name="getCandidatesOfSubward">
+            <input message="tns:getCandidatesOfSubward"/>
+            <output message="tns:getCandidatesOfSubwardResponse"/>
+        </operation>
+        <operation name="addArea">
+            <input message="tns:addArea"/>
+            <output message="tns:addAreaResponse"/>
+        </operation>
+        <operation name="updateArea">
+            <input message="tns:updateArea"/>
+            <output message="tns:updateAreaResponse"/>
+        </operation>
+        <operation name="deleteArea">
+            <input message="tns:deleteArea"/>
+            <output message="tns:deleteAreaResponse"/>
+        </operation>
+        <operation name="getArea">
+            <input message="tns:getArea"/>
+            <output message="tns:getAreaResponse"/>
+        </operation>
+        <operation name="getAllAreas">
+            <input message="tns:getAllAreas"/>
+            <output message="tns:getAllAreasResponse"/>
+        </operation>
+        <operation name="getCitizensOfArea">
+            <input message="tns:getCitizensOfArea"/>
+            <output message="tns:getCitizensOfAreaResponse"/>
+        </operation>
+        <operation name="getCandidatesOfArea">
+            <input message="tns:getCandidatesOfArea"/>
+            <output message="tns:getCandidatesOfAreaResponse"/>
+        </operation>
+        <operation name="addParty">
+            <input message="tns:addParty"/>
+            <output message="tns:addPartyResponse"/>
+        </operation>
+        <operation name="checkForExistingParty">
+            <input message="tns:checkForExistingParty"/>
+            <output message="tns:checkForExistingPartyResponse"/>
+        </operation>
+        <operation name="getParty">
+            <input message="tns:getParty"/>
+            <output message="tns:getPartyResponse"/>
+        </operation>
+        <operation name="getCandidatesOfParty">
+            <input message="tns:getCandidatesOfParty"/>
+            <output message="tns:getCandidatesOfPartyResponse"/>
+        </operation>
+        <operation name="updateParty">
+            <input message="tns:updateParty"/>
+            <output message="tns:updatePartyResponse"/>
+        </operation>
+        <operation name="deleteParty">
+            <input message="tns:deleteParty"/>
+            <output message="tns:deletePartyResponse"/>
+        </operation>
+        <operation name="getAllParties">
+            <input message="tns:getAllParties"/>
+            <output message="tns:getAllPartiesResponse"/>
+        </operation>
+        <operation name="addCity">
+            <input message="tns:addCity"/>
+            <output message="tns:addCityResponse"/>
+        </operation>
+        <operation name="getAllCities">
+            <input message="tns:getAllCities"/>
+            <output message="tns:getAllCitiesResponse"/>
+        </operation>
+        <operation name="getCity">
+            <input message="tns:getCity"/>
+            <output message="tns:getCityResponse"/>
+        </operation>
+        <operation name="getZonesOfCity">
+            <input message="tns:getZonesOfCity"/>
+            <output message="tns:getZonesOfCityResponse"/>
+        </operation>
+        <operation name="addElection">
+            <input message="tns:addElection"/>
+            <output message="tns:addElectionResponse"/>
+        </operation>
+        <operation name="scheduleElection">
+            <input message="tns:scheduleElection"/>
+            <output message="tns:scheduleElectionResponse"/>
+        </operation>
+        <operation name="cancelElection">
+            <input message="tns:cancelElection"/>
+            <output message="tns:cancelElectionResponse"/>
+        </operation>
+        <operation name="updateElection">
+            <input message="tns:updateElection"/>
+            <output message="tns:updateElectionResponse"/>
+        </operation>
+        <operation name="getAllElections">
+            <input message="tns:getAllElections"/>
+            <output message="tns:getAllElectionsResponse"/>
+        </operation>
+        <operation name="getScheduledElections">
+            <input message="tns:getScheduledElections"/>
+            <output message="tns:getScheduledElectionsResponse"/>
+        </operation>
+        <operation name="getElection">
+            <input message="tns:getElection"/>
+            <output message="tns:getElectionResponse"/>
+        </operation>
+        <operation name="getAllElectionTypes">
+            <input message="tns:getAllElectionTypes"/>
+            <output message="tns:getAllElectionTypesResponse"/>
+        </operation>
+        <operation name="addSecurity">
+            <input message="tns:addSecurity"/>
+            <output message="tns:addSecurityResponse"/>
+        </operation>
+        <operation name="activateSecurity">
+            <input message="tns:activateSecurity"/>
+            <output message="tns:activateSecurityResponse"/>
+        </operation>
+        <operation name="deactivateSecurity">
+            <input message="tns:deactivateSecurity"/>
+            <output message="tns:deactivateSecurityResponse"/>
+        </operation>
+        <operation name="addGroup">
+            <input message="tns:addGroup"/>
+            <output message="tns:addGroupResponse"/>
+        </operation>
+        <operation name="castVote">
+            <input message="tns:castVote"/>
+            <output message="tns:castVoteResponse"/>
+        </operation>
+        <operation name="isValidToVote">
+            <input message="tns:isValidToVote"/>
+            <output message="tns:isValidToVoteResponse"/>
+        </operation>
+        <operation name="getActiveCandidatesWithPartyId">
+            <input message="tns:getActiveCandidatesWithPartyId"/>
+            <output message="tns:getActiveCandidatesWithPartyIdResponse"/>
+        </operation>
+        <operation name="getVoteCountForCandidate">
+            <input message="tns:getVoteCountForCandidate"/>
+            <output message="tns:getVoteCountForCandidateResponse"/>
+        </operation>
+        <operation name="getVoteCountsForElection">
+            <input message="tns:getVoteCountsForElection"/>
+            <output message="tns:getVoteCountsForElectionResponse"/>
+        </operation>
+        <operation name="getVoteCountForZone">
+            <input message="tns:getVoteCountForZone"/>
+            <output message="tns:getVoteCountForZoneResponse"/>
+        </operation>
+        <operation name="getVoteCountForWard">
+            <input message="tns:getVoteCountForWard"/>
+            <output message="tns:getVoteCountForWardResponse"/>
+        </operation>
+        <operation name="getVoteCountForSubward">
+            <input message="tns:getVoteCountForSubward"/>
+            <output message="tns:getVoteCountForSubwardResponse"/>
+        </operation>
+        <operation name="getVoteCountForArea">
+            <input message="tns:getVoteCountForArea"/>
+            <output message="tns:getVoteCountForAreaResponse"/>
+        </operation>
+        <operation name="getVoteCountForParty">
+            <input message="tns:getVoteCountForParty"/>
+            <output message="tns:getVoteCountForPartyResponse"/>
+        </operation>
+        <operation name="getCandidateWiseVoteCountsForElection">
+            <input message="tns:getCandidateWiseVoteCountsForElection"/>
+            <output message="tns:getCandidateWiseVoteCountsForElectionResponse"/>
+        </operation>
+        <operation name="getCandidateWiseVoteCountsForWard">
+            <input message="tns:getCandidateWiseVoteCountsForWard"/>
+            <output message="tns:getCandidateWiseVoteCountsForWardResponse"/>
+        </operation>
+        <operation name="getWardWiseVoteCountsForZone">
+            <input message="tns:getWardWiseVoteCountsForZone"/>
+            <output message="tns:getWardWiseVoteCountsForZoneResponse"/>
+        </operation>
+        <operation name="searchWardByName">
+            <input message="tns:searchWardByName"/>
+            <output message="tns:searchWardByNameResponse"/>
+        </operation>
+        <operation name="searchByZoneName">
+            <input message="tns:searchByZoneName"/>
+            <output message="tns:searchByZoneNameResponse"/>
+        </operation>
+        <operation name="searchBySubWardName">
+            <input message="tns:searchBySubWardName"/>
+            <output message="tns:searchBySubWardNameResponse"/>
+        </operation>
+        <operation name="searchByAreaName">
+            <input message="tns:searchByAreaName"/>
+            <output message="tns:searchByAreaNameResponse"/>
+        </operation>
+        <operation name="searchCandidateByFirstName">
+            <input message="tns:searchCandidateByFirstName"/>
+            <output message="tns:searchCandidateByFirstNameResponse"/>
+        </operation>
+        <operation name="searchCandidateByLastName">
+            <input message="tns:searchCandidateByLastName"/>
+            <output message="tns:searchCandidateByLastNameResponse"/>
+        </operation>
+        <operation name="searchCandidateByDateOfBirthRange">
+            <input message="tns:searchCandidateByDateOfBirthRange"/>
+            <output message="tns:searchCandidateByDateOfBirthRangeResponse"/>
+        </operation>
+        <operation name="searchCandidateByActiveStatus">
+            <input message="tns:searchCandidateByActiveStatus"/>
+            <output message="tns:searchCandidateByActiveStatusResponse"/>
+        </operation>
+        <operation name="searchCitizenById">
+            <input message="tns:searchCitizenById"/>
+            <output message="tns:searchCitizenByIdResponse"/>
+        </operation>
+        <operation name="searchElectionByName">
+            <input message="tns:searchElectionByName"/>
+            <output message="tns:searchElectionByNameResponse"/>
+        </operation>
+        <operation name="searchElectionByFinalDate">
+            <input message="tns:searchElectionByFinalDate"/>
+            <output message="tns:searchElectionByFinalDateResponse"/>
+        </operation>
+        <operation name="searchElectionByDateRange">
+            <input message="tns:searchElectionByDateRange"/>
+            <output message="tns:searchElectionByDateRangeResponse"/>
+        </operation>
+        <operation name="searchElectionByElectionType">
+            <input message="tns:searchElectionByElectionType"/>
+            <output message="tns:searchElectionByElectionTypeResponse"/>
+        </operation>
+        <operation name="searchCitizenByUsername">
+            <input message="tns:searchCitizenByUsername"/>
+            <output message="tns:searchCitizenByUsernameResponse"/>
+        </operation>
+        <operation name="searchPartyByPartyName">
+            <input message="tns:searchPartyByPartyName"/>
+            <output message="tns:searchPartyByPartyNameResponse"/>
+        </operation>
+        <operation name="sayHello">
+            <input message="tns:sayHello"/>
+            <output message="tns:sayHelloResponse"/>
+        </operation>
+        <operation name="getPastElections">
+            <input message="tns:getPastElections"/>
+            <output message="tns:getPastElectionsResponse"/>
+        </operation>
+        <operation name="getFutureElections">
+            <input message="tns:getFutureElections"/>
+            <output message="tns:getFutureElectionsResponse"/>
+        </operation>
+        <operation name="getActiveCandidatesOfParty">
+            <input message="tns:getActiveCandidatesOfParty"/>
+            <output message="tns:getActiveCandidatesOfPartyResponse"/>
+        </operation>
+        <operation name="getActiveSecurity">
+            <input message="tns:getActiveSecurity"/>
+            <output message="tns:getActiveSecurityResponse"/>
+        </operation>
+        <operation name="getLoginMasterFromUsername">
+            <input message="tns:getLoginMasterFromUsername"/>
+            <output message="tns:getLoginMasterFromUsernameResponse"/>
+        </operation>
+        <operation name="getAllActiveCandidates">
+            <input message="tns:getAllActiveCandidates"/>
+            <output message="tns:getAllActiveCandidatesResponse"/>
+        </operation>
+        <operation name="getAllInActiveCandidates">
+            <input message="tns:getAllInActiveCandidates"/>
+            <output message="tns:getAllInActiveCandidatesResponse"/>
+        </operation>
+        <operation name="searchCitizenByName">
+            <input message="tns:searchCitizenByName"/>
+            <output message="tns:searchCitizenByNameResponse"/>
+        </operation>
+        <operation name="getAllSecurity">
+            <input message="tns:getAllSecurity"/>
+            <output message="tns:getAllSecurityResponse"/>
+        </operation>
+        <operation name="getSecurity">
+            <input message="tns:getSecurity"/>
+            <output message="tns:getSecurityResponse"/>
+        </operation>
+    </portType>
+    <binding name="EPollWebServicePortBinding" type="tns:EPollWebService">
+        <wsp:PolicyReference URI="#EPollWebServicePortBindingPolicy"/>
+        <operation name="addCandidate">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="checkForExistingCandidate">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="updateCandidate">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getCandidate">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getAllCandidates">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="deleteCandidate">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="addCitizen">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="updateCitizen">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getCitizenMaster">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getAllCitizens">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getLoginMaster">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="deleteCitizen">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="addZone">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="updateZone">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="deleteZone">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getZone">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getAllZones">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getWardsOfZone">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getCitizensOfZone">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getCandidatesOfZone">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="addWard">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="updateWard">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="deleteWard">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getWard">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getAllWards">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getSubWardsOfWard">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getCitizensOfWard">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getCandidatesOfWard">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="addSubWard">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="updateSubWard">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="deleteSubWard">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getSubWard">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getAllSubwards">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getAreaOfSubward">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getCitizensOfSubward">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getCandidatesOfSubward">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="addArea">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="updateArea">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="deleteArea">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getArea">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getAllAreas">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getCitizensOfArea">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getCandidatesOfArea">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="addParty">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="checkForExistingParty">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getParty">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getCandidatesOfParty">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="updateParty">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="deleteParty">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getAllParties">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="addCity">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getAllCities">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getCity">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getZonesOfCity">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="addElection">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="scheduleElection">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="cancelElection">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="updateElection">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getAllElections">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getScheduledElections">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getElection">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getAllElectionTypes">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="addSecurity">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="activateSecurity">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="deactivateSecurity">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="addGroup">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="castVote">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="isValidToVote">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getActiveCandidatesWithPartyId">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getVoteCountForCandidate">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getVoteCountsForElection">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getVoteCountForZone">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getVoteCountForWard">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getVoteCountForSubward">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getVoteCountForArea">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getVoteCountForParty">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getCandidateWiseVoteCountsForElection">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getCandidateWiseVoteCountsForWard">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getWardWiseVoteCountsForZone">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="searchWardByName">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="searchByZoneName">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="searchBySubWardName">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="searchByAreaName">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="searchCandidateByFirstName">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="searchCandidateByLastName">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="searchCandidateByDateOfBirthRange">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="searchCandidateByActiveStatus">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="searchCitizenById">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="searchElectionByName">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="searchElectionByFinalDate">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="searchElectionByDateRange">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="searchElectionByElectionType">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="searchCitizenByUsername">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="searchPartyByPartyName">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="sayHello">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getPastElections">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getFutureElections">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getActiveCandidatesOfParty">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_addCandidate_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getActiveSecurity">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_getActiveSecurity_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_getActiveSecurity_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getLoginMasterFromUsername">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_getLoginMasterFromUsername_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_getLoginMasterFromUsername_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getAllActiveCandidates">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_getAllActiveCandidates_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_getAllActiveCandidates_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getAllInActiveCandidates">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="searchCitizenByName">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_searchCitizenByName_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_searchCitizenByName_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getAllSecurity">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_getAllSecurity_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_getAllSecurity_Output_Policy"/>
+            </output>
+        </operation>
+        <operation name="getSecurity">
+            <input>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_getSecurity_Input_Policy"/>
+            </input>
+            <output>
+                <wsp:PolicyReference URI="#EPollWebServicePortBinding_getSecurity_Output_Policy"/>
+            </output>
+        </operation>
+    </binding>
+    <service name="EPollWebServiceService">
+        <port name="EPollWebServicePort" binding="tns:EPollWebServicePortBinding"/>
+    </service>
+    <wsp:Policy wsu:Id="EPollWebServicePortBinding_getPastElections_Input_Policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:EncryptedParts>
+                    <sp:Body/>
+                </sp:EncryptedParts>
+                <sp:SignedParts>
+                    <sp:Body/>
+                </sp:SignedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy wsu:Id="EPollWebServicePortBinding_getPastElections_Output_Policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:EncryptedParts>
+                    <sp:Body/>
+                </sp:EncryptedParts>
+                <sp:SignedParts>
+                    <sp:Body/>
+                </sp:SignedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy wsu:Id="EPollWebServicePortBinding_getFutureElections_Input_Policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:EncryptedParts>
+                    <sp:Body/>
+                </sp:EncryptedParts>
+                <sp:SignedParts>
+                    <sp:Body/>
+                </sp:SignedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy wsu:Id="EPollWebServicePortBinding_getFutureElections_Output_Policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:EncryptedParts>
+                    <sp:Body/>
+                </sp:EncryptedParts>
+                <sp:SignedParts>
+                    <sp:Body/>
+                </sp:SignedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy wsu:Id="EPollWebServicePortBindingPolicy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <wsam:Addressing wsp:Optional="false"/>
+                <sp:SymmetricBinding>
+                    <wsp:Policy>
+                        <sp:ProtectionToken>
+                            <wsp:Policy>
+                                <sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/Never">
+                                    <wsp:Policy>
+                                        <sp:WssX509V3Token10/>
+                                        <sp:RequireIssuerSerialReference/>
+                                    </wsp:Policy>
+                                </sp:X509Token>
+                            </wsp:Policy>
+                        </sp:ProtectionToken>
+                        <sp:Layout>
+                            <wsp:Policy>
+                                <sp:Strict/>
+                            </wsp:Policy>
+                        </sp:Layout>
+                        <sp:IncludeTimestamp/>
+                        <sp:OnlySignEntireHeadersAndBody/>
+                        <sp:AlgorithmSuite>
+                            <wsp:Policy>
+                                <sp:Basic128/>
+                            </wsp:Policy>
+                        </sp:AlgorithmSuite>
+                    </wsp:Policy>
+                </sp:SymmetricBinding>
+                <sp:Wss11>
+                    <wsp:Policy>
+                        <sp:MustSupportRefIssuerSerial/>
+                        <sp:MustSupportRefThumbprint/>
+                        <sp:MustSupportRefEncryptedKey/>
+                    </wsp:Policy>
+                </sp:Wss11>
+                <sp:SignedEncryptedSupportingTokens>
+                    <wsp:Policy>
+                        <sp:UsernameToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient">
+                            <wsp:Policy>
+                                <sp:WssUsernameToken10/>
+                            </wsp:Policy>
+                        </sp:UsernameToken>
+                    </wsp:Policy>
+                </sp:SignedEncryptedSupportingTokens>
+                <sc:KeyStore wspp:visibility="private" location="/home/milan/glassfish-3.0.1/glassfish/domains/domain3/config/keystore.jks" type="JKS" storepass="changeit" alias="s1as" keypass="changeit"/>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy wsu:Id="EPollWebServicePortBinding_addCandidate_Input_Policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:EncryptedParts>
+                    <sp:Body/>
+                </sp:EncryptedParts>
+                <sp:SignedParts>
+                    <sp:Body/>
+                    <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="AckRequested" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="SequenceAcknowledgement" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="Sequence" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="CreateSequence" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                </sp:SignedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy wsu:Id="EPollWebServicePortBinding_addCandidate_Output_Policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:EncryptedParts>
+                    <sp:Body/>
+                </sp:EncryptedParts>
+                <sp:SignedParts>
+                    <sp:Body/>
+                    <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="AckRequested" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="SequenceAcknowledgement" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="Sequence" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="CreateSequence" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                </sp:SignedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy wsu:Id="EPollWebServicePortBinding_getActiveSecurity_Input_Policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:EncryptedParts>
+                    <sp:Body/>
+                    <sp:Body/>
+                </sp:EncryptedParts>
+                <sp:SignedParts>
+                    <sp:Body/>
+                    <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="AckRequested" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="SequenceAcknowledgement" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="Sequence" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="CreateSequence" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Body/>
+                    <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="AckRequested" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="SequenceAcknowledgement" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="Sequence" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="CreateSequence" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                </sp:SignedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy wsu:Id="EPollWebServicePortBinding_getActiveSecurity_Output_Policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:EncryptedParts>
+                    <sp:Body/>
+                    <sp:Body/>
+                </sp:EncryptedParts>
+                <sp:SignedParts>
+                    <sp:Body/>
+                    <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="AckRequested" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="SequenceAcknowledgement" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="Sequence" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="CreateSequence" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Body/>
+                    <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="AckRequested" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="SequenceAcknowledgement" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="Sequence" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="CreateSequence" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                </sp:SignedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy wsu:Id="EPollWebServicePortBinding_getLoginMasterFromUsername_Input_Policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:EncryptedParts>
+                    <sp:Body/>
+                </sp:EncryptedParts>
+                <sp:SignedParts>
+                    <sp:Body/>
+                    <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="AckRequested" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="SequenceAcknowledgement" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="Sequence" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="CreateSequence" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                </sp:SignedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy wsu:Id="EPollWebServicePortBinding_getLoginMasterFromUsername_Output_Policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:EncryptedParts>
+                    <sp:Body/>
+                </sp:EncryptedParts>
+                <sp:SignedParts>
+                    <sp:Body/>
+                    <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="AckRequested" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="SequenceAcknowledgement" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="Sequence" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="CreateSequence" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                </sp:SignedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy wsu:Id="EPollWebServicePortBinding_getAllActiveCandidates_Input_Policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:EncryptedParts>
+                    <sp:Body/>
+                </sp:EncryptedParts>
+                <sp:SignedParts>
+                    <sp:Body/>
+                    <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="AckRequested" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="SequenceAcknowledgement" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="Sequence" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="CreateSequence" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                </sp:SignedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy wsu:Id="EPollWebServicePortBinding_getAllActiveCandidates_Output_Policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:EncryptedParts>
+                    <sp:Body/>
+                </sp:EncryptedParts>
+                <sp:SignedParts>
+                    <sp:Body/>
+                    <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="AckRequested" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="SequenceAcknowledgement" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="Sequence" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="CreateSequence" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                </sp:SignedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy wsu:Id="EPollWebServicePortBinding_getAllInActiveCandidates_Input_Policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:EncryptedParts>
+                    <sp:Body/>
+                </sp:EncryptedParts>
+                <sp:SignedParts>
+                    <sp:Body/>
+                    <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="AckRequested" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="SequenceAcknowledgement" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="Sequence" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="CreateSequence" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                </sp:SignedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy wsu:Id="EPollWebServicePortBinding_getAllInActiveCandidates_Output_Policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:EncryptedParts>
+                    <sp:Body/>
+                </sp:EncryptedParts>
+                <sp:SignedParts>
+                    <sp:Body/>
+                    <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="AckRequested" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="SequenceAcknowledgement" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="Sequence" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="CreateSequence" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                </sp:SignedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy wsu:Id="EPollWebServicePortBinding_searchCitizenByName_Input_Policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:EncryptedParts>
+                    <sp:Body/>
+                    <sp:Body/>
+                </sp:EncryptedParts>
+                <sp:SignedParts>
+                    <sp:Body/>
+                    <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="AckRequested" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="SequenceAcknowledgement" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="Sequence" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="CreateSequence" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Body/>
+                    <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="AckRequested" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="SequenceAcknowledgement" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="Sequence" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="CreateSequence" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                </sp:SignedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy wsu:Id="EPollWebServicePortBinding_searchCitizenByName_Output_Policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:EncryptedParts>
+                    <sp:Body/>
+                    <sp:Body/>
+                </sp:EncryptedParts>
+                <sp:SignedParts>
+                    <sp:Body/>
+                    <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="AckRequested" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="SequenceAcknowledgement" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="Sequence" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="CreateSequence" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Body/>
+                    <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="AckRequested" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="SequenceAcknowledgement" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="Sequence" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="CreateSequence" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                </sp:SignedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy wsu:Id="EPollWebServicePortBinding_getAllSecurity_Input_Policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:EncryptedParts>
+                    <sp:Body/>
+                    <sp:Body/>
+                </sp:EncryptedParts>
+                <sp:SignedParts>
+                    <sp:Body/>
+                    <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="AckRequested" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="SequenceAcknowledgement" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="Sequence" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="CreateSequence" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Body/>
+                    <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="AckRequested" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="SequenceAcknowledgement" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="Sequence" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="CreateSequence" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                </sp:SignedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy wsu:Id="EPollWebServicePortBinding_getAllSecurity_Output_Policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:EncryptedParts>
+                    <sp:Body/>
+                    <sp:Body/>
+                </sp:EncryptedParts>
+                <sp:SignedParts>
+                    <sp:Body/>
+                    <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="AckRequested" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="SequenceAcknowledgement" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="Sequence" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="CreateSequence" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Body/>
+                    <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="AckRequested" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="SequenceAcknowledgement" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="Sequence" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="CreateSequence" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                </sp:SignedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy wsu:Id="EPollWebServicePortBinding_getSecurity_Input_Policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:EncryptedParts>
+                    <sp:Body/>
+                </sp:EncryptedParts>
+                <sp:SignedParts>
+                    <sp:Body/>
+                    <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="AckRequested" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="SequenceAcknowledgement" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="Sequence" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="CreateSequence" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                </sp:SignedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy wsu:Id="EPollWebServicePortBinding_getSecurity_Output_Policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:EncryptedParts>
+                    <sp:Body/>
+                </sp:EncryptedParts>
+                <sp:SignedParts>
+                    <sp:Body/>
+                    <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Name="AckRequested" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="SequenceAcknowledgement" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="Sequence" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                    <sp:Header Name="CreateSequence" Namespace="http://docs.oasis-open.org/ws-rx/wsrm/200702"/>
+                </sp:SignedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+</definitions>

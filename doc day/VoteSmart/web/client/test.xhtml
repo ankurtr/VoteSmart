@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="./CitizenTemplate.xhtml">
+
+    <ui:define name="top">
+        top
+    </ui:define>
+
+    <ui:define name="content">
+        <ul>
+            <li style=" display: inline;list-style-type: none;">
+                <ui:repeat value="#{voteBean.partyList}" var="party" >
+                    <dl>
+                        <dt style="display: none;"><img src="images/wd_thumb1.jpg" alt=""/></dt>
+                        <dd>#{party.partyName}</dd>                    
+                        <ul style="white-space: nowrap;">
+                            <li style=" display: inline;list-style-type: none;">
+                                <ui:repeat value="#{voteBean.fetchCandidateOfParty(party.partyId)}" var="candidate">
+                                    <dl>
+                                        <dt style="display: none;"><img src="images/wd_thumb1.jpg" alt=""/></dt>
+                                        <dd><p class="description active"><strong>xx:</strong> #{bid.partyName}<br/><a style="display: none;" href="" class="view">view details</a></p></dd>
+                                    </dl>
+                                </ui:repeat>
+                            </li>
+                        </ul>
+                    </dl>
+                </ui:repeat>
+            </li>
+        </ul>       
+    </ui:define>
+
+    <ui:define name="bottom">
+        bottom
+    </ui:define>
+
+</ui:composition>

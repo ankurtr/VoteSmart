@@ -1,0 +1,499 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!-- =========== FULL CONFIGURATION FILE ================================== -->
+
+<faces-config version="2.0"
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd">
+    <application>
+        <resource-bundle>
+            <base-name>bundle.myBundle</base-name>
+            <var>eng</var>
+        </resource-bundle>
+        <locale-config>
+            <default-locale>en</default-locale>
+            <supported-locale>hi</supported-locale>
+            <supported-locale>gu</supported-locale>
+        </locale-config>
+    </application>
+
+    <managed-bean>
+        <managed-bean-name>securityBean</managed-bean-name>
+        <managed-bean-class>adminbeans.SecurityBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>loginBean</managed-bean-name>
+        <managed-bean-class>commonbeans.LoginBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>zoneBean</managed-bean-name>
+        <managed-bean-class>adminbeans.ZoneBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>wardBean</managed-bean-name>
+        <managed-bean-class>adminbeans.WardBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>subWardBean</managed-bean-name>
+        <managed-bean-class>adminbeans.SubWardBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>areaBean</managed-bean-name>
+        <managed-bean-class>adminbeans.AreaBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>electionBean</managed-bean-name>
+        <managed-bean-class>adminbeans.ElectionBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>candidateBean</managed-bean-name>
+        <managed-bean-class>adminbeans.CandidateBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>partyBean</managed-bean-name>
+        <managed-bean-class>adminbeans.PartyBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>citizenBean</managed-bean-name>
+        <managed-bean-class>adminbeans.CitizenBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>changeLocaleBean</managed-bean-name>
+        <managed-bean-class>adminbeans.ChangeLocaleBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>voteBean</managed-bean-name>
+        <managed-bean-class>citizenbeans.VoteBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>faceRecognitionBean</managed-bean-name>
+        <managed-bean-class>citizenbeans.FaceRecognitionBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>fingerPrintBean</managed-bean-name>
+        <managed-bean-class>citizenbeans.FingerPrintBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>resultBean</managed-bean-name>
+        <managed-bean-class>resultbeans.ResultBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>partyResultBean</managed-bean-name>
+        <managed-bean-class>resultbeans.PartyBean</managed-bean-class>
+        <managed-bean-scope>view</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>candidateResultBean</managed-bean-name>
+        <managed-bean-class>resultbeans.CandidateResultBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+
+    <!-- LoginPage.jsf -->
+    <navigation-rule>
+        <from-view-id>/LoginPage.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>citizen</from-outcome>
+            <to-view-id>/client/CastVote.jsf</to-view-id>
+<!--            <to-view-id>/FingerPrintVerification.jsf</to-view-id>-->
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/LoginPage.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>admin</from-outcome>
+            <to-view-id>/admin/DashBoard.jsf</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- CastVote.jsf -->
+    <navigation-rule>
+        <from-view-id>*.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/LoginPage.jsf</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+
+   <!-- ZoneList.jsf -->
+    <navigation-rule>
+        <from-view-id>/admin/ZoneList.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>zoneDeleted</from-outcome>
+            <to-view-id>/admin/ZoneList.jsf</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/admin/ZoneList.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>addNewZone</from-outcome>
+            <to-view-id>/admin/ZoneForm.jsf</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/admin/ZoneList.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>editZone</from-outcome>
+            <to-view-id>/admin/ZoneForm.jsf</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+   <!-- ZoneForm.jsf -->
+    <navigation-rule>
+        <from-view-id>/admin/ZoneForm.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>zoneSaved</from-outcome>
+            <to-view-id>/admin/ZoneList.jsf</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- WardList.jsf -->
+    <navigation-rule>
+        <from-view-id>/admin/WardList.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>wardDeleted</from-outcome>
+            <to-view-id>/admin/WardList.jsf</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/admin/WardList.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>addNewWard</from-outcome>
+            <to-view-id>/admin/WardForm.jsf</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/admin/WardList.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>editWard</from-outcome>
+            <to-view-id>/admin/WardForm.jsf</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+   <!-- WardForm.jsf -->
+    <navigation-rule>
+        <from-view-id>/admin/WardForm.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>wardSaved</from-outcome>
+            <to-view-id>/admin/WardList.jsf</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- SubWardList.jsf -->
+    <navigation-rule>
+        <from-view-id>/admin/SubWardList.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>subWardDeleted</from-outcome>
+            <to-view-id>/admin/SubWardList.jsf</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/admin/SubWardList.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>addNewSubWard</from-outcome>
+            <to-view-id>/admin/SubWardForm.jsf</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/admin/SubWardList.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>editSubWard</from-outcome>
+            <to-view-id>/admin/SubWardForm.jsf</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+   <!-- SubWardForm.jsf -->
+    <navigation-rule>
+        <from-view-id>/admin/SubWardForm.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>subWardSaved</from-outcome>
+            <to-view-id>/admin/SubWardList.jsf</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- AreaList.jsf -->
+    <navigation-rule>
+        <from-view-id>/admin/AreaList.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>areaDeleted</from-outcome>
+            <to-view-id>/admin/AreaList.jsf</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/admin/AreaList.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>addNewArea</from-outcome>
+            <to-view-id>/admin/AreaForm.jsf</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/admin/AreaList.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>editArea</from-outcome>
+            <to-view-id>/admin/AreaForm.jsf</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+   <!-- AreaForm.jsf -->
+    <navigation-rule>
+        <from-view-id>/admin/AreaForm.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>areaSaved</from-outcome>
+            <to-view-id>/admin/AreaList.jsf</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- CandidateList.jsf -->
+    <navigation-rule>
+        <from-view-id>/admin/CandidateList.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>candidateDeleted</from-outcome>
+            <to-view-id>/admin/CandidateList.jsf</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/admin/CandidateList.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>addNewCandidate</from-outcome>
+            <to-view-id>/admin/CandidateForm.jsf</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/admin/CandidateList.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>editCandidate</from-outcome>
+            <to-view-id>/admin/CandidateForm.jsf</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- CandidateForm.jsf -->
+    <navigation-rule>
+        <from-view-id>/admin/CandidateForm.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>candidateSaved</from-outcome>
+            <to-view-id>/admin/CandidateList.jsf</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+     <!-- PartyList.jsf -->
+    <navigation-rule>
+        <from-view-id>/admin/PartyList.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>partyDeleted</from-outcome>
+            <to-view-id>/admin/PartyList.jsf</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/admin/PartyList.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>editParty</from-outcome>
+            <to-view-id>/admin/PartyForm.jsf</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/admin/PartyList.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>addNewParty</from-outcome>
+            <to-view-id>/admin/PartyForm.jsf</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+
+   <!-- PartyForm.jsf-->
+    <navigation-rule>
+        <from-view-id>/admin/PartyForm.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>partySaved</from-outcome>
+            <to-view-id>/admin/PartyList.jsf</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- CitizenList.jsf -->
+    <navigation-rule>
+        <from-view-id>/admin/CitizenList.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>citizenDeleted</from-outcome>
+            <to-view-id>/admin/CitizenList.jsf</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/admin/CitizenList.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>editCitizen</from-outcome>
+            <to-view-id>/admin/CitizenForm.jsf</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/admin/CitizenList.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>addNewCitizen</from-outcome>
+            <to-view-id>/admin/CitizenForm.jsf</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- CitizenForm.jsf -->
+    <navigation-rule>
+        <from-view-id>/admin/CitizenForm.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>citizenSaved</from-outcome>
+            <to-view-id>/admin/CitizenList.jsf</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- ElectionList.jsf -->
+    <navigation-rule>
+        <from-view-id>/admin/ElectionList.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>editElection</from-outcome>
+            <to-view-id>/admin/ElectionForm.jsf</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/admin/ElectionList.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>addNewElection</from-outcome>
+            <to-view-id>/admin/ElectionForm.jsf</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- ElectionForm.jsf -->
+    <navigation-rule>
+        <from-view-id>/admin/ElectionForm.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>electionSaved</from-outcome>
+            <to-view-id>/admin/ElectionList.jsf</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- ScheduleElection.jsf -->
+    <navigation-rule>
+        <from-view-id>/admin/ScheduleElection.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>scheduleElection</from-outcome>
+            <to-view-id>/admin/ScheduleElection.jsf</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- FingerPrintVerification.jsf -->
+    <navigation-rule>
+        <from-view-id>/FingerPrintVerification.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>showTemplates</from-outcome>
+            <to-view-id>/FingerPrintTemplates.jsf</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- FingerPrintTemplates.jsf -->
+    <navigation-rule>
+        <from-view-id>/FingerPrintTemplates.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>castVote</from-outcome>
+            <to-view-id>/client/CastVote.jsf</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/FingerPrintTemplates.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>sendToLogin</from-outcome>
+            <to-view-id>/LoginPage.jsf</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- FaceRecognition.jsf -->
+<!--    <navigation-rule>
+        <from-view-id>/FaceRecognition.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/client/CastVote.jsf</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/FaceRecognition.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>failure</from-outcome>
+            <to-view-id>/client/CastVote.jsf</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>-->
+
+    <!-- SecurityList.jsf -->
+    <navigation-rule>
+        <from-view-id>/admin/SecurityList.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>addNewSecurity</from-outcome>
+            <to-view-id>/admin/SecurityForm.jsf</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- SecurityForm.jsf -->
+    <navigation-rule>
+        <from-view-id>/admin/SecurityForm.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>securitySaved</from-outcome>
+            <to-view-id>/admin/SecurityList.jsf</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+
+
+<!--    <lifecycle>
+        <phase-listener>
+           listeners.MyPhaseListener
+        </phase-listener>
+    </lifecycle>-->
+
+    <validator>
+        <validator-id>emailValidator</validator-id>
+        <validator-class>validators.EmailValidator</validator-class>
+    </validator>
+    <converter>
+        <converter-class>converter.DateConverter</converter-class>
+        <converter-id>dateConverter</converter-id>
+    </converter>
+    <converter>
+        <converter-class>converter.TimeConverter</converter-class>
+        <converter-id>timeConverter</converter-id>
+    </converter>
+    
+</faces-config>

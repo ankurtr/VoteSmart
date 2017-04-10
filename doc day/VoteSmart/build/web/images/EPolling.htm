@@ -1,0 +1,257 @@
+<html>
+<!-- Begin Head section -->
+<head>
+    <title>Vote-Smart </title>
+    <link type="text/css" rel="stylesheet" media="all" href="Style.css" />
+    <link rel="stylesheet" type="text/css" href="DeshBoard.css" />
+    <link rel="stylesheet" type="text/css" href="Menustyles.css" />
+    <!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="ie.css?Q" />
+<![endif]-->
+</head>
+<!-- End Head section -->
+<!-- Begin Body section -->
+<body class="not-front not-logged-in no-sidebars i18n-en page-user-login section-user">
+    <!-- Begin Page Section -->
+    <div id="page">
+        <div id="page-inner">
+            <a name="top" id="navigation-top"></a>
+            <div id="header" class="region region-header">
+                <div id="header-inner">
+                    <div id="logo">
+                    </div>
+                    <div id="user_info">
+                        <div id="anonymous_user_wrapper">
+                            <ul id="anonymous_user">
+                                <li class="login_link" style="float: right"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- user info  -->
+                    <div id="lang_dropdown_logout" class="lang_anonymous_user">
+                        <label class="lang_lbl">
+                            Language:</label><select id="language-select-list" onchange="document.location.href=this.options[this.selectedIndex].value;">
+                                <option value="/en-us/user/login?error=timeout" selected="selected">English</option>
+                                <option value="/fr-fr/user/login?error=timeout">Français</option>
+                                <option value="/de-de/user/login?error=timeout">Deutsch</option>
+                                <option value="/es-es/user/login?error=timeout">Español</option>
+                            </select>
+                    </div>
+                    <div id="navbar">
+                            <div id="primary">
+                                <ul id="main_nav">
+                                    <li class="leaf first"><a href="/en-us" title="">Home </a></li>
+                                    <li class="expanded"><a href="" title="">Region </a>
+                                        <ul id="main_nav">
+                                            <li class="leaf first"><a href="" title="">Zone Management </a></li>
+                                            <li class="leaf first"><a href="" title="">Ward Management </a></li>
+                                            <li class="leaf first"><a href="" title="">Sub-Ward Management </a></li>
+                                            <li class="leaf first"><a href="" title="">Area Management </a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="expanded"><a href="" title="">Parties </a>
+                                        <ul id="main_nav">
+                                            <li class="leaf first"><a href="" title="">Register Party </a></li>
+                                            <li class="leaf first"><a href="" title="">View Parties </a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="expanded"><a href="" title="">Candidates </a>
+                                        <ul id="main_nav">
+                                            <li class="leaf first"><a href="" title="">Register Candidate </a></li>
+                                            <li class="leaf first"><a href="" title="">View Candidates </a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="expanded"><a href="" title="">Citizen </a>
+                                        <ul id="main_nav">
+                                            <li class="leaf first"><a href="" title="">Register Citizen </a></li>
+                                            <li class="leaf first"><a href="" title="">Search Citizen </a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="expanded"><a href="" title="">Results </a>
+                                        <ul id="main_nav">
+                                            <li class="leaf first"><a href="" title="">Party wise </a></li>
+                                            <li class="leaf first"><a href="" title="">Cantidate wise </a></li>
+                                            <li class="leaf first"><a href="" title="">Zone wise </a></li>
+                                            <li class="leaf first"><a href="" title="">ward wise </a></li>
+                                        </ul>
+                                    </li>
+                                   
+                                </ul>
+                               
+                            </div>
+                            <form id="nav_search_bar" >
+                               <div style="margin-top:10px;margin-right:10px">
+                               <b> 
+                                <a href="#" style="color:Red"> Log Out</a> </b>
+                               </div> 
+                            </form>
+                            <!-- END nav_search_bar -->
+                        </div>
+                    </div>
+                    <!-- /#navbar-inner, /#navbar -->
+                </div>
+            </div>
+            <?php// endif; ?>
+            <!-- Main Container Section -->
+            <div id="main">
+                <div id="main-inner" class="clear-block with-navbar">
+                    <!-- Show Dashboard Bar if on a dashboard page -->
+                    <!-- Begin Content Section -->
+                    <div id="content">
+                        <div id="content-inner">
+                            <div id="content-header">
+                                <h1 class="title" style="color: Blue; font-family: Verdana;">
+                                    DashBoard</h1>
+                                <!--<div class="messages error">
+                                    Your login has timed out, please login again.</div>-->
+                            </div>
+                            <hr />
+                            <!-- /#content-header -->
+                            <div id="developerjoin_org_step">
+                                <div id="content-area">
+                                    <form>
+                                    <div>
+                                        <div>
+                                            <div id="developerjoin_org_form">
+                                                <div class="container_12">
+                                                    <div class="grid_5">
+                                                        <div class="module">
+                                                            <h2>
+                                                                <span>Region Management </span>
+                                                            </h2>
+                                                            <div class="module-body">
+                                                                <div class="grid_7">
+                                                                    <a href="" class="dashboard-module">
+                                                                        <img src="Region.png" width="84" height="84" alt="edit" />
+                                                                        <span>Add Zone </span></a><a href="" class="dashboard-module">
+                                                                            <img src="Region.png" width="84" height="84" alt="edit" />
+                                                                            <span>Add ward </span></a><a href="" class="dashboard-module">
+                                                                                <img src="Region.png" width="84" height="84" alt="edit" />
+                                                                                <span>Add Sub-ward </span></a><a href="" class="dashboard-module">
+                                                                                    <img src="Region.png" width="84" height="84" alt="edit" />
+                                                                                    <span>Add Area </span></a>
+                                                                </div>
+                                                                <div style="clear: both;">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div style="clear: both;">
+                                                        </div>
+                                                    </div>
+                                                    <div class="grid_5">
+                                                        <div class="module">
+                                                            <h2>
+                                                                <span>Party Management </span>
+                                                            </h2>
+                                                            <div class="module-body">
+                                                                <div class="grid_7">
+                                                                    <a href="" class="dashboard-module">
+                                                                        <img src="india_flag.png" width="84" height="84" alt="edit" />
+                                                                        <span>Register Party </span></a><a href="" class="dashboard-module">
+                                                                            <img src="Candidate.png" width="84" height="84" alt="edit" />
+                                                                            <span>Register Candidate </span></a><a href="" class="dashboard-module">
+                                                                                <img src="ActiveCandidate.png" width="84" height="84" alt="edit" />
+                                                                                <span>Active Candidates </span></a>
+                                                                </div>
+                                                                <div style="clear: both;">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div style="clear: both;">
+                                                        </div>
+                                                    </div>
+                                                    <div class="grid_5">
+                                                        <div class="module">
+                                                            <h2>
+                                                                <span>Citizen Management</span></h2>
+                                                            <div class="module-body">
+                                                                <div class="grid_7">
+                                                                    <a href="" class="dashboard-module">
+                                                                        <img src="Citizen.png" width="84" height="84" alt="edit" />
+                                                                        <span>Register Citizen </span></a><a href="" class="dashboard-module">
+                                                                            <img src="Search.png" width="84" height="84" alt="edit" />
+                                                                            <span>Search </span></a>
+                                                                </div>
+                                                                <div style="clear: both;">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div style="clear: both;">
+                                                        </div>
+                                                    </div>
+                                                    <div class="grid_5">
+                                                        <div class="module">
+                                                            <h2>
+                                                                <span>Election Management</span></h2>
+                                                            <div class="module-body">
+                                                                <div class="grid_7">
+                                                                    <a href="" class="dashboard-module">
+                                                                        <img src="schedule.png" width="84" height="84" alt="Schedule Election" />
+                                                                        <span>Schedule </span></a>
+                                                                </div>
+                                                                <div style="clear: both;">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div style="clear: both;">
+                                                        </div>
+                                                    </div>
+                                                    <div class="grid_5">
+                                                        <div class="module">
+                                                            <h2>
+                                                                <span>Result Report View</span></h2>
+                                                            <div class="module-body">
+                                                                <div class="grid_7">
+                                                                    <a href="" class="dashboard-module">
+                                                                        <img src="charts.png" width="84" height="84" alt="edit" />
+                                                                        <span>Result </span></a>
+                                                                </div>
+                                                                <div style="clear: both;">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div style="clear: both;">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /#content-inner, /#content -->
+                    <!-- End Content Section -->
+                    <!-- Begin RHC Section -->
+                    <!-- End RHC Section -->
+                </div>
+                <hr />
+            </div>
+            <!-- /#main-inner, /#main -->
+            <!-- End Main Container Section -->
+            <!-- Begin Footer section -->
+            <div id="footer" class="region region-footer">
+                <div id="footer-inner">
+                    <div id="footer">
+                        <div id="footer-inner" class="region region-footer">
+                            <div class="content">
+                                <div id="quicklink-hdr">
+                                    <center>
+                                        Copyright @ WallGuest Tech developer program
+                                    </center>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Footer section -->
+        </div>
+        <!-- /#page-inner, /#page -->
+        <!-- End Page Section -->
+    </div>
+</body>
+<!-- End Body section -->
+</html>

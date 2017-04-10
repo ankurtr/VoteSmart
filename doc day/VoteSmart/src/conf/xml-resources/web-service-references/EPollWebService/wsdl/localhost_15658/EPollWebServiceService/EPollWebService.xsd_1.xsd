@@ -1,0 +1,1907 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2.1-hudson-28-. --><xs:schema xmlns:tns="http://service/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://service/">
+
+<xs:element name="activateSecurity" type="tns:activateSecurity" />
+
+<xs:element name="activateSecurityResponse" type="tns:activateSecurityResponse" />
+
+<xs:element name="addArea" type="tns:addArea" />
+
+<xs:element name="addAreaResponse" type="tns:addAreaResponse" />
+
+<xs:element name="addCandidate" type="tns:addCandidate" />
+
+<xs:element name="addCandidateResponse" type="tns:addCandidateResponse" />
+
+<xs:element name="addCitizen" type="tns:addCitizen" />
+
+<xs:element name="addCitizenResponse" type="tns:addCitizenResponse" />
+
+<xs:element name="addCity" type="tns:addCity" />
+
+<xs:element name="addCityResponse" type="tns:addCityResponse" />
+
+<xs:element name="addElection" type="tns:addElection" />
+
+<xs:element name="addElectionResponse" type="tns:addElectionResponse" />
+
+<xs:element name="addGroup" type="tns:addGroup" />
+
+<xs:element name="addGroupResponse" type="tns:addGroupResponse" />
+
+<xs:element name="addParty" type="tns:addParty" />
+
+<xs:element name="addPartyResponse" type="tns:addPartyResponse" />
+
+<xs:element name="addSecurity" type="tns:addSecurity" />
+
+<xs:element name="addSecurityResponse" type="tns:addSecurityResponse" />
+
+<xs:element name="addSubWard" type="tns:addSubWard" />
+
+<xs:element name="addSubWardResponse" type="tns:addSubWardResponse" />
+
+<xs:element name="addWard" type="tns:addWard" />
+
+<xs:element name="addWardResponse" type="tns:addWardResponse" />
+
+<xs:element name="addZone" type="tns:addZone" />
+
+<xs:element name="addZoneResponse" type="tns:addZoneResponse" />
+
+<xs:element name="cancelElection" type="tns:cancelElection" />
+
+<xs:element name="cancelElectionResponse" type="tns:cancelElectionResponse" />
+
+<xs:element name="castVote" type="tns:castVote" />
+
+<xs:element name="castVoteResponse" type="tns:castVoteResponse" />
+
+<xs:element name="checkForExistingCandidate" type="tns:checkForExistingCandidate" />
+
+<xs:element name="checkForExistingCandidateResponse" type="tns:checkForExistingCandidateResponse" />
+
+<xs:element name="checkForExistingParty" type="tns:checkForExistingParty" />
+
+<xs:element name="checkForExistingPartyResponse" type="tns:checkForExistingPartyResponse" />
+
+<xs:element name="deactivateSecurity" type="tns:deactivateSecurity" />
+
+<xs:element name="deactivateSecurityResponse" type="tns:deactivateSecurityResponse" />
+
+<xs:element name="deleteArea" type="tns:deleteArea" />
+
+<xs:element name="deleteAreaResponse" type="tns:deleteAreaResponse" />
+
+<xs:element name="deleteCandidate" type="tns:deleteCandidate" />
+
+<xs:element name="deleteCandidateResponse" type="tns:deleteCandidateResponse" />
+
+<xs:element name="deleteCitizen" type="tns:deleteCitizen" />
+
+<xs:element name="deleteCitizenResponse" type="tns:deleteCitizenResponse" />
+
+<xs:element name="deleteParty" type="tns:deleteParty" />
+
+<xs:element name="deletePartyResponse" type="tns:deletePartyResponse" />
+
+<xs:element name="deleteSubWard" type="tns:deleteSubWard" />
+
+<xs:element name="deleteSubWardResponse" type="tns:deleteSubWardResponse" />
+
+<xs:element name="deleteWard" type="tns:deleteWard" />
+
+<xs:element name="deleteWardResponse" type="tns:deleteWardResponse" />
+
+<xs:element name="deleteZone" type="tns:deleteZone" />
+
+<xs:element name="deleteZoneResponse" type="tns:deleteZoneResponse" />
+
+<xs:element name="getActiveCandidatesOfParty" type="tns:getActiveCandidatesOfParty" />
+
+<xs:element name="getActiveCandidatesOfPartyResponse" type="tns:getActiveCandidatesOfPartyResponse" />
+
+<xs:element name="getActiveCandidatesWithPartyId" type="tns:getActiveCandidatesWithPartyId" />
+
+<xs:element name="getActiveCandidatesWithPartyIdResponse" type="tns:getActiveCandidatesWithPartyIdResponse" />
+
+<xs:element name="getActiveSecurity" type="tns:getActiveSecurity" />
+
+<xs:element name="getActiveSecurityResponse" type="tns:getActiveSecurityResponse" />
+
+<xs:element name="getAllActiveCandidates" type="tns:getAllActiveCandidates" />
+
+<xs:element name="getAllActiveCandidatesResponse" type="tns:getAllActiveCandidatesResponse" />
+
+<xs:element name="getAllAreas" type="tns:getAllAreas" />
+
+<xs:element name="getAllAreasResponse" type="tns:getAllAreasResponse" />
+
+<xs:element name="getAllCandidates" type="tns:getAllCandidates" />
+
+<xs:element name="getAllCandidatesResponse" type="tns:getAllCandidatesResponse" />
+
+<xs:element name="getAllCities" type="tns:getAllCities" />
+
+<xs:element name="getAllCitiesResponse" type="tns:getAllCitiesResponse" />
+
+<xs:element name="getAllCitizens" type="tns:getAllCitizens" />
+
+<xs:element name="getAllCitizensResponse" type="tns:getAllCitizensResponse" />
+
+<xs:element name="getAllElectionTypes" type="tns:getAllElectionTypes" />
+
+<xs:element name="getAllElectionTypesResponse" type="tns:getAllElectionTypesResponse" />
+
+<xs:element name="getAllElections" type="tns:getAllElections" />
+
+<xs:element name="getAllElectionsResponse" type="tns:getAllElectionsResponse" />
+
+<xs:element name="getAllInActiveCandidates" type="tns:getAllInActiveCandidates" />
+
+<xs:element name="getAllInActiveCandidatesResponse" type="tns:getAllInActiveCandidatesResponse" />
+
+<xs:element name="getAllParties" type="tns:getAllParties" />
+
+<xs:element name="getAllPartiesResponse" type="tns:getAllPartiesResponse" />
+
+<xs:element name="getAllSecurity" type="tns:getAllSecurity" />
+
+<xs:element name="getAllSecurityResponse" type="tns:getAllSecurityResponse" />
+
+<xs:element name="getAllSubwards" type="tns:getAllSubwards" />
+
+<xs:element name="getAllSubwardsResponse" type="tns:getAllSubwardsResponse" />
+
+<xs:element name="getAllWards" type="tns:getAllWards" />
+
+<xs:element name="getAllWardsResponse" type="tns:getAllWardsResponse" />
+
+<xs:element name="getAllZones" type="tns:getAllZones" />
+
+<xs:element name="getAllZonesResponse" type="tns:getAllZonesResponse" />
+
+<xs:element name="getArea" type="tns:getArea" />
+
+<xs:element name="getAreaOfSubward" type="tns:getAreaOfSubward" />
+
+<xs:element name="getAreaOfSubwardResponse" type="tns:getAreaOfSubwardResponse" />
+
+<xs:element name="getAreaResponse" type="tns:getAreaResponse" />
+
+<xs:element name="getCandidate" type="tns:getCandidate" />
+
+<xs:element name="getCandidateResponse" type="tns:getCandidateResponse" />
+
+<xs:element name="getCandidateWiseVoteCountsForElection" type="tns:getCandidateWiseVoteCountsForElection" />
+
+<xs:element name="getCandidateWiseVoteCountsForElectionResponse" type="tns:getCandidateWiseVoteCountsForElectionResponse" />
+
+<xs:element name="getCandidateWiseVoteCountsForWard" type="tns:getCandidateWiseVoteCountsForWard" />
+
+<xs:element name="getCandidateWiseVoteCountsForWardResponse" type="tns:getCandidateWiseVoteCountsForWardResponse" />
+
+<xs:element name="getCandidatesOfArea" type="tns:getCandidatesOfArea" />
+
+<xs:element name="getCandidatesOfAreaResponse" type="tns:getCandidatesOfAreaResponse" />
+
+<xs:element name="getCandidatesOfSubward" type="tns:getCandidatesOfSubward" />
+
+<xs:element name="getCandidatesOfSubwardResponse" type="tns:getCandidatesOfSubwardResponse" />
+
+<xs:element name="getCandidatesOfWard" type="tns:getCandidatesOfWard" />
+
+<xs:element name="getCandidatesOfWardResponse" type="tns:getCandidatesOfWardResponse" />
+
+<xs:element name="getCandidatesOfZone" type="tns:getCandidatesOfZone" />
+
+<xs:element name="getCandidatesOfZoneResponse" type="tns:getCandidatesOfZoneResponse" />
+
+<xs:element name="getCitizenMaster" type="tns:getCitizenMaster" />
+
+<xs:element name="getCitizenMasterResponse" type="tns:getCitizenMasterResponse" />
+
+<xs:element name="getCitizensOfArea" type="tns:getCitizensOfArea" />
+
+<xs:element name="getCitizensOfAreaResponse" type="tns:getCitizensOfAreaResponse" />
+
+<xs:element name="getCitizensOfSubward" type="tns:getCitizensOfSubward" />
+
+<xs:element name="getCitizensOfSubwardResponse" type="tns:getCitizensOfSubwardResponse" />
+
+<xs:element name="getCitizensOfWard" type="tns:getCitizensOfWard" />
+
+<xs:element name="getCitizensOfWardResponse" type="tns:getCitizensOfWardResponse" />
+
+<xs:element name="getCitizensOfZone" type="tns:getCitizensOfZone" />
+
+<xs:element name="getCitizensOfZoneResponse" type="tns:getCitizensOfZoneResponse" />
+
+<xs:element name="getCity" type="tns:getCity" />
+
+<xs:element name="getCityResponse" type="tns:getCityResponse" />
+
+<xs:element name="getElection" type="tns:getElection" />
+
+<xs:element name="getElectionResponse" type="tns:getElectionResponse" />
+
+<xs:element name="getFutureElections" type="tns:getFutureElections" />
+
+<xs:element name="getFutureElectionsResponse" type="tns:getFutureElectionsResponse" />
+
+<xs:element name="getLoginMaster" type="tns:getLoginMaster" />
+
+<xs:element name="getLoginMasterFromUsername" type="tns:getLoginMasterFromUsername" />
+
+<xs:element name="getLoginMasterFromUsernameResponse" type="tns:getLoginMasterFromUsernameResponse" />
+
+<xs:element name="getLoginMasterResponse" type="tns:getLoginMasterResponse" />
+
+<xs:element name="getParty" type="tns:getParty" />
+
+<xs:element name="getPartyResponse" type="tns:getPartyResponse" />
+
+<xs:element name="getPastElections" type="tns:getPastElections" />
+
+<xs:element name="getPastElectionsResponse" type="tns:getPastElectionsResponse" />
+
+<xs:element name="getScheduledElections" type="tns:getScheduledElections" />
+
+<xs:element name="getScheduledElectionsResponse" type="tns:getScheduledElectionsResponse" />
+
+<xs:element name="getSecurity" type="tns:getSecurity" />
+
+<xs:element name="getSecurityResponse" type="tns:getSecurityResponse" />
+
+<xs:element name="getSubWard" type="tns:getSubWard" />
+
+<xs:element name="getSubWardResponse" type="tns:getSubWardResponse" />
+
+<xs:element name="getSubWardsOfWard" type="tns:getSubWardsOfWard" />
+
+<xs:element name="getSubWardsOfWardResponse" type="tns:getSubWardsOfWardResponse" />
+
+<xs:element name="getVoteCountForArea" type="tns:getVoteCountForArea" />
+
+<xs:element name="getVoteCountForAreaResponse" type="tns:getVoteCountForAreaResponse" />
+
+<xs:element name="getVoteCountForCandidate" type="tns:getVoteCountForCandidate" />
+
+<xs:element name="getVoteCountForCandidateResponse" type="tns:getVoteCountForCandidateResponse" />
+
+<xs:element name="getVoteCountForParty" type="tns:getVoteCountForParty" />
+
+<xs:element name="getVoteCountForPartyResponse" type="tns:getVoteCountForPartyResponse" />
+
+<xs:element name="getVoteCountForSubward" type="tns:getVoteCountForSubward" />
+
+<xs:element name="getVoteCountForSubwardResponse" type="tns:getVoteCountForSubwardResponse" />
+
+<xs:element name="getVoteCountForWard" type="tns:getVoteCountForWard" />
+
+<xs:element name="getVoteCountForWardResponse" type="tns:getVoteCountForWardResponse" />
+
+<xs:element name="getVoteCountForZone" type="tns:getVoteCountForZone" />
+
+<xs:element name="getVoteCountForZoneResponse" type="tns:getVoteCountForZoneResponse" />
+
+<xs:element name="getVoteCountsForElection" type="tns:getVoteCountsForElection" />
+
+<xs:element name="getVoteCountsForElectionResponse" type="tns:getVoteCountsForElectionResponse" />
+
+<xs:element name="getWard" type="tns:getWard" />
+
+<xs:element name="getWardResponse" type="tns:getWardResponse" />
+
+<xs:element name="getWardWiseVoteCountsForZone" type="tns:getWardWiseVoteCountsForZone" />
+
+<xs:element name="getWardWiseVoteCountsForZoneResponse" type="tns:getWardWiseVoteCountsForZoneResponse" />
+
+<xs:element name="getWardsOfZone" type="tns:getWardsOfZone" />
+
+<xs:element name="getWardsOfZoneResponse" type="tns:getWardsOfZoneResponse" />
+
+<xs:element name="getZone" type="tns:getZone" />
+
+<xs:element name="getZoneResponse" type="tns:getZoneResponse" />
+
+<xs:element name="getZonesOfCity" type="tns:getZonesOfCity" />
+
+<xs:element name="getZonesOfCityResponse" type="tns:getZonesOfCityResponse" />
+
+<xs:element name="isValidToVote" type="tns:isValidToVote" />
+
+<xs:element name="isValidToVoteResponse" type="tns:isValidToVoteResponse" />
+
+<xs:element name="sayHello" type="tns:sayHello" />
+
+<xs:element name="scheduleElection" type="tns:scheduleElection" />
+
+<xs:element name="scheduleElectionResponse" type="tns:scheduleElectionResponse" />
+
+<xs:element name="searchByAreaName" type="tns:searchByAreaName" />
+
+<xs:element name="searchByAreaNameResponse" type="tns:searchByAreaNameResponse" />
+
+<xs:element name="searchBySubWardName" type="tns:searchBySubWardName" />
+
+<xs:element name="searchBySubWardNameResponse" type="tns:searchBySubWardNameResponse" />
+
+<xs:element name="searchByZoneName" type="tns:searchByZoneName" />
+
+<xs:element name="searchByZoneNameResponse" type="tns:searchByZoneNameResponse" />
+
+<xs:element name="searchCandidateByActiveStatus" type="tns:searchCandidateByActiveStatus" />
+
+<xs:element name="searchCandidateByActiveStatusResponse" type="tns:searchCandidateByActiveStatusResponse" />
+
+<xs:element name="searchCandidateByDateOfBirthRange" type="tns:searchCandidateByDateOfBirthRange" />
+
+<xs:element name="searchCandidateByDateOfBirthRangeResponse" type="tns:searchCandidateByDateOfBirthRangeResponse" />
+
+<xs:element name="searchCandidateByFirstName" type="tns:searchCandidateByFirstName" />
+
+<xs:element name="searchCandidateByFirstNameResponse" type="tns:searchCandidateByFirstNameResponse" />
+
+<xs:element name="searchCandidateByLastName" type="tns:searchCandidateByLastName" />
+
+<xs:element name="searchCandidateByLastNameResponse" type="tns:searchCandidateByLastNameResponse" />
+
+<xs:element name="searchCitizenById" type="tns:searchCitizenById" />
+
+<xs:element name="searchCitizenByIdResponse" type="tns:searchCitizenByIdResponse" />
+
+<xs:element name="searchCitizenByName" type="tns:searchCitizenByName" />
+
+<xs:element name="searchCitizenByNameResponse" type="tns:searchCitizenByNameResponse" />
+
+<xs:element name="searchCitizenByUsername" type="tns:searchCitizenByUsername" />
+
+<xs:element name="searchCitizenByUsernameResponse" type="tns:searchCitizenByUsernameResponse" />
+
+<xs:element name="searchElectionByDateRange" type="tns:searchElectionByDateRange" />
+
+<xs:element name="searchElectionByDateRangeResponse" type="tns:searchElectionByDateRangeResponse" />
+
+<xs:element name="searchElectionByElectionType" type="tns:searchElectionByElectionType" />
+
+<xs:element name="searchElectionByElectionTypeResponse" type="tns:searchElectionByElectionTypeResponse" />
+
+<xs:element name="searchElectionByFinalDate" type="tns:searchElectionByFinalDate" />
+
+<xs:element name="searchElectionByFinalDateResponse" type="tns:searchElectionByFinalDateResponse" />
+
+<xs:element name="searchElectionByName" type="tns:searchElectionByName" />
+
+<xs:element name="searchElectionByNameResponse" type="tns:searchElectionByNameResponse" />
+
+<xs:element name="searchPartyByPartyName" type="tns:searchPartyByPartyName" />
+
+<xs:element name="searchPartyByPartyNameResponse" type="tns:searchPartyByPartyNameResponse" />
+
+<xs:element name="searchWardByName" type="tns:searchWardByName" />
+
+<xs:element name="searchWardByNameResponse" type="tns:searchWardByNameResponse" />
+
+<xs:element name="updateArea" type="tns:updateArea" />
+
+<xs:element name="updateAreaResponse" type="tns:updateAreaResponse" />
+
+<xs:element name="updateCandidate" type="tns:updateCandidate" />
+
+<xs:element name="updateCandidateResponse" type="tns:updateCandidateResponse" />
+
+<xs:element name="updateCitizen" type="tns:updateCitizen" />
+
+<xs:element name="updateCitizenResponse" type="tns:updateCitizenResponse" />
+
+<xs:element name="updateElection" type="tns:updateElection" />
+
+<xs:element name="updateElectionResponse" type="tns:updateElectionResponse" />
+
+<xs:element name="updateParty" type="tns:updateParty" />
+
+<xs:element name="updatePartyResponse" type="tns:updatePartyResponse" />
+
+<xs:element name="updateSubWard" type="tns:updateSubWard" />
+
+<xs:element name="updateSubWardResponse" type="tns:updateSubWardResponse" />
+
+<xs:element name="updateWard" type="tns:updateWard" />
+
+<xs:element name="updateWardResponse" type="tns:updateWardResponse" />
+
+<xs:element name="updateZone" type="tns:updateZone" />
+
+<xs:element name="updateZoneResponse" type="tns:updateZoneResponse" />
+
+<xs:complexType name="getAllCities">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="getAllCitiesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:cityMaster" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cityMaster">
+<xs:sequence>
+<xs:element name="cityId" type="xs:ID" minOccurs="0" />
+<xs:element name="cityName" type="xs:string" minOccurs="0" />
+<xs:element name="countryId" type="xs:int" />
+<xs:element name="stateId" type="xs:int" />
+<xs:element name="zoneMasterList" type="xs:IDREF" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="zoneMaster">
+<xs:sequence>
+<xs:element name="candidateMasterList" type="xs:IDREF" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+<xs:element name="citizenMasterList" type="xs:IDREF" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+<xs:element name="cityMaster" type="tns:cityMaster" minOccurs="0" />
+<xs:element name="population" type="xs:long" />
+<xs:element name="voteMasterList" type="xs:IDREF" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+<xs:element name="wardMasterList" type="xs:IDREF" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+<xs:element name="zoneId" type="xs:ID" minOccurs="0" />
+<xs:element name="zoneName" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="candidateMaster">
+<xs:sequence>
+<xs:element name="address" type="xs:string" minOccurs="0" />
+<xs:element name="areaMaster" type="tns:areaMaster" minOccurs="0" />
+<xs:element name="candidateId" type="xs:ID" minOccurs="0" />
+<xs:element name="dateOfBirth" type="xs:dateTime" minOccurs="0" />
+<xs:element name="electionMasterList" type="xs:IDREF" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+<xs:element name="email" type="xs:string" minOccurs="0" />
+<xs:element name="firstName" type="xs:string" minOccurs="0" />
+<xs:element name="image" type="xs:string" minOccurs="0" />
+<xs:element name="isActive" type="xs:boolean" />
+<xs:element name="lastName" type="xs:string" minOccurs="0" />
+<xs:element name="nationality" type="xs:string" minOccurs="0" />
+<xs:element name="partyMaster" type="tns:partyMaster" minOccurs="0" />
+<xs:element name="phoneNo" type="xs:string" minOccurs="0" />
+<xs:element name="sex" type="xs:boolean" />
+<xs:element name="subWardMaster" type="tns:subWardMaster" minOccurs="0" />
+<xs:element name="voteMasterList" type="xs:IDREF" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+<xs:element name="wardMaster" type="tns:wardMaster" minOccurs="0" />
+<xs:element name="zoneMaster" type="tns:zoneMaster" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="areaMaster">
+<xs:sequence>
+<xs:element name="areaId" type="xs:ID" minOccurs="0" />
+<xs:element name="areaName" type="xs:string" minOccurs="0" />
+<xs:element name="candidateMasterList" type="xs:IDREF" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+<xs:element name="citizenMasterList" type="xs:IDREF" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+<xs:element name="subWardMaster" type="tns:subWardMaster" minOccurs="0" />
+<xs:element name="voteMasterList" type="xs:IDREF" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="citizenMaster">
+<xs:sequence>
+<xs:element name="address" type="xs:string" minOccurs="0" />
+<xs:element name="areaMaster" type="tns:areaMaster" minOccurs="0" />
+<xs:element name="contactNo" type="xs:string" minOccurs="0" />
+<xs:element name="dateOfBirth" type="xs:dateTime" minOccurs="0" />
+<xs:element name="faceImage" type="xs:string" minOccurs="0" />
+<xs:element name="loginMaster" type="xs:IDREF" minOccurs="0" />
+<xs:element name="name" type="xs:string" minOccurs="0" />
+<xs:element name="signatureImage" type="xs:string" minOccurs="0" />
+<xs:element name="subWardMaster" type="tns:subWardMaster" minOccurs="0" />
+<xs:element name="thumbImage" type="xs:string" minOccurs="0" />
+<xs:element name="userId" type="xs:ID" minOccurs="0" />
+<xs:element name="voterCardImage" type="xs:string" minOccurs="0" />
+<xs:element name="wardMaster" type="tns:wardMaster" minOccurs="0" />
+<xs:element name="zoneMaster" type="tns:zoneMaster" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="loginMaster">
+<xs:sequence>
+<xs:element name="citizenMaster" type="xs:IDREF" minOccurs="0" />
+<xs:element name="isActive" type="xs:boolean" />
+<xs:element name="password" type="xs:string" minOccurs="0" />
+<xs:element name="userGroupMasterList" type="xs:IDREF" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+<xs:element name="userId" type="xs:ID" minOccurs="0" />
+<xs:element name="userType" type="xs:string" minOccurs="0" />
+<xs:element name="username" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="userGroupMaster">
+<xs:sequence>
+<xs:element name="groupMaster" type="tns:groupMaster" minOccurs="0" />
+<xs:element name="loginMaster" type="tns:loginMaster" minOccurs="0" />
+<xs:element name="userGroupMasterPK" type="xs:ID" minOccurs="0" />
+<xs:element name="username" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="groupMaster">
+<xs:sequence>
+<xs:element name="description" type="xs:string" minOccurs="0" />
+<xs:element name="groupName" type="xs:ID" minOccurs="0" />
+<xs:element name="userGroupMasterList" type="xs:IDREF" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="subWardMaster">
+<xs:sequence>
+<xs:element name="areaMasterList" type="xs:IDREF" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+<xs:element name="candidateMasterList" type="xs:IDREF" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+<xs:element name="citizenMasterList" type="xs:IDREF" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+<xs:element name="subWardId" type="xs:ID" minOccurs="0" />
+<xs:element name="subWardName" type="xs:string" minOccurs="0" />
+<xs:element name="voteMasterList" type="xs:IDREF" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+<xs:element name="wardMaster" type="tns:wardMaster" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="voteMaster">
+<xs:sequence>
+<xs:element name="areaMaster" type="tns:areaMaster" minOccurs="0" />
+<xs:element name="candidateMaster" type="tns:candidateMaster" minOccurs="0" />
+<xs:element name="electionMaster" type="tns:electionMaster" minOccurs="0" />
+<xs:element name="subWardMaster" type="tns:subWardMaster" minOccurs="0" />
+<xs:element name="voteDateTime" type="xs:dateTime" minOccurs="0" />
+<xs:element name="voteId" type="xs:ID" minOccurs="0" />
+<xs:element name="wardMaster" type="tns:wardMaster" minOccurs="0" />
+<xs:element name="zoneMaster" type="tns:zoneMaster" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="electionMaster">
+<xs:sequence>
+<xs:element name="candidateMasterList" type="xs:IDREF" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+<xs:element name="electionId" type="xs:ID" minOccurs="0" />
+<xs:element name="electionTypeMaster" type="tns:electionTypeMaster" minOccurs="0" />
+<xs:element name="endTime" type="xs:dateTime" minOccurs="0" />
+<xs:element name="finalDate" type="xs:dateTime" minOccurs="0" />
+<xs:element name="isActive" type="xs:boolean" />
+<xs:element name="name" type="xs:string" minOccurs="0" />
+<xs:element name="startTime" type="xs:dateTime" minOccurs="0" />
+<xs:element name="voteMasterList" type="xs:IDREF" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="electionTypeMaster">
+<xs:sequence>
+<xs:element name="description" type="xs:string" minOccurs="0" />
+<xs:element name="electionMasterList" type="xs:IDREF" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+<xs:element name="electionTypeId" type="xs:ID" minOccurs="0" />
+<xs:element name="typeName" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="wardMaster">
+<xs:sequence>
+<xs:element name="candidateMasterList" type="xs:IDREF" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+<xs:element name="citizenMasterList" type="xs:IDREF" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+<xs:element name="subWardMasterList" type="xs:IDREF" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+<xs:element name="voteMasterList" type="xs:IDREF" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+<xs:element name="wardId" type="xs:ID" minOccurs="0" />
+<xs:element name="wardName" type="xs:string" minOccurs="0" />
+<xs:element name="zoneMaster" type="tns:zoneMaster" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="partyMaster">
+<xs:sequence>
+<xs:element name="candidateMasterList" type="xs:IDREF" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+<xs:element name="description" type="xs:string" minOccurs="0" />
+<xs:element name="partyId" type="xs:ID" minOccurs="0" />
+<xs:element name="partyLogo" type="xs:string" minOccurs="0" />
+<xs:element name="partyName" type="xs:string" minOccurs="0" />
+<xs:element name="partySlogan" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateArea">
+<xs:sequence>
+<xs:element name="area" type="tns:areaMaster" minOccurs="0" />
+<xs:element name="newSubwardId" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateAreaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateZone">
+<xs:sequence>
+<xs:element name="zone" type="tns:zoneMaster" minOccurs="0" />
+<xs:element name="newCityMasterId" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateZoneResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getLoginMaster">
+<xs:sequence>
+<xs:element name="userId" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getLoginMasterResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:loginMaster" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteParty">
+<xs:sequence>
+<xs:element name="partyID" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deletePartyResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getParty">
+<xs:sequence>
+<xs:element name="partyID" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getPartyResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:partyMaster" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCandidate">
+<xs:sequence>
+<xs:element name="candidateID" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCandidateResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:candidateMaster" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="castVote">
+<xs:sequence>
+<xs:element name="citizenId" type="xs:int" minOccurs="0" />
+<xs:element name="candidateIds" type="xs:int" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="castVoteResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllCitizens">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="getAllCitizensResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:citizenMaster" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="searchByAreaName">
+<xs:sequence>
+<xs:element name="areaName" type="xs:string" minOccurs="0" />
+<xs:element name="maxResults" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="searchByAreaNameResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:areaMaster" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="searchCandidateByLastName">
+<xs:sequence>
+<xs:element name="lastName" type="xs:string" minOccurs="0" />
+<xs:element name="maxResults" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="searchCandidateByLastNameResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:candidateMaster" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="searchBySubWardName">
+<xs:sequence>
+<xs:element name="subwardName" type="xs:string" minOccurs="0" />
+<xs:element name="maxResults" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="searchBySubWardNameResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:subWardMaster" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="checkForExistingParty">
+<xs:sequence>
+<xs:element name="pm" type="tns:partyMaster" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="checkForExistingPartyResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllActiveCandidates">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="getAllActiveCandidatesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:candidateMaster" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getVoteCountForParty">
+<xs:sequence>
+<xs:element name="partyId" type="xs:int" minOccurs="0" />
+<xs:element name="electionId" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getVoteCountForPartyResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:long" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateSubWard">
+<xs:sequence>
+<xs:element name="subward" type="tns:subWardMaster" minOccurs="0" />
+<xs:element name="newWardId" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateSubWardResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="checkForExistingCandidate">
+<xs:sequence>
+<xs:element name="cm" type="tns:candidateMaster" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="checkForExistingCandidateResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="activateSecurity">
+<xs:sequence>
+<xs:element name="securityId" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="activateSecurityResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateWard">
+<xs:sequence>
+<xs:element name="ward" type="tns:wardMaster" minOccurs="0" />
+<xs:element name="newZoneId" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateWardResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getVoteCountsForElection">
+<xs:sequence>
+<xs:element name="electionId" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getVoteCountsForElectionResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:long" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateCandidate">
+<xs:sequence>
+<xs:element name="cm" type="tns:candidateMaster" minOccurs="0" />
+<xs:element name="zoneId" type="xs:int" minOccurs="0" />
+<xs:element name="wardId" type="xs:int" minOccurs="0" />
+<xs:element name="subwardId" type="xs:int" minOccurs="0" />
+<xs:element name="areaId" type="xs:int" minOccurs="0" />
+<xs:element name="partyId" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateCandidateResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateParty">
+<xs:sequence>
+<xs:element name="pm" type="tns:partyMaster" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updatePartyResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCandidatesOfWard">
+<xs:sequence>
+<xs:element name="wardId" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCandidatesOfWardResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:candidateMaster" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCitizensOfArea">
+<xs:sequence>
+<xs:element name="areaId" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCitizensOfAreaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:citizenMaster" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="searchByZoneName">
+<xs:sequence>
+<xs:element name="zoneName" type="xs:string" minOccurs="0" />
+<xs:element name="maxResults" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="searchByZoneNameResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:zoneMaster" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="searchCandidateByFirstName">
+<xs:sequence>
+<xs:element name="firstName" type="xs:string" minOccurs="0" />
+<xs:element name="maxResults" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="searchCandidateByFirstNameResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:candidateMaster" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getScheduledElections">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="getScheduledElectionsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:electionMaster" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="scheduleElection">
+<xs:sequence>
+<xs:element name="electionID" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="scheduleElectionResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllElectionTypes">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="getAllElectionTypesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:electionTypeMaster" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCitizenMaster">
+<xs:sequence>
+<xs:element name="citizenId" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCitizenMasterResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:citizenMaster" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCandidateWiseVoteCountsForElection">
+<xs:sequence>
+<xs:element name="electionId" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCandidateWiseVoteCountsForElectionResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:xmlHashMapIL" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="xmlHashMapIL">
+<xs:sequence>
+<xs:element name="map" type="tns:xmlHashMapWrapperIL" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="xmlHashMapWrapperIL">
+<xs:sequence>
+<xs:element name="listOfKeyValuePairs" type="tns:xmlHashMapHelperIL" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="xmlHashMapHelperIL">
+<xs:simpleContent>
+<xs:extension base="xs:long">
+<xs:attribute name="key" type="xs:int" />
+</xs:extension>
+</xs:simpleContent>
+</xs:complexType>
+
+<xs:complexType name="getZone">
+<xs:sequence>
+<xs:element name="zoneId" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getZoneResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:zoneMaster" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAreaOfSubward">
+<xs:sequence>
+<xs:element name="subwardId" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAreaOfSubwardResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:areaMaster" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="sayHello">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="searchElectionByDateRange">
+<xs:sequence>
+<xs:element name="fromDate" type="xs:dateTime" minOccurs="0" />
+<xs:element name="toDate" type="xs:dateTime" minOccurs="0" />
+<xs:element name="maxResults" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="searchElectionByDateRangeResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:electionMaster" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="searchPartyByPartyName">
+<xs:sequence>
+<xs:element name="partyName" type="xs:string" minOccurs="0" />
+<xs:element name="maxResults" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="searchPartyByPartyNameResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:partyMaster" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addElection">
+<xs:sequence>
+<xs:element name="elm" type="tns:electionMaster" minOccurs="0" />
+<xs:element name="electionTypeId" type="xs:int" minOccurs="0" />
+<xs:element name="candidateIds" type="xs:int" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addElectionResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getVoteCountForArea">
+<xs:sequence>
+<xs:element name="areaId" type="xs:int" minOccurs="0" />
+<xs:element name="electionId" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getVoteCountForAreaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:long" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="searchElectionByFinalDate">
+<xs:sequence>
+<xs:element name="date" type="xs:dateTime" minOccurs="0" />
+<xs:element name="maxResults" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="searchElectionByFinalDateResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:electionMaster" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCitizensOfSubward">
+<xs:sequence>
+<xs:element name="subwardId" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCitizensOfSubwardResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:citizenMaster" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteCandidate">
+<xs:sequence>
+<xs:element name="candidateId" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteCandidateResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addSecurity">
+<xs:sequence>
+<xs:element name="sm" type="tns:securityMaster" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="securityMaster">
+<xs:sequence>
+<xs:element name="description" type="xs:string" minOccurs="0" />
+<xs:element name="isActive" type="xs:boolean" />
+<xs:element name="securityId" type="xs:ID" minOccurs="0" />
+<xs:element name="securityName" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addSecurityResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCandidateWiseVoteCountsForWard">
+<xs:sequence>
+<xs:element name="electionId" type="xs:int" minOccurs="0" />
+<xs:element name="wardId" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCandidateWiseVoteCountsForWardResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:xmlHashMapIL" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getVoteCountForZone">
+<xs:sequence>
+<xs:element name="zoneId" type="xs:int" minOccurs="0" />
+<xs:element name="electionId" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getVoteCountForZoneResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:long" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateElection">
+<xs:sequence>
+<xs:element name="elm" type="tns:electionMaster" minOccurs="0" />
+<xs:element name="electionTypeId" type="xs:int" minOccurs="0" />
+<xs:element name="candidateIds" type="xs:int" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateElectionResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllZones">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="getAllZonesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:zoneMaster" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addCity">
+<xs:sequence>
+<xs:element name="cm" type="tns:cityMaster" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addCityResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getElection">
+<xs:sequence>
+<xs:element name="electionId" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getElectionResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:electionMaster" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getVoteCountForSubward">
+<xs:sequence>
+<xs:element name="subwardId" type="xs:int" minOccurs="0" />
+<xs:element name="electionId" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getVoteCountForSubwardResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:long" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getActiveCandidatesOfParty">
+<xs:sequence>
+<xs:element name="partyID" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getActiveCandidatesOfPartyResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:candidateMaster" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCitizensOfWard">
+<xs:sequence>
+<xs:element name="wardId" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCitizensOfWardResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:citizenMaster" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addZone">
+<xs:sequence>
+<xs:element name="zone" type="tns:zoneMaster" minOccurs="0" />
+<xs:element name="cityMasterId" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addZoneResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getActiveSecurity">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="getActiveSecurityResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:securityMaster" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllWards">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="getAllWardsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:wardMaster" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteCitizen">
+<xs:sequence>
+<xs:element name="citizenId" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteCitizenResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllElections">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="getAllElectionsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:electionMaster" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getVoteCountForWard">
+<xs:sequence>
+<xs:element name="wardId" type="xs:int" minOccurs="0" />
+<xs:element name="electionId" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getVoteCountForWardResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:long" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addSubWard">
+<xs:sequence>
+<xs:element name="subward" type="tns:subWardMaster" minOccurs="0" />
+<xs:element name="wardId" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addSubWardResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSubWard">
+<xs:sequence>
+<xs:element name="subwardId" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSubWardResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:subWardMaster" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="searchWardByName">
+<xs:sequence>
+<xs:element name="wardName" type="xs:string" minOccurs="0" />
+<xs:element name="maxResults" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="searchWardByNameResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:wardMaster" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllSubwards">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="getAllSubwardsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:subWardMaster" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getWardWiseVoteCountsForZone">
+<xs:sequence>
+<xs:element name="electionId" type="xs:int" minOccurs="0" />
+<xs:element name="zoneId" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getWardWiseVoteCountsForZoneResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:xmlHashMapIL" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getWardsOfZone">
+<xs:sequence>
+<xs:element name="zoneId" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getWardsOfZoneResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:wardMaster" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllCandidates">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="getAllCandidatesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:candidateMaster" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCitizensOfZone">
+<xs:sequence>
+<xs:element name="zoneId" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCitizensOfZoneResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:citizenMaster" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addWard">
+<xs:sequence>
+<xs:element name="ward" type="tns:wardMaster" minOccurs="0" />
+<xs:element name="zoneId" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addWardResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addGroup">
+<xs:sequence>
+<xs:element name="gm" type="tns:groupMaster" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addGroupResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cancelElection">
+<xs:sequence>
+<xs:element name="electionID" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cancelElectionResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addCandidate">
+<xs:sequence>
+<xs:element name="cm" type="tns:candidateMaster" minOccurs="0" />
+<xs:element name="zoneId" type="xs:int" minOccurs="0" />
+<xs:element name="wardId" type="xs:int" minOccurs="0" />
+<xs:element name="subwardId" type="xs:int" minOccurs="0" />
+<xs:element name="areaId" type="xs:int" minOccurs="0" />
+<xs:element name="partyId" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addCandidateResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteSubWard">
+<xs:sequence>
+<xs:element name="subwardId" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteSubWardResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllInActiveCandidates">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="getAllInActiveCandidatesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:candidateMaster" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addParty">
+<xs:sequence>
+<xs:element name="pm" type="tns:partyMaster" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addPartyResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteZone">
+<xs:sequence>
+<xs:element name="zoneId" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteZoneResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getArea">
+<xs:sequence>
+<xs:element name="areaId" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAreaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:areaMaster" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addArea">
+<xs:sequence>
+<xs:element name="area" type="tns:areaMaster" minOccurs="0" />
+<xs:element name="subwardId" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addAreaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getActiveCandidatesWithPartyId">
+<xs:sequence>
+<xs:element name="wardId" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getActiveCandidatesWithPartyIdResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:xmlHashMapII" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="xmlHashMapII">
+<xs:sequence>
+<xs:element name="map" type="tns:xmlHashMapWrapperII" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="xmlHashMapWrapperII">
+<xs:sequence>
+<xs:element name="listOfKeyValuePairs" type="tns:xmlHashMapHelperII" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="xmlHashMapHelperII">
+<xs:simpleContent>
+<xs:extension base="xs:int">
+<xs:attribute name="key" type="xs:int" />
+</xs:extension>
+</xs:simpleContent>
+</xs:complexType>
+
+<xs:complexType name="getAllSecurity">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="getAllSecurityResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:securityMaster" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="searchCandidateByDateOfBirthRange">
+<xs:sequence>
+<xs:element name="fromDate" type="xs:dateTime" minOccurs="0" />
+<xs:element name="toDate" type="xs:dateTime" minOccurs="0" />
+<xs:element name="maxResults" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="searchCandidateByDateOfBirthRangeResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:candidateMaster" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCandidatesOfArea">
+<xs:sequence>
+<xs:element name="areaId" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCandidatesOfAreaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:candidateMaster" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getWard">
+<xs:sequence>
+<xs:element name="wardId" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getWardResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:wardMaster" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getVoteCountForCandidate">
+<xs:sequence>
+<xs:element name="candidateId" type="xs:int" minOccurs="0" />
+<xs:element name="electionId" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getVoteCountForCandidateResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:long" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getLoginMasterFromUsername">
+<xs:sequence>
+<xs:element name="username" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getLoginMasterFromUsernameResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:loginMaster" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="searchCitizenByUsername">
+<xs:sequence>
+<xs:element name="username" type="xs:string" minOccurs="0" />
+<xs:element name="maxResults" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="searchCitizenByUsernameResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:citizenMaster" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="searchElectionByName">
+<xs:sequence>
+<xs:element name="electionName" type="xs:string" minOccurs="0" />
+<xs:element name="maxResults" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="searchElectionByNameResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:electionMaster" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="searchElectionByElectionType">
+<xs:sequence>
+<xs:element name="electionTypeId" type="xs:int" minOccurs="0" />
+<xs:element name="maxResults" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="searchElectionByElectionTypeResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:electionMaster" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllAreas">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="getAllAreasResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:areaMaster" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getZonesOfCity">
+<xs:sequence>
+<xs:element name="cityId" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getZonesOfCityResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:zoneMaster" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="isValidToVote">
+<xs:sequence>
+<xs:element name="citizenId" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="isValidToVoteResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSecurity">
+<xs:sequence>
+<xs:element name="securityId" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSecurityResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:securityMaster" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCity">
+<xs:sequence>
+<xs:element name="cityMasterId" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCityResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:cityMaster" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSubWardsOfWard">
+<xs:sequence>
+<xs:element name="wardId" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSubWardsOfWardResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:subWardMaster" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="searchCandidateByActiveStatus">
+<xs:sequence>
+<xs:element name="isActive" type="xs:boolean" />
+<xs:element name="maxResults" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="searchCandidateByActiveStatusResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:candidateMaster" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getFutureElections">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="getFutureElectionsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:electionMaster" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateCitizen">
+<xs:sequence>
+<xs:element name="lm" type="tns:loginMaster" minOccurs="0" />
+<xs:element name="cm" type="tns:citizenMaster" minOccurs="0" />
+<xs:element name="zoneId" type="xs:int" minOccurs="0" />
+<xs:element name="wardId" type="xs:int" minOccurs="0" />
+<xs:element name="subwardId" type="xs:int" minOccurs="0" />
+<xs:element name="areaId" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateCitizenResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCandidatesOfSubward">
+<xs:sequence>
+<xs:element name="subwardId" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCandidatesOfSubwardResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:candidateMaster" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteArea">
+<xs:sequence>
+<xs:element name="areaId" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteAreaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deactivateSecurity">
+<xs:sequence>
+<xs:element name="securityId" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deactivateSecurityResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllParties">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="getAllPartiesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:partyMaster" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="searchCitizenByName">
+<xs:sequence>
+<xs:element name="citizenName" type="xs:string" minOccurs="0" />
+<xs:element name="maxResults" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="searchCitizenByNameResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:citizenMaster" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getPastElections">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="getPastElectionsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:electionMaster" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCandidatesOfZone">
+<xs:sequence>
+<xs:element name="zoneId" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCandidatesOfZoneResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:candidateMaster" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="searchCitizenById">
+<xs:sequence>
+<xs:element name="citizenId" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="searchCitizenByIdResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:citizenMaster" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteWard">
+<xs:sequence>
+<xs:element name="wardId" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteWardResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addCitizen">
+<xs:sequence>
+<xs:element name="lm" type="tns:loginMaster" minOccurs="0" />
+<xs:element name="cm" type="tns:citizenMaster" minOccurs="0" />
+<xs:element name="zoneId" type="xs:int" minOccurs="0" />
+<xs:element name="wardId" type="xs:int" minOccurs="0" />
+<xs:element name="subwardId" type="xs:int" minOccurs="0" />
+<xs:element name="areaId" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addCitizenResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

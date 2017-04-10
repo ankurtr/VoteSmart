@@ -1,0 +1,709 @@
+
+/* Upload Application Files Submit Files button*/
+#app-submission-form #faux-button, #comp-submission-form #faux-button{
+	float:left;
+}
+
+/* Upload Application Files Note text*/
+#app-submission-form #req, #comp-submission-form #req{
+	margin-top:17px;
+}
+
+
+#userprofile_content #edit-language{
+	margin-top:5px;
+}
+
+#beta{
+	margin-bottom: -75px;
+}
+ 
+TEXTAREA[id=edit-ShortDescription] {
+ height:30px;
+}
+ 
+TEXTAREA[id=edit-LongDescription] {
+ height:100px;
+}
+ 
+TEXTAREA[id=edit-Keywords] {
+ height:30px;
+}
+
+body.admin-menu{
+  _margin-top:0px;
+}
+
+#fieldset_screenshots .upload-element-preview{
+	float:none;
+}
+
+#screenshots_screenshot_file_title-wrapper .form_value_wrapper{
+	margin-top:-20px;	
+}
+
+#comp-submission-form #edit-IconFile-ahah-wrapper .remove {
+    float: left;
+    margin-left: 93px;
+    padding-right: 470px;
+		position:relative;
+		top:25px;
+}
+
+#comp-submission-form #fieldset_screenshots .remove {
+		position:relative;
+		top:10px;
+}
+
+.remove{
+	position:relative;
+	top:20px;
+}
+
+#fieldset_pricing_availability_pricing_wrapper{
+	border-top: 1px solid #CECECE;
+}
+
+div.tabs{
+  _margin-top:5px
+}
+
+.status-history-wrapper {
+	margin-top:20px;
+}
+
+#dashboard-applications .status-history-label, #dashboard-components .status-history-label{
+  margin-top: 0px;
+}
+
+.app-details-data, .comp-details-data {
+	padding-top: 5px;
+}
+
+#ahah-progress-edit-IconFile-upload-element-ahah {
+	position:relative;
+	left: -123px;
+	display:inline-block;
+}
+
+.progress .bar {
+	width: 100px;
+}
+.message{
+	clear:both;
+}
+
+#comp-submission-form .form_value_wrapper {
+	display:inline;
+}
+
+#comp-submission-form.comp_submission_step6 .form_value_wrapper {
+	display:block;
+}
+
+#status-date-label{
+	position:relative;
+	top: 3px;
+}
+
+#org-label{
+	position:relative;
+	top: 8px;
+}
+
+#guid-label{
+	position:relative;
+	top: 8px;
+}
+
+#contact-email-label{
+	position:relative;
+	top: 8px;
+}
+
+input[type="submit"] {
+	height:21px;
+	line-height:14px;
+}
+
+.page-dashboard-mymessages #edit-delete{
+	position:relative;
+	top:3px;
+}
+
+.belt_black{
+	min-width:120px;
+}
+
+#my_account {
+	_margin-right: 137px;
+}
+
+#my_account .username{
+	min-width:inherit;
+}
+
+.lang_my_account  {
+	top:20px;
+}
+
+.lang_anonymous_user{
+	top:17px;
+}
+
+#nav_search_bar .search_box {
+	background: none;               
+}
+
+#nav_search_bar {
+	background-image: url(/sites/all/themes/intel_agate/images/search_box.jpg);
+	background-repeat: no-repeat;
+}
+
+#anonymous_user .login_link div#login_area {
+	margin-left: -286px;
+	margin-top: 18px;
+}
+
+#anonymous_user {
+	_margin-right: 137px;
+}
+
+#primary ul.primary li {
+	_width: 50px;
+	_font-size: 11px;
+	_letter-spacing: -1px;
+}
+
+.newDropDownBox {
+    position: absolute !important;
+    margin: 38px 0px 0px 125px;
+}
+
+#orgDropDownBox {
+    position: relative !important;
+}
+
+#search {
+  width: 240px;
+}
+/* Overide for IE add a div with left, top, and right border to match the other normal browsers*/
+.section-app legend, .section-comp legend, .section-dashboard legend{
+	margin-left: -18px;
+	margin-top: -30px;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-right: 58px;
+	display: block !important; 
+	border-left: 1px solid #CECECE;
+	border-right: 1px solid #CECECE;
+	border-top: 1px solid #CECECE;
+}
+/* Since Legends are overwritten on IE. Need to overwrite margin top for IE only.*/
+#edit-OrgName-1-wrapper, #edit-OrgName-wrapper, .comp_submission_step1 #org_info_OrgName-wrapper, #edit-ApplicationName-1-wrapper, #edit-ApplicationName-wrapper, #edit-PrimaryCategory-wrapper, #edit-ContentRating-wrapper, #edit-ReleaseNotes-1-wrapper, #edit-ReleaseNotes-wrapper, #edit-SupportEmail-1-wrapper, #edit-SupportEmail-wrapper, #edit-resource-name-wrapper, #edit-DevelopmentLanguages-wrapper, #edit-ComponentName-wrapper, #edit-PublishStartDate-wrapper, #edit-RevenuePercentage-wrapper, #appup_center_test_info_appup_organization-wrapper, #pricing_availability_IsApplicationFree-wrapper{
+	margin-top: 15px;
+}
+
+#fieldset_app_summary legend, #fieldset_comp_summary legend{
+	width: 670px;
+}
+
+.page-dashboard-mymessages legend, .page-dashboard-mymessages-new legend, .page-dashboard-mymessages-notify legend, .page-dashboard-mymessages-stopmsgs legend{
+	width: 848px;
+	border:0 none;
+}
+
+#app-submission-form form[id^="app_submission_meta_locale_form"] legend{
+	width: 647px;
+}
+
+#fieldset_app_summary_submit_for_validation legend, #fieldset_comp_summary_submit_for_validation legend{
+	background:none repeat scroll 0 0 #F2F2F2;
+}
+
+/* App Submit Wrapper inside a wrapper fix*/
+#fieldset_upload_component_files_upload_your_files, #fieldset_app_summary_org_details, #fieldset_app_summary_storefront_info, #fieldset_app_summary_system_requirements, #fieldset_app_summary_storefront_info2, #fieldset_app_summary_support_info, #fieldset_app_summary_upload_summary, #fieldset_app_summary_submit_for_validation {
+	margin-top: 25px;
+}
+
+/* App Submit Wrapper inside a wrapper fix - make the legend smaller since its inside another wrapper*/
+#fieldset_upload_component_files_upload_your_files legend, #fieldset_app_summary_org_details legend, #fieldset_app_summary_storefront_info legend, #fieldset_app_summary_system_requirements legend, #fieldset_app_summary_storefront_info2 legend, #fieldset_app_summary_support_info legend, #fieldset_app_summary_upload_summary legend, #fieldset_app_summary_submit_for_validation legend {
+	width: 600px;
+}
+
+/* Comp Submit Wrapper inside a wrapper fix*/
+#fieldset_upload_component_files_upload_your_files, #fieldset_comp_summary_org_details, #fieldset_comp_summary_storefront_info, #fieldset_comp_summary_system_requirements, #fieldset_comp_summary_storefront_info2, #fieldset_comp_summary_support_info, #fieldset_comp_summary_upload_summary, #fieldset_comp_summary_submit_for_validation {
+	margin-top: 25px;
+}
+
+/* Comp Submit Wrapper inside a wrapper fix - make the legend smaller since its inside another wrapper*/
+#fieldset_upload_component_files_upload_your_files legend, #fieldset_comp_summary_org_details legend, #fieldset_comp_summary_storefront_info legend, #fieldset_comp_summary_system_requirements legend, #fieldset_comp_summary_storefront_info2 legend, #fieldset_comp_summary_support_info legend, #fieldset_comp_summary_upload_summary legend, #fieldset_comp_summary_submit_for_validation legend {
+	width: 648px;
+}
+
+.section-app fieldset, .section-comp fieldset, .section-dashboard fieldset{
+	border-top: 0px;
+}
+
+#app-submission-form {
+	padding-bottom: 50px;
+}
+
+/*#app-submission-form .form_value_wrapper {
+	display:inline;
+}*/
+
+
+#app-submission-form fieldset {
+	border-top: 0px;
+}
+
+#edit-currency-wrapper {
+	margin-right: 170px;
+}
+
+#fieldset_header legend{
+	top: 0px;
+	left: 0px;
+	border: 0px;
+	margin: 0px;
+	margin-left: -10px;
+	padding: 0px;
+	padding-bottom: 10px;
+}
+
+/* For IE only remove the background "?" and show "Help" link */
+.help_link{
+	position:relative;
+	z-index: 20;
+}
+/*  New App pop-up */
+/* move the close butten a little away from border*/
+#cboxClose {
+	margin-right:5px;
+	margin-bottom: 5px;
+}
+
+/**************************
+Start App Submission Step 1
+**************************/
+
+#edit-FullDescription {
+	float: left;
+	margin-left: 150px;
+	padding-right: 10px;
+}
+
+/*#edit-ShortDescription-wrapper .form_value_wrapper, #edit-Keywords-wrapper  .form_value_wrapper, #edit-ReleaseNotes-wrapper .form_value_wrapper{
+	margin-left: 150px;
+}*/
+
+
+#app-submission-form #fieldset_release_info .form_value_wrapper .form-radios .form_value_wrapper label{
+	position:relative;
+	left: -4px;
+}
+
+#edit-Keywords-wrapper label {
+	margin-top: 10px;
+}
+
+#edit-OrgId-wrapper .form_value_wrapper, #edit-PublisherName-wrapper .form_value_wrapper {	
+	width: 200px;
+	display: inline;
+}
+
+#edit-Version-wrapper .form_value_wrapper {
+	display: block;
+}
+
+#app_info_submit_appname-wrapper{
+	display:inline;
+}
+
+#edit-Tagline-wrapper .form_value_wrapper {
+	display: inline;
+}
+
+#edit-ShortDescription-wrapper label {
+	margin-top: 10px;
+}
+
+#edit-LongDescription-wrapper label {
+	margin-top: 11px;
+}
+
+#edit-Keywords-wrapper .form_value_wrapper  {
+	margin-top: -15
+}
+
+#edit-LongDescription-wrapper .form_value_wrapper, #edit-ShortDescription-wrapper .form_value_wrapper, #edit-ShortDescription-wrapper .form_value_wrapper{
+	display: inline;
+	margin-top: 10px;
+	margin-left: -5px;
+}
+
+#edit-ContentRating-wrapper .form_value_wrapper, #edit-PrimaryCategory-wrapper  .form_value_wrapper, #edit-SecondaryCategory-wrapper .form_value_wrapper, #edit-SupportEmail-wrapper .form_value_wrapper, #edit-SupportUrl-wrapper .form_value_wrapper {
+	display: inline;
+}
+
+#fieldset_catalog_availability label{
+	width: 137px;
+}
+
+
+#screenshots_PrimaryScreenShot-wrapper, #screenshots_AdditionalScreenShots_0-wrapper, #screenshots_AdditionalScreenShots_1-wrapper, #screenshots_AdditionalScreenShots_2-wrapper, #screenshots_AdditionalScreenShots_3-wrapper, #screenshots_PrimaryScreenShot-wrapper, #screenshots_AdditionalScreenShots_0-wrapper, #screenshots_AdditionalScreenShots_1-wrapper, #screenshots_AdditionalScreenShots_2-wrapper, #screenshots_AdditionalScreenShots_3-wrapper {
+	display: inline;
+	margin-right: 3px;
+}
+
+#app-submission-form div[id^="screenshots_PrimaryScreenShot"], #app-submission-form div[id^="screenshots_AdditionalScreenShots"]
+{
+	display:inline;
+	width:140px;
+}
+
+#app-submission-form div[id^="screenshots_AdditionalScreenShots_3"]
+{
+	width:110px;
+}
+
+#edit-PublishStartDate-wrapper .form_value_wrapper, #edit-PublishEndDate-wrapper  .form_value_wrapper {
+	display: block;
+}
+
+
+
+/************************
+End App Submission Step 1
+************************/
+
+/**************************
+Start App Submission Step 2
+**************************/
+
+#pricing_availability_IsApplicationFree-wrapper  .form_value_wrapper .form_value_wrapper{
+	margin-top: 0px;
+}
+
+#edit-Price-wrapper .form_value_wrapper, #edit-CurrencyCode-wrapper .form_value_wrapper {
+	display: inline;
+	margin-left: 10px;
+	margin-right: 10px;
+	position:relative;
+	top:6px;
+}
+
+#fieldset_pricing_availability, #fieldset_pricing_availability_AvailableCurrency_SalePrice_EUR_info, #fieldset_pricing_availability #fieldset_pricing_availability_AvailableCurrency_SalePrice_USD_info, #fieldset_pricing_availability  #fieldset_pricing_availability_AvailableCurrency_SalePrice_GBP_info{
+	border-top: 1px solid #ccc;
+}
+
+#fieldset_pricing_availability_AvailableCurrency_SalePrice_EUR_info_values, #fieldset_pricing_availability_AvailableCurrency_SalePrice_USD_info_values, #fieldset_pricing_availability_AvailableCurrency_SalePrice_GBP_info_values {
+	border: 0px;
+}
+
+/*Place the border on top of inner fieldsets*/
+#fieldset_pricing_availability fieldset {
+	border-top: 1px solid #CECECE;
+}
+/*Don't place border-top inside fieldset*/
+#fieldset_pricing_availability fieldset#fieldset_pricing_availability_free_wrapper, #fieldset_pricing_availability fieldset#fieldset_pricing_availability_pricing_wrapper{
+	border-top:none;
+}
+
+/************************
+End App Submission Step 2
+************************/
+
+/**************************
+Start App Submission Step 3
+**************************/
+
+/************************
+End App Submission Step 3
+************************/
+
+/**************************
+Start App Submission Step 4
+**************************/
+
+/************************
+End App Submission Step 4
+************************/
+
+/**************************
+Start App Submission Step 5
+**************************/
+
+#fieldset_app_summary .form_value_wrapper {
+	display: block;
+}
+
+#fieldset_app_summary fieldset {
+	margin-top: 40px;
+}
+
+#fieldset_app_summary fieldset legend {
+	padding-right: 40px;
+}
+
+
+/************************
+End App Submission Step 5
+************************/
+
+/* Comp Submission*/
+
+/**************************
+Start Comp Submission Step 1
+**************************/
+#comp-submission-form #edit-ComponentName-wrapper .form_value_wrapper {
+}
+
+#cboxContent {
+	border: 1px solid #ccc;
+	padding: 10px;
+}
+
+.page-dashboard-myapps .cboxIE #cboxContent #cboxLoadedContent{
+	overflow:hidden;
+}
+
+.page-dashboard-myapps .cboxIE #cboxContent #cboxLoadedContent .ajaxtitle, .page-dashboard-mycomps .cboxIE #cboxContent #cboxLoadedContent .ajaxtitle {
+	line-height: 16px;
+	padding-bottom:10px;
+}
+
+/***** Fixes App Submit Process bar IE Bug */
+
+#fieldset_step_process .steps, #fieldset_step_process .step_on{
+	float:left; 
+	height:50%; 
+	margin-bottom:-20px;
+	display:block;
+}
+
+#fieldset_step_process .nav-link{
+	clear:both; 
+	height:40px; 
+	position:relative;
+	display:inline;
+}
+
+
+#invitation-code {
+	margin-left: -20px;
+}
+
+#app-submission-form #fieldset_start_stop fieldset{
+	border-top-width: 1px;
+}
+
+.joinExistAlone #invitation-code{
+	margin-left:-290px;
+}
+
+#edit-file-IconFile-wrapper {
+	margin-top: 115px;
+	margin-left: -123px;
+}
+
+#app_info_Guid-wrapper label, #app_info_Guid-wrapper .form_value_wrapper {
+	display: inline;
+}
+
+#edit-OrgName-wrapper, #edit-PrimaryCategory-wrapper {
+	margin-top: 30px;
+}
+
+#edit-file-IconFile, #edit-file-PrimaryScreenShot, #edit-file-AdditionalScreenShots-0, #edit-file-AdditionalScreenShots-1, #edit-file-AdditionalScreenShots-2, #edit-file-AdditionalScreenShots-3 {
+	margin-left: -32px;
+}
+
+.app_submission_step3 #edit-file-ApplicationEncryptionCCATS, .comp_submission_step5 #edit-file-ComponentEncryptionCCATS  {
+	margin-left: -35px !important;
+	position:relative;
+	left:-20px;
+}
+
+#edit-OsPlatforms-wrapper, #edit-TargetDevices-wrapper {
+	margin-top: 20px;
+}
+
+#fieldset_pricing_availability_pricing_wrapper .verify_price{
+	position:relative;
+	top:-4px;
+}
+
+#edit-validation-team-message-wrapper .form_value_wrapper, #edit-validation-hardware-required-wrapper .form_value_wrapper , #edit-validation-hardware-unique-description-wrapper .form_value_wrapper{
+	width: 450px;
+}
+
+#edit-validation-team-login-required-username-wrapper .form_value_wrapper, #edit-validation-team-login-required-password-wrapper  .form_value_wrapper {
+	display: inline;
+}
+
+#edit-file-ApplicationEncryptionCCATS-wrapper {
+	padding-right: 10px;
+}
+
+#app_summary_system_requirements_OsPlatforms-wrapper label, #app_summary_system_requirements_TargetDevices-wrapper label {
+	margin-top: 15px;
+}
+
+#comp-submission-form #fieldset_release_info .form_value_wrapper .form-radios{
+	margin-left:-5px;
+}
+
+#fieldset_apps_summary_org_details .form_value_wrapper, 
+#fieldset_apps_summary_storefront_info .form_value_wrapper,
+#fieldset_apps_summary_system_requirements .form_value_wrapper, 
+#fieldset_apps_summary_storefront_info2 .form_value_wrapper, 
+#fieldset_apps_summary_support_info .form_value_wrapper, 
+#fieldset_apps_summary_upload_summary .form_value_wrapper, 
+#fieldset_apps_summary_submit_for_validation .form_value_wrapper,
+#fieldset_comp_summary_org_details .form_value_wrapper, 
+#fieldset_comp_summary_storefront_info .form_value_wrapper,
+#fieldset_comp_summary_system_requirements .form_value_wrapper, 
+#fieldset_comp_summary_storefront_info2 .form_value_wrapper, 
+#fieldset_comp_summary_support_info .form_value_wrapper, 
+#fieldset_comp_summary_upload_summary .form_value_wrapper, 
+#fieldset_comp_summary_submit_for_validation .form_value_wrapper{
+	word-break:break-all;
+}
+
+.page-dashboard-myapps #app-submission-get-reviews-form{
+	width:750px;
+}
+
+#fieldset_app_summary_submit_for_validation .item-list ul {
+	padding-left:2em;
+}
+
+#dashboard-applications .header span, #app-submission-form label, #app-submission-form .form_value_wrapper{
+	line-height:1.3em;
+}
+
+.block-app_dashboard #app_dashboard_dash_title-wrapper {
+	line-height:18px;
+	font-weight:bold;
+}
+
+#edit-app-dashboard-dash-links-wrapper label{
+	padding-right:5px;
+	margin-top:3px;
+}
+
+#edit-app-dashboard-dash-organization-wrapper label{
+	padding-right:5px;
+}
+
+.personalProfileContent .form-text{
+	position:relative;
+	top:3px;
+}
+
+#orgProfileLoginId{
+	position:relative;
+	top:6px;
+}
+
+.personalProfileContent #edit-country{
+	position:relative;
+	top:5px;
+}
+
+#cboxLoadedContent #edit-ApplicationName-wrapper label, #cboxLoadedContent #edit-ComponentName-wrapper label{
+	width:auto;
+}
+
+#edit-OsPlatforms-extra-controls-os-windows7x64 label{
+	margin-left:0px;
+}
+
+#comp-submission-form #edit-OsPlatforms-extra-controls-os-windows7x64-wrapper label {
+    margin-left: 0px;
+}
+
+#app-submission-form #tabs legend{
+	width: 647px;
+}
+
+#app-submission-form legend, #comp-submission-form legend {
+	width: 670px;
+}
+
+#fieldset_app_summary legend, #fieldset_comp_summary legend{
+	width: 670px;
+}
+
+/* Start Align check app name and start app*/
+#app-submission-new-form #edit-submit-save{
+	position:relative;
+	top:-8px;
+}
+
+#app-submission-new-form a.button{
+	padding-bottom:2px;
+}
+
+#app-submission-new-form input[type='submit']{
+	height:20px;
+}
+/* End Align check app name and start app*/
+
+/* Start Align check Comp name and start app*/
+#comp-submission-new-form #edit-submit-save{
+	position:relative;
+	top:-8px;
+}
+
+#comp-submission-new-form a.button{
+	padding-bottom:2px;
+}
+
+#comp-submission-new-form input[type='submit']{
+	height:20px;
+}
+/* End Align check Comp name and start app*/
+
+#navbar #main_nav li.leaf {
+    list-style-image: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#app_info_submit_appname-wrapper #nextLoading img {
+	display:none;
+}
+
+.help_box {
+  left: 748px;
+	position:absolute;
+	top:2px;
+}
+
+#tabs .help_box {
+  left: 737px;
+}
+
+#fieldset_app_summary fieldset legend, #fieldset_comp_summary fieldset legend {
+	padding-right: 36px;
+}
+
+#testerTableHeader {
+	height: 28px;
+}
+
+#savedTableContainer input{
+	margin-left:15px;
+}
+
+#comp-submission-form #app_info_submit_appname-wrapper{
+	padding-bottom:1px;
+}
+
+#comp-submission-form #app_info_submit_appname-wrapper #comp_check_name{
+	margin:0;
+}

@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:cc="http://java.sun.com/jsf/composite"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+     >
+
+
+    <!-- INTERFACE -->
+    <cc:interface>
+        <cc:actionSource name="loginEventListener" targets="form:btnLogin" />
+        <cc:attribute name="loginButtonPrompt" default="Login" required="true"/>
+        <cc:attribute name="loginPrompt" required="true"/>
+        <cc:attribute name="UsernamePrompt" required="true" />
+        <cc:attribute name="UsernameRequiredPrompt" required="true"/>
+        <cc:attribute name="PasswordPrompt" required="true"/>
+        <cc:attribute name="PasswordRequiredPrompt" required="true"/>
+        <cc:attribute name="RememberMePrompt" required="false"/>
+        <cc:attribute name="loginAction" method-signature="java.lang.String action()" required="true"/>       
+        <cc:attribute name="managedBean" required="true"/>
+    </cc:interface>
+
+    <!-- IMPLEMENTATION -->
+    <cc:implementation>
+        <h:body>
+            <div align="center">
+                <div class="panelsurround" >
+
+                    <div class="prompt">
+                        <img src="./images/login.jpg" align="top" height="25Px" width="35Px" alt="login"/>
+                        <span style="padding-left: 5Px;vertical-align:middle"> <h:outputText  value="#{cc.attrs.loginPrompt}"/> :</span>
+                    </div>
+
+                    <div class="panel">
+
+                        <div align="left" style="padding-top: 10Px">
+
+                            <div align="center">
+                                <h:form id="loginForm" prependId="false"  onsubmit="return checkForm(this, '#{cc.clientId}')" >
+                                    <h:panelGrid columns="3">
+                                        <h:outputText  value="#{cc.attrs.UsernamePrompt}"/>
+                                        <h:inputText id="username" value="#{cc.attrs.managedBean.username}" 
+                                                     required="true" requiredMessage="#{cc.attrs.UsernameRequiredPrompt}"/>
+                                        <h:message for="username" styleClass="errorLabel"/>
+                                        <h:outputText  value="#{cc.attrs.PasswordPrompt}"/>
+                                        <h:inputSecret id="password" required="true" requiredMessage="#{cc.attrs.PasswordRequiredPrompt}" value="#{cc.attrs.managedBean.password}" />
+                                        <h:message for="password" styleClass="errorLabel"/>
+                                    </h:panelGrid>
+                                    <h:outputText  value="#{loginBean.errorMessage}" styleClass="errorLabel"/>
+                                    <p>
+                                        <h:commandButton id="btnLogin" value="#{cc.attrs.loginButtonPrompt}"
+                                                         action="#{cc.attrs.managedBean.login}"/>
+                                        <input type="reset" value="Reset"/>
+                                    </p>                                    
+                                </h:form>                                
+                                <div align="right">
+                                    <a href="client/ProblemLogin.jsf" >Problem Login?</a>
+                                </div>                                
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </h:body>
+    </cc:implementation>
+</html>

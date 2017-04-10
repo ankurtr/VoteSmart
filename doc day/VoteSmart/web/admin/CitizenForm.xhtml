@@ -1,0 +1,227 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="./AdminMasterPage.xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:field="http://www.trapasiya.com/jsf"
+                xmlns:t="http://myfaces.apache.org/tomahawk">
+
+    <ui:define name="content">
+        <div id="content-outer">
+            <!-- start content -->
+            <div id="content">
+                <!--  start page-heading -->
+                <div id="page-heading">
+                    <h1>Citizen Management</h1>
+                </div>
+                <!-- end page-heading -->
+                <table border="0" width="100%" cellpadding="0" cellspacing="0" id="content-table">
+                    <tr>
+                        <th rowspan="3" class="sized"><img src="../images/shared/side_shadowleft.jpg" width="20" height="300" alt="" /></th>
+                        <th class="topleft"></th>
+                        <td id="tbl-border-top">&nbsp;</td>
+                        <th class="topright"></th>
+                        <th rowspan="3" class="sized"><img src="../images/shared/side_shadowright.jpg" width="20" height="300" alt="" /></th>
+                    </tr>
+                    <tr>
+                        <td id="tbl-border-left"></td>
+                        <td>
+                            <!--  start content-table-inner ...................................................................... START -->
+                            <div id="content-table-inner">
+
+                                <!--  start table-content  -->
+                                <div id="table-content" style="margin-top: -20px">
+
+                                    <h:form id="tryfrm" enctype="multipart/form-data" prependId="false">                                        
+
+                                        <h:panelGrid columns="2">
+                                            <h:outputLabel value="Select Zone"> </h:outputLabel>
+                                            <h:selectOneMenu value="#{citizenBean.selectedZone}" id="zoneCombo"   style="width: 100px">
+                                                <f:selectItem itemLabel="select" itemValue="0"/>
+                                                <f:selectItems value="#{citizenBean.zoneList}" var="item" itemLabel="#{item.zoneName}" itemValue="#{item.zoneId}"/>
+                                                <f:ajax event="valueChange" execute="@this" listener="#{citizenBean.zoneSelectionChanged}" render="wardCombo subwardCombo areaCombo" />
+                                            </h:selectOneMenu>
+                                            <h:outputLabel  value="Select Ward"> </h:outputLabel>
+                                            <h:selectOneMenu value="#{citizenBean.selectedWard}" id="wardCombo"   style="width: 100px">
+                                                <f:selectItem itemLabel="select" itemValue="0"/>
+                                                <f:selectItems value="#{citizenBean.wardList}" var="item" itemLabel="#{item.wardName}" itemValue="#{item.wardId}"/>
+                                                <f:ajax event="valueChange" execute="@this" listener="#{citizenBean.wardSelectionChanged}" render="subwardCombo areaCombo" />
+                                            </h:selectOneMenu>
+                                            <h:outputLabel  value="Select Sub-Ward"> </h:outputLabel>
+                                            <h:selectOneMenu value="#{citizenBean.selectedSubward}" id="subwardCombo"  style="width: 100px">
+                                                <f:selectItem itemLabel="select" itemValue="0"/>
+                                                <f:selectItems value="#{citizenBean.subwardList}" var="item" itemLabel="#{item.subWardName}" itemValue="#{item.subWardId}"/>
+                                                <f:ajax event="valueChange" execute="@this" listener="#{citizenBean.subwardSelectionChanged}" render="areaCombo" />
+                                            </h:selectOneMenu>
+                                            <h:outputLabel  value="Select Area"> </h:outputLabel>
+                                            <h:selectOneMenu value="#{citizenBean.selectedArea}" id="areaCombo"   style="width: 100px">
+                                                <f:selectItem itemLabel="select" itemValue="0"/>
+                                                <f:selectItems value="#{citizenBean.areaList}" var="item" itemLabel="#{item.areaName}" itemValue="#{item.areaId}"/>
+                                            </h:selectOneMenu>
+                                            <field:field label="#{eng['CitizenForm.UsernamePrompt']}" required="true" entity="#{citizenBean}" fieldName="username" id="txtUserName" requiredMessage="#{eng['CitizenForm.UsernameRequiredPrompt']}">
+                                                <f:ajax  event="valueChange" listener="#{citizenBean.checkUser}" execute="@this" render="usernameMessage" />
+                                            </field:field>                                            
+                                            <h:outputLabel value="#{eng['CitizenForm.PasswordPrompt']}"/>
+                                            <h:inputSecret id="txtPassword" value="#{citizenBean.password}" required="true" requiredMessage="#{eng['CitizenForm.PasswordRequiredPrompt']}"/>
+                                            <h:outputLabel value="UserType" />
+                                            <h:selectOneMenu value="#{citizenBean.selectedUserType}" style="width:100Px" >
+                                                <f:selectItem itemLabel="admin" itemValue="admin"/>
+                                                <f:selectItem itemLabel="citizen" itemValue="citizen"/>
+                                            </h:selectOneMenu>
+                                            <field:field label="#{eng['CitizenForm.NamePrompt']}" required="true" entity="#{citizenBean}" fieldName="name" id="txtName" requiredMessage="#{eng['CitizenForm.NameRequiredPrompt']}"/>
+                                            <field:field label="#{eng['CitizenForm.AddressPrompt']}" required="true" entity="#{citizenBean}"  fieldName="address" id="txtAddress" requiredMessage="#{eng['CitizenForm.AddressRequiredPrompt']}" textArea="true"/>
+                                            <field:field label="#{eng['CitizenForm.ContactNumberPrompt']}" required="true" entity="#{citizenBean}" fieldName="contactNumber" id="txtContactNumber" requiredMessage="#{eng['CitizenForm.ContactNumberRequiredPrompt']}">
+                                                <f:ajax execute="@this" event="valueChange" immediate="true" render="contactNumberMessage"/>
+                                                <f:validateRegex pattern="[0-9]*"/>
+                                            </field:field>
+                                        </h:panelGrid>
+
+                                        <h:panelGrid columns="2">
+                                            <h:outputLabel value="#{eng['CitizenForm.DOBPrompt']}" style="width:145Px;" />
+
+
+                                            <table id="BirthdateTable">
+                                                <tr>                                                    
+                                                    <td>
+                                                        <h:inputText id="datum1"  value="#{citizenBean.birthDate}">
+                                                            <f:converter converterId="dateConverter"/>
+                                                        </h:inputText>
+
+                                                        <a  onclick="setYears(1901, 2011);showCalender(this, 'datum1');">
+                                                            <img src="../images/calender.png" alt="Click Here" height="20px" width="22px" style="margin-left: 20Px;"/>
+                                                        </a>
+                                                    </td>
+                                                    <td>
+                                                        <table id="calenderTable" >
+                                                            <tbody id="calenderTableHead">
+                                                                <tr>
+                                                                    <td colspan="4" align="center">
+                                                                        <select onChange="showCalenderBody(createCalender(document.getElementById('selectYear').value,
+                                                                        this.selectedIndex, false));" id="selectMonth">
+                                                                            <option value="0">Jan</option>
+                                                                            <option value="1">Feb</option>
+                                                                            <option value="2">Mar</option>
+                                                                            <option value="3">Apr</option>
+                                                                            <option value="4">May</option>
+                                                                            <option value="5">Jun</option>
+                                                                            <option value="6">Jul</option>
+                                                                            <option value="7">Aug</option>
+                                                                            <option value="8">Sep</option>
+                                                                            <option value="9">Oct</option>
+                                                                            <option value="10">Nov</option>
+                                                                            <option value="11">Dec</option>
+                                                                        </select>
+                                                                    </td>
+                                                                    <td colspan="2" align="center">
+                                                                        <select onChange="showCalenderBody(createCalender(this.value,
+                                                                        document.getElementById('selectMonth').selectedIndex, false));" id="selectYear">
+                                                                        </select>
+                                                                    </td>
+                                                                    <td align="center">
+                                                                        <a href="#" onClick="closeCalender();"><font color="#003333">close</font></a>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                            <tbody id="calenderTableDays">
+                                                                <tr style="font:message-box;border-style:solid; ">
+
+                                                                    <td>Sun|</td><td>Mon|</td><td>Tue|</td><td>Wed|</td><td>Thu|</td><td>Fri|</td><td>Sat</td>
+
+                                                                </tr>
+                                                            </tbody>
+                                                            <tbody id="calender"></tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </h:panelGrid>
+
+                                        <div style="background-color: #d9d9d9;">
+                                            <center>
+                                                <h:outputLabel value=" Images Details ">
+                                                </h:outputLabel>
+                                                <table width="98%" border="1" align="center" cellspacing="5Px">
+                                                    <tr>
+                                                        <td align="left" bgcolor="#f6f6f6" width="25%">
+                                                            <h:outputLabel value="#{eng['CitizenForm.VoterCardImagePrompt']}" />
+                                                        </td>
+                                                        <td style="margin-left: 5Px;">
+                                                            <t:inputFileUpload id="voterCardImage" value="#{citizenBean.uFileVoterCard}" />
+                                                            <h:commandButton id="btnUpload" value="Upload" action="#{citizenBean.uploadVoterCardImage}">
+                                                            </h:commandButton>
+                                                            <h:graphicImage id="imgVoter" style="margin: 10px 10px 10px 10px" height="50px" width="50Px"  url="../images/img/#{citizenBean.voterCardImage}"></h:graphicImage>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" bgcolor="#f6f6f6" width="25%">
+                                                            <h:outputLabel value="#{eng['CitizenForm.SignatureImageaPrompt']}" />
+                                                        </td>
+                                                        <td>
+                                                            <t:inputFileUpload id="signatureImage" value="#{citizenBean.uFileSignature}" />
+                                                            <h:commandButton id="btnUploadSignature" value="Upload" action="#{citizenBean.uploadSignatureImage}">
+                                                            </h:commandButton>
+                                                            <h:graphicImage id="imgSignature" style="margin: 10px 10px 10px 10px" height="50px" width="50Px"  url="../images/img/#{citizenBean.signatureImage}"></h:graphicImage>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" bgcolor="#f6f6f6" width="25%">
+                                                            <h:outputLabel value="#{eng['CitizenForm.ThumbImagePrompt']}" />
+                                                        </td>
+                                                        <td>
+                                                            <t:inputFileUpload id="thumbImage" value="#{citizenBean.uFileThumb}" />
+                                                            <h:commandButton id="btnUploadThumb" value="Upload" action="#{citizenBean.uploadThumbImage}">
+                                                            </h:commandButton>
+                                                            <h:graphicImage id="imgThumb" style="margin: 10px 10px 10px 10px" height="50px" width="50Px"  url="../images/img/#{citizenBean.thumbImage}"></h:graphicImage>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" bgcolor="#f6f6f6" width="25%">
+                                                            <h:outputLabel value="#{eng['CitizenForm.FaceImagePrompt']}" />
+                                                        </td>
+                                                        <td>
+                                                            <t:inputFileUpload id="faceImage" value="#{citizenBean.uFileFace}" />
+                                                            <h:commandButton id="btnUploadFace" value="Upload" action="#{citizenBean.uploadFaceImage}">
+                                                            </h:commandButton>
+                                                            <h:graphicImage id="imgFace" style="margin: 10px 10px 10px 10px" height="50px" width="50Px"  url="../images/img/#{citizenBean.faceImage}"></h:graphicImage>
+                                                        </td>
+                                                    </tr>
+
+                                                </table>
+                                            </center>
+                                        </div>
+                                        <br/>
+                                        <br/>
+                                        <div align="center">
+                                            <h:commandButton value="Save"  action="#{citizenBean.addCitizen}" >
+                                                <f:ajax event="action" render="usernameMessage"/>
+                                            </h:commandButton>
+                                            <input type="reset" value="Reset"/>
+                                        </div>
+                                    </h:form>
+                                </div>
+                            </div>
+                            <!--  end content-table-inner ............................................END  -->
+                        </td>
+                        <td id="tbl-border-right"></td>
+                    </tr>
+                    <tr>
+                        <th class="sized bottomleft"></th>
+                        <td id="tbl-border-bottom">&nbsp;</td>
+                        <th class="sized bottomright"></th>
+                    </tr>
+                </table>
+                <div class="clear">&nbsp;</div>
+
+            </div>
+            <!--  end content -->
+            <div class="clear">&nbsp;</div>
+        </div>
+
+
+
+
+    </ui:define>
+
+</ui:composition>

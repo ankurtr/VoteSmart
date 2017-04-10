@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="./AdminMasterPage.xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:col="http://www.trapasiya.com/jsf">
+
+    <ui:define name="content">
+        <div id="content-outer">
+            <!-- start content -->
+            <div id="content">
+                <!--  start page-heading -->
+                <div id="page-heading">
+                    <h1>Schedule Election</h1>
+                </div>
+                <!-- end page-heading -->
+                <table border="0" width="100%" cellpadding="0" cellspacing="0" id="content-table">
+                    <tr>
+                        <th rowspan="3" class="sized"><img src="../images/shared/side_shadowleft.jpg" width="20" height="300" alt="" /></th>
+                        <th class="topleft"></th>
+                        <td id="tbl-border-top">&nbsp;</td>
+                        <th class="topright"></th>
+                        <th rowspan="3" class="sized"><img src="../images/shared/side_shadowright.jpg" width="20" height="300" alt="" /></th>
+                    </tr>
+                    <tr>
+                        <td id="tbl-border-left"></td>
+                        <td>
+                            <!--  start content-table-inner ...................................................................... START -->
+                            <div id="content-table-inner">
+
+                                <!--  start table-content  -->
+                                <div id="table-content" style="margin-top: -20px">
+
+                                    <h:form id="f1" prependId="false">
+
+                                        <h:panelGrid columns="2" >
+                                            <h:outputLabel value="#{eng['ScheduleElectionForm.SelectElectionPrompt']}"/>
+                                            <h:selectOneMenu id="electionsCombo" value="#{electionBean.selectedElection}">
+                                                <f:selectItem itemLabel="-select" itemValue="0"/>
+                                                <f:selectItems value="#{electionBean.electionList}" var="item" itemLabel="#{item.name}" itemValue="#{item.electionId}"/>
+                                                <f:ajax render="electionDetails" event="valueChange" execute="@form" listener="#{electionBean.electionSelectionChanged}"/>
+                                            </h:selectOneMenu>
+                                        </h:panelGrid>
+                                        <h:panelGrid id="electionDetails" columns="2"  >
+                                            <h:outputText style="margin-right: 5Px;" value="#{eng['ScheduleElectionForm.ElectionNamePrompt']}"/>
+                                            <h:outputText value="#{electionBean.electionObj.name}"/>
+                                            <h:outputText value="#{eng['ScheduleElectionForm.FinalDatePrompt']}"/>
+                                            <h:outputText value="#{electionBean.electionObj.finalDate}">
+                                                <f:converter converterId="dateConverter"/>
+                                            </h:outputText>
+                                            <h:outputText value="#{eng['ScheduleElectionForm.StartTimePrompt']}"/>
+                                            <h:outputText value="#{electionBean.electionObj.startTime}">
+                                                <f:converter converterId="timeConverter"/>
+                                            </h:outputText>
+                                            <h:outputText value="#{eng['ScheduleElectionForm.EndTimePrompt']}"/>
+                                            <h:outputText value="#{electionBean.electionObj.endTime}">
+                                                <f:converter converterId="timeConverter"/>
+                                            </h:outputText>
+                                            <h:outputText value="#{eng['ScheduleElectionForm.ElectionTypeName']}"/>
+                                            <h:outputText value="#{electionBean.electionObj.electionTypeMaster.typeName}"/>
+                                        </h:panelGrid>
+
+                                        <h:commandButton action="#{electionBean.scheduleElection}" value="#{eng['ScheduleElectionForm.ScheduleButtonPrompt']}"/>                                        
+                                    </h:form>
+                                </div>
+                            </div>
+                            <!--  end content-table-inner ............................................END  -->
+                        </td>
+                        <td id="tbl-border-right"></td>
+                    </tr>
+                    <tr>
+                        <th class="sized bottomleft"></th>
+                        <td id="tbl-border-bottom">&nbsp;</td>
+                        <th class="sized bottomright"></th>
+                    </tr>
+                </table>
+                <div class="clear">&nbsp;</div>
+
+            </div>
+            <!--  end content -->
+            <div class="clear">&nbsp;</div>
+        </div>
+    </ui:define>
+
+</ui:composition>

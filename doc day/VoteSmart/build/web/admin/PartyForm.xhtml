@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="./AdminMasterPage.xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:field="http://www.trapasiya.com/jsf"
+                xmlns:t="http://myfaces.apache.org/tomahawk">
+
+    <ui:define name="content">
+        <div id="content-outer">
+            <!-- start content -->
+            <div id="content">
+                <!--  start page-heading -->
+                <div id="page-heading">
+                    <h1>Party Management</h1>
+                </div>
+                <!-- end page-heading -->
+                <table border="0" width="100%" cellpadding="0" cellspacing="0" id="content-table">
+                    <tr>
+                        <th rowspan="3" class="sized"><img src="../images/shared/side_shadowleft.jpg" width="20" height="300" alt="" /></th>
+                        <th class="topleft"></th>
+                        <td id="tbl-border-top">&nbsp;</td>
+                        <th class="topright"></th>
+                        <th rowspan="3" class="sized"><img src="../images/shared/side_shadowright.jpg" width="20" height="300" alt="" /></th>
+                    </tr>
+                    <tr>
+                        <td id="tbl-border-left"></td>
+                        <td>
+                            <!--  start content-table-inner ...................................................................... START -->
+                            <div id="content-table-inner">
+
+                                <!--  start table-content  -->
+                                <div id="table-content" style="margin-top: -20px">
+
+                                    <h:form id="f1" enctype="multipart/form-data" prependId="false">
+
+                                        <h:panelGrid columns="2">
+
+                                           
+
+                                            <field:field  label="#{eng['PartyForm.PartyNamePrompt']}" required="true" entity="#{partyBean}" fieldName="partyName" id="txtPartyName" requiredMessage="#{eng['PartyForm.PartyNameRequiredPrompt']}"/>
+
+                                            <h:outputLabel value="#{eng['PartyForm.PartyLogoPrompt']}" />
+                                            <table width="98%" align="center" style="margin-left: 10Px; background-color: #f9f9f9">
+                                                <tr>
+                                                    <td style="width: 50%">
+                                                        <t:inputFileUpload id="candidateImage" value="#{partyBean.uFilePartyLogoImage}" />
+                                                        <h:commandButton id="btnUpload" value="Upload" action="#{partyBean.uploadLogoImage}">
+                                                        </h:commandButton>
+                                                        <h:graphicImage   id="img" style="margin-left: 10Px;margin-top: 5Px;" height="100px" width="100"  url="../images/img/#{partyBean.partyLogo}"/>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            
+
+                                            <field:field  label="#{eng['PartyForm.PartySloganPrompt']}" required="true" entity="#{partyBean}" fieldName="partySlogan" id="txtPartyName" requiredMessage="#{eng['PartyForm.PartySloganRequiredPrompt']}"/>
+
+                                            <field:field  label="#{eng['PartyForm.PartyDescriptionPrompt']}"  entity="#{partyBean}" fieldName="description" id="txtPartyName" textArea="true"/>                                            
+
+                                        </h:panelGrid>
+
+
+
+                                        <center><h:commandButton action="#{partyBean.save}"  value="#{eng['PartyForm.SaveButtonPrompt']}" >
+                                            <f:ajax event="action" execute="@form" render="partyNameMessage partySloganMessage" />
+                                        </h:commandButton>
+                                        <h:commandButton type="reset" value="Reset" />
+                                        </center>
+                                       </h:form>
+                                </div>
+                            </div>
+                            <!--  end content-table-inner ............................................END  -->
+                        </td>
+                        <td id="tbl-border-right"></td>
+                    </tr>
+                    <tr>
+                        <th class="sized bottomleft"></th>
+                        <td id="tbl-border-bottom">&nbsp;</td>
+                        <th class="sized bottomright"></th>
+                    </tr>
+                </table>
+                <div class="clear">&nbsp;</div>
+
+            </div>
+            <!--  end content -->
+            <div class="clear">&nbsp;</div>
+        </div>
+    </ui:define>
+</ui:composition>

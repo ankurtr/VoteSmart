@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="./AdminMasterPage.xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:field="http://www.trapasiya.com/jsf"
+                xmlns:p="http://primefaces.prime.com.tr/ui"
+                xmlns:t="http://myfaces.apache.org/tomahawk"
+                xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+    <ui:define name="content">
+        <h:form id="myFrm">
+            <h2>Party Result</h2><br/>
+
+            <h3> Vote Count of All Parties </h3>
+            <!--            <h:dataTable id="partyH" value="{partyResultBean.partyList}" rowClasses="odd,even" headerClass="ColumnHeader"  styleClass="table"  cellpadding="2" cellspacing="2" border="0"  width="50%"  var="row" >
+
+                            <h:column >
+                                <f:facet name="header">
+                                    Logo
+                                </f:facet>
+                                <h:graphicImage width="80" height="65" url="../images/party/{row.partyLogo}" />
+                            </h:column>
+                            <h:column >
+                                <f:facet name="header">
+                                    Party
+                                </f:facet>
+                                <h:outputText value="{row.partyName}" />
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header" >
+                                    Count   </f:facet>
+                                <h:outputText value="{partyResultBean.count}" />
+                            </h:column>
+                        </h:dataTable>-->
+            <p:dataTable id="partyDT" value="#{partyResultBean.partyList}" rowStyleClass="odd"  binding="#{partyResultBean.pDT}" style="width: 50%" var="row"   >
+                <p:column headerText="Logo" styleClass="ColumnHeader" >
+                    <h:graphicImage width="80" height="65" url="../images/img/#{row.partyLogo}" />
+                </p:column>
+                <p:column headerText="Party" styleClass="ColumnHeader" >
+                    <h:outputText value="#{row.partyName}" />
+                </p:column>
+                <p:column headerText="Votes" styleClass="ColumnHeader">
+                    <h:outputText value="#{partyResultBean.primeCount}" />
+                </p:column>
+
+            </p:dataTable>
+            <h:panelGrid columns="4">
+                <h:commandLink>
+                    <h:outputText  value="PDF  |" />
+                    <p:dataExporter type="pdf" target="partyDT"  fileName="SevenWonders"/>
+                </h:commandLink>
+                <h:commandLink>
+                    <h:outputText  value="XLS  |" />
+                    <p:dataExporter type="xls" target="partyDT"  fileName="SevenWonders"/>
+                </h:commandLink>
+                <h:commandLink>
+                    <h:outputText  value="XML  |" />
+                    <p:dataExporter type="xml" target="partyDT"  fileName="SevenWonders"/>
+                </h:commandLink>
+                <h:commandLink>
+                    <h:outputText  value="CSV" />
+                    <p:dataExporter type="csv" target="partyDT"  fileName="SevenWonders"/>
+                </h:commandLink>
+            </h:panelGrid>
+            <h3>Bar Chart</h3>
+            <p:barChart   model="#{partyResultBean.cartesianModel}" width="90%" />
+            <br/>
+            <h3>Line Chart</h3>
+            <p:lineChart model="#{partyResultBean.cartesianModel}" width="90%" >
+            </p:lineChart>
+            <br/>
+            <h3>Column Chart</h3>
+
+            <p:columnChart model="#{partyResultBean.cartesianModel}" width="90%" />
+
+            <h3>Pie Chart</h3>
+            <p:pieChart model="#{partyResultBean.pieModel}" width="70%" />
+
+        </h:form>
+    </ui:define>
+</ui:composition>

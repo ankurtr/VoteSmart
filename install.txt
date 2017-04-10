@@ -1,0 +1,15 @@
+--------------- EVoting System ---------------
+
+jndi  : jndi/epolling2
+
+Realm : EPolling
+
+passsword for all the system login : a
+
+Security : create certificate 
+
+library : take the library reference from :-  {VoteSmart\libs}
+
+database : EPolling.sql
+
+	

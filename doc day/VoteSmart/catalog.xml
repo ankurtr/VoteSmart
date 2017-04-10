@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:8080/EPollWebServiceService/EPollWebService?wsdl" uri="src/conf/xml-resources/web-service-references/EPollWebService/wsdl/localhost_8080/EPollWebServiceService/EPollWebService.wsdl"/>
+    <system systemId="http://localhost:8080/EPollWebServiceService/EPollWebService?xsd=1" uri="src/conf/xml-resources/web-service-references/EPollWebService/wsdl/localhost_8080/EPollWebServiceService/EPollWebService.xsd_1.xsd"/>
+    <system systemId="http://localhost:15658/EPollWebServiceService/EPollWebService?wsdl" uri="src/conf/xml-resources/web-service-references/EPollWebService/wsdl/localhost_15658/EPollWebServiceService/EPollWebService.wsdl"/>
+    <system systemId="http://localhost:15658/EPollWebServiceService/EPollWebService?xsd=1" uri="src/conf/xml-resources/web-service-references/EPollWebService/wsdl/localhost_15658/EPollWebServiceService/EPollWebService.xsd_1.xsd"/>
+</catalog>

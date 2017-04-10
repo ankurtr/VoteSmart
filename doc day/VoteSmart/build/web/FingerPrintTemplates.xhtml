@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="./MasterPage.xhtml"
+                xmlns:h="http://java.sun.com/jsf/html">
+
+    <h:head>
+        <link rel="stylesheet" href="css/cssLayout.css"/>
+        <link rel="stylesheet" href="css/default.css"/>
+    </h:head>
+    <ui:define name="content">
+        <div align="center" >
+            <div class="panelsurround" style="padding: 2em 1em 4em;
+                 -moz-border-radius: 10px;
+                 -webkit-border-radius: 10px;
+                 -moz-box-shadow: 1px 1px 10px #000;
+                 -webkit-box-shadow: 1px 1px 5px #000;margin-top: 70Px;">
+
+                <div class="prompt">                    
+                    <span style="padding-left: 5Px;vertical-align:middle;"> Finger Print Result :</span>
+                </div>
+
+                <div style="margin-top: 10Px">
+                    <h:form id="form1" prependId="false">
+                        <br/>
+                        <span style="margin-top: 2Px;">
+                            <!--                            <img alt="img1"  src="images/temp/x.jpg" height="220" width="240"/>
+                                                        <img alt="img2"  src="images/temp/y.jpg" height="220" width="240"/>-->
+                            <h:graphicImage url="images/temp/#{sessionScope['path1']}" height="220" width="240"/>
+                            <h:graphicImage url="images/temp/#{sessionScope['path2']}" height="220" width="240"/>
+                        </span>
+                        <br/>
+                        <br/>
+                        <span style="color: #D20005;"><h:outputText value="#{sessionScope['message']}"/></span>
+                        <br/>
+                        <br/>
+                        <h:commandLink value="GO TO VOTE PAGE >>" action="#{fingerPrintBean.goToVotePage}" style="color: red;margin-left: 350Px;"/>
+                    </h:form>
+                </div>
+            </div>
+        </div>
+    </ui:define>
+
+</ui:composition>

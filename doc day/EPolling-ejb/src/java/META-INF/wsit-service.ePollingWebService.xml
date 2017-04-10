@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+ <definitions 
+ xmlns="http://schemas.xmlsoap.org/wsdl/" 
+ xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+ xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="ePollingWebServiceService" targetNamespace="http://service/" xmlns:tns="http://service/"
+ >
+    <message name="registerCandidate"/>
+    <message name="registerCandidateResponse"/>
+    <message name="checkExisting"/>
+    <message name="checkExistingResponse"/>
+    <message name="updateCandidate"/>
+    <message name="updateCandidateResponse"/>
+    <message name="getCandidate"/>
+    <message name="getCandidateResponse"/>
+    <message name="registerCitizen"/>
+    <message name="registerCitizenResponse"/>
+    <message name="updateCitizen"/>
+    <message name="updateCitizenResponse"/>
+    <message name="addZone"/>
+    <message name="addZoneResponse"/>
+    <message name="editZone"/>
+    <message name="editZoneResponse"/>
+    <message name="deleteZone"/>
+    <message name="deleteZoneResponse"/>
+    <message name="getZone"/>
+    <message name="getZoneResponse"/>
+    <message name="addWard"/>
+    <message name="addWardResponse"/>
+    <message name="editWard"/>
+    <message name="editWardResponse"/>
+    <message name="deleteWard"/>
+    <message name="deleteWardResponse"/>
+    <message name="getWard"/>
+    <message name="getWardResponse"/>
+    <message name="addSubWard"/>
+    <message name="addSubWardResponse"/>
+    <message name="editSubWard"/>
+    <message name="editSubWardResponse"/>
+    <message name="deleteSubWard"/>
+    <message name="deleteSubWardResponse"/>
+    <message name="getSubWard"/>
+    <message name="getSubWardResponse"/>
+    <message name="addArea"/>
+    <message name="addAreaResponse"/>
+    <message name="editArea"/>
+    <message name="editAreaResponse"/>
+    <message name="deleteArea"/>
+    <message name="deleteAreaResponse"/>
+    <message name="getArea"/>
+    <message name="getAreaResponse"/>
+    <message name="registerParty"/>
+    <message name="registerPartyResponse"/>
+    <message name="checkExisting_1"/>
+    <message name="checkExisting_1Response"/>
+    <message name="getParty"/>
+    <message name="getPartyResponse"/>
+    <message name="getCandidates"/>
+    <message name="getCandidatesResponse"/>
+    <message name="updateParty"/>
+    <message name="updatePartyResponse"/>
+    <message name="removeParty"/>
+    <message name="removePartyResponse"/>
+    <message name="addElection"/>
+    <message name="addElectionResponse"/>
+    <message name="scheduleElection"/>
+    <message name="scheduleElectionResponse"/>
+    <message name="cancelElection"/>
+    <message name="cancelElectionResponse"/>
+    <message name="updateElection"/>
+    <message name="updateElectionResponse"/>
+    <message name="addSecurity"/>
+    <message name="addSecurityResponse"/>
+    <message name="activateSecurity"/>
+    <message name="activateSecurityResponse"/>
+    <message name="deactivateSecurity"/>
+    <message name="deactivateSecurityResponse"/>
+    <message name="getCitizen"/>
+    <message name="getCitizenResponse"/>
+    <message name="castVote"/>
+    <message name="castVoteResponse"/>
+    <message name="isValidToVote"/>
+    <message name="isValidToVoteResponse"/>
+    <message name="addCity"/>
+    <message name="addCityResponse"/>
+    <message name="getAllCities"/>
+    <message name="getAllCitiesResponse"/>
+    <message name="getCityFromId"/>
+    <message name="getCityFromIdResponse"/>
+    <portType name="ePollingWebService">
+        <operation name="registerCandidate">
+            <input message="tns:registerCandidate"/>
+            <output message="tns:registerCandidateResponse"/>
+        </operation>
+        <operation name="checkExisting">
+            <input message="tns:checkExisting"/>
+            <output message="tns:checkExistingResponse"/>
+        </operation>
+        <operation name="updateCandidate">
+            <input message="tns:updateCandidate"/>
+            <output message="tns:updateCandidateResponse"/>
+        </operation>
+        <operation name="getCandidate">
+            <input message="tns:getCandidate"/>
+            <output message="tns:getCandidateResponse"/>
+        </operation>
+        <operation name="registerCitizen">
+            <input message="tns:registerCitizen"/>
+            <output message="tns:registerCitizenResponse"/>
+        </operation>
+        <operation name="updateCitizen">
+            <input message="tns:updateCitizen"/>
+            <output message="tns:updateCitizenResponse"/>
+        </operation>
+        <operation name="addZone">
+            <input message="tns:addZone"/>
+            <output message="tns:addZoneResponse"/>
+        </operation>
+        <operation name="editZone">
+            <input message="tns:editZone"/>
+            <output message="tns:editZoneResponse"/>
+        </operation>
+        <operation name="deleteZone">
+            <input message="tns:deleteZone"/>
+            <output message="tns:deleteZoneResponse"/>
+        </operation>
+        <operation name="getZone">
+            <input message="tns:getZone"/>
+            <output message="tns:getZoneResponse"/>
+        </operation>
+        <operation name="addWard">
+            <input message="tns:addWard"/>
+            <output message="tns:addWardResponse"/>
+        </operation>
+        <operation name="editWard">
+            <input message="tns:editWard"/>
+            <output message="tns:editWardResponse"/>
+        </operation>
+        <operation name="deleteWard">
+            <input message="tns:deleteWard"/>
+            <output message="tns:deleteWardResponse"/>
+        </operation>
+        <operation name="getWard">
+            <input message="tns:getWard"/>
+            <output message="tns:getWardResponse"/>
+        </operation>
+        <operation name="addSubWard">
+            <input message="tns:addSubWard"/>
+            <output message="tns:addSubWardResponse"/>
+        </operation>
+        <operation name="editSubWard">
+            <input message="tns:editSubWard"/>
+            <output message="tns:editSubWardResponse"/>
+        </operation>
+        <operation name="deleteSubWard">
+            <input message="tns:deleteSubWard"/>
+            <output message="tns:deleteSubWardResponse"/>
+        </operation>
+        <operation name="getSubWard">
+            <input message="tns:getSubWard"/>
+            <output message="tns:getSubWardResponse"/>
+        </operation>
+        <operation name="addArea">
+            <input message="tns:addArea"/>
+            <output message="tns:addAreaResponse"/>
+        </operation>
+        <operation name="editArea">
+            <input message="tns:editArea"/>
+            <output message="tns:editAreaResponse"/>
+        </operation>
+        <operation name="deleteArea">
+            <input message="tns:deleteArea"/>
+            <output message="tns:deleteAreaResponse"/>
+        </operation>
+        <operation name="getArea">
+            <input message="tns:getArea"/>
+            <output message="tns:getAreaResponse"/>
+        </operation>
+        <operation name="registerParty">
+            <input message="tns:registerParty"/>
+            <output message="tns:registerPartyResponse"/>
+        </operation>
+        <operation name="checkExisting_1">
+            <input message="tns:checkExisting_1"/>
+            <output message="tns:checkExisting_1Response"/>
+        </operation>
+        <operation name="getParty">
+            <input message="tns:getParty"/>
+            <output message="tns:getPartyResponse"/>
+        </operation>
+        <operation name="getCandidates">
+            <input message="tns:getCandidates"/>
+            <output message="tns:getCandidatesResponse"/>
+        </operation>
+        <operation name="updateParty">
+            <input message="tns:updateParty"/>
+            <output message="tns:updatePartyResponse"/>
+        </operation>
+        <operation name="removeParty">
+            <input message="tns:removeParty"/>
+            <output message="tns:removePartyResponse"/>
+        </operation>
+        <operation name="addElection">
+            <input message="tns:addElection"/>
+            <output message="tns:addElectionResponse"/>
+        </operation>
+        <operation name="scheduleElection">
+            <input message="tns:scheduleElection"/>
+            <output message="tns:scheduleElectionResponse"/>
+        </operation>
+        <operation name="cancelElection">
+            <input message="tns:cancelElection"/>
+            <output message="tns:cancelElectionResponse"/>
+        </operation>
+        <operation name="updateElection">
+            <input message="tns:updateElection"/>
+            <output message="tns:updateElectionResponse"/>
+        </operation>
+        <operation name="addSecurity">
+            <input message="tns:addSecurity"/>
+            <output message="tns:addSecurityResponse"/>
+        </operation>
+        <operation name="activateSecurity">
+            <input message="tns:activateSecurity"/>
+            <output message="tns:activateSecurityResponse"/>
+        </operation>
+        <operation name="deactivateSecurity">
+            <input message="tns:deactivateSecurity"/>
+            <output message="tns:deactivateSecurityResponse"/>
+        </operation>
+        <operation name="getCitizen">
+            <input message="tns:getCitizen"/>
+            <output message="tns:getCitizenResponse"/>
+        </operation>
+        <operation name="castVote">
+            <input message="tns:castVote"/>
+            <output message="tns:castVoteResponse"/>
+        </operation>
+        <operation name="isValidToVote">
+            <input message="tns:isValidToVote"/>
+            <output message="tns:isValidToVoteResponse"/>
+        </operation>
+        <operation name="addCity">
+            <input message="tns:addCity"/>
+            <output message="tns:addCityResponse"/>
+        </operation>
+        <operation name="getAllCities">
+            <input message="tns:getAllCities"/>
+            <output message="tns:getAllCitiesResponse"/>
+        </operation>
+        <operation name="getCityFromId">
+            <input message="tns:getCityFromId"/>
+            <output message="tns:getCityFromIdResponse"/>
+        </operation>
+    </portType>
+    <binding name="ePollingWebServicePortBinding" type="tns:ePollingWebService">
+        <operation name="registerCandidate">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="checkExisting">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="updateCandidate">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="getCandidate">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="registerCitizen">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="updateCitizen">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="addZone">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="editZone">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="deleteZone">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="getZone">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="addWard">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="editWard">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="deleteWard">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="getWard">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="addSubWard">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="editSubWard">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="deleteSubWard">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="getSubWard">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="addArea">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="editArea">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="deleteArea">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="getArea">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="registerParty">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="checkExisting_1">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="getParty">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="getCandidates">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="updateParty">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="removeParty">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="addElection">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="scheduleElection">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="cancelElection">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="updateElection">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="addSecurity">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="activateSecurity">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="deactivateSecurity">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="getCitizen">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="castVote">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="isValidToVote">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="addCity">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="getAllCities">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="getCityFromId">
+            <input/>
+            <output/>
+        </operation>
+    </binding>
+    <service name="ePollingWebServiceService">
+        <port name="ePollingWebServicePort" binding="tns:ePollingWebServicePortBinding"/>
+    </service>
+</definitions>

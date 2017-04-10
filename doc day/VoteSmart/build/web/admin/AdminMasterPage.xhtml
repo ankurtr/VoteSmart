@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="#{changeLocaleBean.language}"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" href="../css/Style.css"/>
+        <link rel="stylesheet" href="../css/ie.css"/>
+        <link rel="stylesheet" href="../css/Menustyles.css"/>
+        <link rel="stylesheet" href="../css/DashBoard.css" />
+        <link rel="stylesheet" href="../css/screen.css" />
+        <link rel="stylesheet" href="../css/calendar.css" />
+        <script language="javascript" type="text/javascript" src="../css/calendar.js"></script>
+        <style type="text/css" media="all">@import "../css/timePicker.css";</style>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>
+        <script type="text/javascript" src="../css/jquery.timePicker.js"></script>
+        <style type="tetext/css">
+            .messageStyle
+            {
+                color: red;
+            }
+        </style>
+    </h:head>
+
+    <h:body>
+        <f:view locale="#{changeLocaleBean.locale}">
+            <div id="page">
+
+                <ui:insert name="top">
+                    <div id="page-inner">
+                        <a name="top" id="navigation-top"></a>
+                        <div id="header" class="region region-header">
+                            <div id="header-inner">
+                                <div id="logo">
+                                </div>
+                                <div id="user_info">
+                                    <div id="anonymous_user_wrapper">
+                                        <ul id="anonymous_user">
+                                            <li class="login_link" style="float: right"></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- user info  -->
+                                <div id="lang_dropdown_logout" class="lang_anonymous_user" >
+                                    <label class="lang_lbl">
+                                        &nbsp;#{eng['MasterPage.Language']}</label>
+                                    <h:form>
+                                        <h:selectOneMenu value="#{changeLocaleBean.language}" style="width:100Px;" onchange="submit();">
+                                            <f:selectItem itemLabel="-language-" itemValue="-language-"/>
+                                            <f:selectItem itemLabel="English" itemValue="en"/>
+                                            <f:selectItem itemLabel="Hindi" itemValue="hi"/>
+                                            <f:selectItem itemLabel="Gujarati" itemValue="gu"/>
+                                        </h:selectOneMenu>                                       
+                                    </h:form>
+                                </div>
+                                <div id="navbar">
+                                    <div id="primary">
+                                        <ul id="main_nav">
+                                            <li class="leaf first"><a href="DashBoard.jsf" title="">#{eng['MenuItem.Home']} </a></li>
+                                            <li class="expanded"><a href="" title="">#{eng['MenuItem.Regions']} </a>
+                                                <ul id="main_nav">
+                                                    <li class="leaf first"><a href="ZoneList.jsf" title="">#{eng['MenuItem.ZoneManagement']}</a></li>
+                                                    <li class="leaf first"><a href="WardList.jsf" title="">#{eng['MenuItem.WardManagement']}</a></li>
+                                                    <li class="leaf first"><a href="SubWardList.jsf" title="">#{eng['MenuItem.SubWardManagement']}</a></li>
+                                                    <li class="leaf first"><a href="AreaList.jsf" title="">#{eng['MenuItem.AreaManagement']}</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="expanded"><a href="" title="">#{eng['MenuItem.Parties']}</a>
+                                                <ul id="main_nav">
+                                                    <li class="leaf first"><a href="PartyList.jsf" title="">#{eng['MenuItem.ViewAllParties']}</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="expanded"><a href="" title="">#{eng['MenuItem.Candidates']}</a>
+                                                <ul id="main_nav">
+                                                    <li class="leaf first"><a href="CandidateList.jsf" title="">#{eng['MenuItem.ViewAllCandidates']}</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="expanded"><a href="" title="">#{eng['MenuItem.Citizen']}</a>
+                                                <ul id="main_nav">
+                                                    <li class="leaf first"><a href="CitizenList.jsf" title="">#{eng['MenuItem.ViewAllCitizen']}</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="expanded"><a href="" title="">#{eng['MenuItem.Elections']}</a>
+                                                <ul id="main_nav">
+                                                    <li class="leaf first"><a href="ElectionList.jsf" title="">#{eng['MenuItem.ViewAllElections']}</a></li>
+                                                    <li class="leaf first"><a href="ScheduleElection.jsf" title="">#{eng['MenuItem.ScheduleElection']}</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="expanded"><a href="" title="">#{eng['MenuItem.Results']}</a>
+                                                <ul id="main_nav">
+                                                    <li class="leaf first"><a href="Result.jsf" title="">#{eng['DashBoard.ZoneWiseResult']}</a></li>
+                                                    <li class="leaf first"><a href="PartyResult.jsf" title="">#{eng['DashBoard.PartyWiseResult']}</a></li>
+                                                    <li class="leaf first"><a href="CandidateResult.jsf" title="">#{eng['DashBoard.CandidateWiseResult']}</a></li>
+                                                </ul>
+                                            </li>
+
+                                        </ul>
+
+                                    </div>
+                                    <h:form id="nav_search_bar" >
+                                        <div style="margin-top:10px;margin-right:10px">
+                                            <h:commandLink value="Log Out" action="#{loginBean.logout}" style="color: red;font-weight: bold"/>
+                                        </div>
+                                    </h:form>
+                                    <!-- END nav_search_bar -->
+                                </div>
+                            </div>
+                            <!-- /#navbar-inner, /#navbar -->
+                        </div>
+                    </div>
+                </ui:insert>
+
+                <ui:insert name="content">
+                    Content
+                </ui:insert>
+
+                <ui:insert name="footer">
+                    <!-- /#main-inner, /#main -->
+                    <!-- End Main Container Section -->
+                    <!-- Begin Footer section -->
+                    <div id="footer" class="region region-footer">
+                        <div id="footer-inner">
+                            <div id="footer">
+                                <div id="footer-inner" class="region region-footer">
+                                    <div class="content">
+                                        <div id="quicklink-hdr">
+                                            <center>
+                                                Copyright @ WallGuest Tech developer program
+                                            </center>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Footer section -->
+                </ui:insert>
+
+            </div>
+        </f:view>
+    </h:body>
+
+</html>

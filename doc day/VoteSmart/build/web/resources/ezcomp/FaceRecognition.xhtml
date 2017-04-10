@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:cc="http://java.sun.com/jsf/composite"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:t="http://myfaces.apache.org/tomahawk">
+
+  <!-- INTERFACE -->
+  <cc:interface>
+      <cc:attribute name="managedBean" required="true"/>
+        <cc:attribute name="required" required="true"/>
+  </cc:interface>
+
+  <!-- IMPLEMENTATION -->
+  <cc:implementation>
+      <h:body>
+            <div align="center">
+                <div class="panelsurround">
+
+                    <div class="prompt">
+                        <img src="./images/fingerprint.jpg" align="top" height="25Px" width="35Px" alt="login"/>
+                        <span style="padding-left: 5Px;vertical-align:middle"> #{eng.FaceImagePrompt} :</span>
+                    </div>
+
+                    <div class="panel">
+
+                        <div align="left" style="padding-top: 10Px">
+
+                            <div align="center">
+                                <h:form id="loginForm" prependId="false" enctype="multipart/form-data"  onsubmit="return checkForm(this, '#{cc.clientId}')" >
+                                    <h:panelGrid columns="3">
+                                        <h:outputText value="#{eng.FaceImageUploadPrompt}"/>
+                                        <t:inputFileUpload id="fingerPrintImage" value="#{cc.attrs.managedBean.uploadedFile}"
+                                                           required="true" requiredMessage="#{eng.FaceImageRequiredPrompt}"/>
+                                        <h:message for="fingerPrintImage" styleClass="errorLabel"/>
+
+                                    </h:panelGrid>
+                                    <h:outputText value="#{loginBean.errorMessage}" styleClass="errorLabel"/>
+                                    <p>
+                                        <h:commandButton id="btnUpload" value="#{eng.FaceImageButtonPrompt}"
+                                                         action="#{cc.attrs.managedBean.uploadImage}"/>
+                                        <input type="reset" value="Reset"/>
+                                    </p>
+                                </h:form>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </h:body>
+  </cc:implementation>
+</html>
